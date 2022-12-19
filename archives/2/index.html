@@ -242,20 +242,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+              标签
               
               
             </a>
@@ -275,9 +264,20 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -447,6 +447,84 @@
   <!-- top end -->
   
 
+  <a href="/cn/syc/">
+    <h2 class="post-title">
+      SycCTF
+    </h2>
+    <h3 class="post-subtitle">
+      web and misc（懒得写了，直接截图
+    </h3>
+    <div class="post-content-preview">
+      Web
+Misc
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-12-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#SYC" title="SYC">SYC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/buu-pwn/">
+    <h2 class="post-title">
+      BUUCTF PWN
+    </h2>
+    <h3 class="post-subtitle">
+      easy pwn challenges
+    </h3>
+    <div class="post-content-preview">
+      rip
+查看主函数，s 长度为 15，gets 传入值，可以不限大小，存在栈溢出
+发现危险函数存在 system(‘bin/sh’)，将地址溢出至 fun() 地址，触发函数
+因存在 栈平衡问题（不明白是什么），须先传入返回地址，通过 ropper 获取 ret 地址
+payload1234567from pwn import *# a = process(&#x27;./pwn1&#x27......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-11-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#BUUCTF" title="BUUCTF">BUUCTF</a>
+    
+    <a href="/tags/#PWN" title="PWN">PWN</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/ctfshow/">
     <h2 class="post-title">
       CTFshow
@@ -456,10 +534,7 @@
     </h3>
     <div class="post-content-preview">
       RCE 1
-
-challenge
-
-1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);$code = $_POST[&#x27;code&#x27;];$code = str_replace(&quot;(&quot;,&quot;括号&quot;,$code);$code = str_replace......
+challenge1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);$code = $_POST[&#x27;code&#x27;];$code = str_replace(&quot;(&quot;,&quot;括号&quot;,$code);$code = str_replace(&q......
     </div>
   </a>
   
@@ -497,9 +572,8 @@ challenge
     </h3>
     <div class="post-content-preview">
       BUUCTF [SUCTF 2019]EasySQL
-
 测试发现无论输入什么数字，都会返回 1
-存在过滤 union, from, or … (不完全测试)，返回 nonono
+存在过滤 union, from, or … (不完全测试)，返回 nonono 
 猜测后台 select 语句为 select {input} || flag from flag; (看别的师傅的 wp,不是很理解)’
 当输入任何 {} || flag 为 true，只返回 1
 只需要在执行 {}......
@@ -539,17 +613,13 @@ challenge
       Install Docker
     </h3>
     <div class="post-content-preview">
-      安装
-官网
-
+      安装官网
 https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository
 
 清华源
-
 https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/
 
-Install
-123456789101112131415sudo apt-get install apt-transpo......
+Install123456789101112131415sudo apt-get install apt-transport-h......
     </div>
   </a>
   
@@ -583,16 +653,11 @@ Install
     </h3>
     <div class="post-content-preview">
       环境 Ubuntu 20.04 vmware
-安装
-安装 mysql server
-12sudo apt-get updatesudo apt-get install mysql-server
+安装安装 mysql server12sudo apt-get updatesudo apt-get install mysql-server
 
+第一次登录是无需输入密码1mysql -u root -p
 
-第一次登录是无需输入密码
-1mysql -u root -p
-
-设置 root 密码
-1ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDEN......
+设置 root 密码1ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIE......
     </div>
   </a>
   
@@ -625,9 +690,7 @@ Install
       我好菜，拖后腿了
     </h3>
     <div class="post-content-preview">
-      S3qUenCEs
-payload
-123456789101112131415161718192021222324252627282930313233343536373839404142from pwn import *def run(n: int, m: int, a1: list):    sign = []    minn = []    summary = 0    sum1 = 0......
+      S3qUenCEspayload123456789101112131415161718192021222324252627282930313233343536373839404142from pwn import *def run(n: int, m: int, a1: list):    sign = []    minn = []    summary = 0    sum1 = 0  ......
     </div>
   </a>
   
@@ -664,13 +727,8 @@ payload
       My vegetables has exploded
     </h3>
     <div class="post-content-preview">
-      Misc
-ISCTF 层层迷宫
-题解
-
-run.py
-
-123456789101112131415161718192021222324252627282930313233from pwn import *from solve import solveimport syssys.setrecursionlimit(20000)  # 修改最大递归深度a = remote(&#x27;120.7......
+      MiscISCTF 层层迷宫题解
+run.py123456789101112131415161718192021222324252627282930313233from pwn import *from solve import solveimport syssys.setrecursionlimit(20000)  # 修改最大递归深度a = remote(&#x27;120.79.18.......
     </div>
   </a>
   
@@ -708,23 +766,14 @@ run.py
     </h3>
     <div class="post-content-preview">
       啊，淦，web就会俩题，
-Web
-backdoor (动态链接库逆向
-题解
-
+Webbackdoor (动态链接库逆向题解
 访问 robots.txt，得知 www.zip，下载
-
-
-index.php
-backdoor.php
-phpinfo.php
-robots.txt
-so.so
+index.phpbackdoor.phpphpinfo.phprobots.txtso.so
 
 
 打开 backdoor.php 发现是乱码
-
-IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen......
+IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyenc
+https://......
     </div>
   </a>
   
@@ -761,9 +810,7 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
       一些脚本
     </h3>
     <div class="post-content-preview">
-      RSA 1
-例题
-123456789101112from Crypto.Util.number import bytes_to_long, getPrimefrom gmpy2 import *from secret import flagm = bytes_to_long(flag)p = getPrime(128)q = getPrime(128)n = p * qe = 65537c ......
+      RSA 1例题123456789101112from Crypto.Util.number import bytes_to_long, getPrimefrom gmpy2 import *from secret import flagm = bytes_to_long(flag)p = getPrime(128)q = getPrime(128)n = p * qe = 65537c = ......
     </div>
   </a>
   
@@ -776,102 +823,6 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     <a href="/tags/#CRYPTO" title="CRYPTO">CRYPTO</a>
     
     <a href="/tags/#RSA" title="RSA">RSA</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/vol-env/">
-    <h2 class="post-title">
-      Volatility
-    </h2>
-    <h3 class="post-subtitle">
-      Kali Linux Volatility
-    </h3>
-    <div class="post-content-preview">
-      Install
-pip2
-12wget https://bootstrap.pypa.io/pip/2.7/get-pip.pysudo python2 get-pip.py 
-volatility
-
-repository
-
-1https://github.com/volatilityfoundation/volatility
-
-下载 源代码
-
-1wget https://github.co......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-10-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
-    <a href="/tags/#Volatility" title="Volatility">Volatility</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/hnctf/">
-    <h2 class="post-title">
-      HNCTF
-    </h2>
-    <h3 class="post-subtitle">
-      Misc and Web
-    </h3>
-    <div class="post-content-preview">
-      MISC
-UP&amp;DOWN_Aussie
-题目描述
-由于Aussie的一些申必bug 编码数据的长度为73,得出的数据第二位需要大写 第23位大写 第30位大写 第31位保密 第45位大写 第47位大写
-题解
-
-很有意思的题，但是也不难，搜到东西就很好办
-challenge.aussie
-
-123456789101112131415161718192021222324252627282......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-10-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
-    <a href="/tags/#WEB" title="WEB">WEB</a>
-    
-    <a href="/tags/#HNCTF" title="HNCTF">HNCTF</a>
-    
-    <a href="/tags/#JAIL" title="JAIL">JAIL</a>
-    
-    <a href="/tags/#自增" title="自增">自增</a>
     
   </div>
   
@@ -919,7 +870,7 @@ challenge.aussie
     
     
     
-    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
+    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
     
     
     
@@ -927,19 +878,19 @@ challenge.aussie
     
     
     
-    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
+    <a href="/tags/#BUUCTF" title="BUUCTF" rel="3">BUUCTF</a>
     
     
     
-    <a href="/tags/#BUUCTF" title="BUUCTF" rel="4">BUUCTF</a>
+    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
     
     
     
-    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
+    <a href="/tags/#MISC" title="MISC" rel="14">MISC</a>
     
     
     
-    <a href="/tags/#NSSCTF" title="NSSCTF" rel="1">NSSCTF</a>
+    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
     
     
     
@@ -947,11 +898,7 @@ challenge.aussie
     
     
     
-    <a href="/tags/#MISC" title="MISC" rel="13">MISC</a>
-    
-    
-    
-    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
+    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
     
     
     
@@ -963,31 +910,11 @@ challenge.aussie
     
     
     
-    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
-    
-    
-    
-    <a href="/tags/#WEB" title="WEB" rel="13">WEB</a>
-    
-    
-    
-    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
-    
-    
-    
-    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
-    
-    
-    
-    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
-    
-    
-    
-    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
-    
-    
-    
     <a href="/tags/#HNCTF" title="HNCTF" rel="1">HNCTF</a>
+    
+    
+    
+    <a href="/tags/#WEB" title="WEB" rel="15">WEB</a>
     
     
     
@@ -999,7 +926,23 @@ challenge.aussie
     
     
     
-    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    
+    
+    
+    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
+    
+    
+    
+    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
+    
+    
+    
+    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
+    
+    
+    
+    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
     
     
     
@@ -1007,11 +950,11 @@ challenge.aussie
     
     
     
+    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    
+    
+    
     <a href="/tags/#Dokcer" title="Dokcer" rel="1">Dokcer</a>
-    
-    
-    
-    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1019,7 +962,7 @@ challenge.aussie
     
     
     
-    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
+    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1027,7 +970,11 @@ challenge.aussie
     
     
     
-    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
+    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    
+    
+    
+    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
     
     
     
@@ -1035,7 +982,7 @@ challenge.aussie
     
     
     
-    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
     
     
     
@@ -1044,6 +991,14 @@ challenge.aussie
     
     
     <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
+    
+    
+    
+    <a href="/tags/#JAVA" title="JAVA" rel="1">JAVA</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="1">SpringBoot</a>
     
     
   </div>
@@ -1106,6 +1061,14 @@ challenge.aussie
 <div class="widget">
   <ul>
     
+    <a href="../../cn/springboot-learning/">
+      <li>SpringBoot</li>
+    </a>
+    
+    <a href="../../cn/pwnhub/">
+      <li>PwnHub</li>
+    </a>
+    
     <a href="../../cn/catf1ag/">
       <li>Catf1ag</li>
     </a>
@@ -1116,14 +1079,6 @@ challenge.aussie
     
     <a href="../../cn/cbzx-offical/">
       <li>12月协会招新 Official</li>
-    </a>
-    
-    <a href="../../cn/cbzx/">
-      <li>12月协会招新</li>
-    </a>
-    
-    <a href="../../cn/nctf/">
-      <li>NCTF</li>
     </a>
     
   </ul>
@@ -1188,7 +1143,7 @@ challenge.aussie
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">9</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">8</span></li></ul>
 </div>
 
 
@@ -1212,8 +1167,8 @@ challenge.aussie
       <li>Tools</li>
     </a>
     
-    <a href="/categories/#Course">
-      <li>Course</li>
+    <a href="/categories/#Learning">
+      <li>Learning</li>
     </a>
     
   </ul>

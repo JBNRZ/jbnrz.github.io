@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jbnrz.github.io/cn/springboot-learning/</loc>
+    <lastmod>2022-12-19</lastmod>
+  </url>
+  <url>
+    <loc>https://jbnrz.github.io/cn/pwnhub/</loc>
+    <lastmod>2022-12-19</lastmod>
+  </url>
+  <url>
     <loc>https://jbnrz.github.io/cn/catf1ag/</loc>
     <lastmod>2022-12-18</lastmod>
   </url>
@@ -83,10 +91,6 @@
   <url>
     <loc>https://jbnrz.github.io/cn/misc/</loc>
     <lastmod>2022-10-03</lastmod>
-  </url>
-  <url>
-    <loc>https://jbnrz.github.io/cn/web/</loc>
-    <lastmod>2022-09-30</lastmod>
   </url>
   <url>
     <loc>https://jbnrz.github.io/cn/0rays/</loc>

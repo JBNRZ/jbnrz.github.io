@@ -242,20 +242,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+              标签
               
               
             </a>
@@ -275,9 +264,20 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -447,6 +447,88 @@
   <!-- top end -->
   
 
+  <a href="/cn/vol-env/">
+    <h2 class="post-title">
+      Volatility
+    </h2>
+    <h3 class="post-subtitle">
+      Kali Linux Volatility
+    </h3>
+    <div class="post-content-preview">
+      Installpip212wget https://bootstrap.pypa.io/pip/2.7/get-pip.pysudo python2 get-pip.py 
+volatility
+repository1https://github.com/volatilityfoundation/volatility
+下载 源代码1wget https://github.com/volati......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-10-15
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#Volatility" title="Volatility">Volatility</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/hnctf/">
+    <h2 class="post-title">
+      HNCTF
+    </h2>
+    <h3 class="post-subtitle">
+      Misc and Web
+    </h3>
+    <div class="post-content-preview">
+      MISCUP&amp;DOWN_Aussie题目描述由于Aussie的一些申必bug 编码数据的长度为73,得出的数据第二位需要大写 第23位大写 第30位大写 第31位保密 第45位大写 第47位大写
+题解
+很有意思的题，但是也不难，搜到东西就很好办
+challenge.aussie123456789101112131415161718192021222324252627282930313......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-10-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#HNCTF" title="HNCTF">HNCTF</a>
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#JAIL" title="JAIL">JAIL</a>
+    
+    <a href="/tags/#自增" title="自增">自增</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/rce/">
     <h2 class="post-title">
       RCE
@@ -455,24 +537,18 @@
       无参数 RCE PHP
     </h3>
     <div class="post-content-preview">
-      发现
-某天做题，发现了一个没看懂的 正则表达式
+      发现某天做题，发现了一个没看懂的 正则表达式
 
-[^\W]+\((?R)?\)
-？？？什么东西
+[^\W]+\((?R)?\)？？？什么东西
 
-尝试在线正则匹配也没弄明白，直接搜表达式吧…
-
-
-收获新名词
+尝试在线正则匹配也没弄明白，直接搜表达式吧…收获新名词
 
 无参数 RCE
 
 当时直接用了现成的 payload，现在总结一下 抄网上的东西，方便断网比赛用
-新知识
-为什么无参数
-
-https://www.php.net/manual/zh/regexp.reference.recursi......
+新知识为什么无参数
+https://www.php.net/manual/zh/regexp.reference.recursive.php
+......
     </div>
   </a>
   
@@ -508,28 +584,22 @@ https://www.php.net/manual/zh/regexp.reference.recursi......
     </h3>
     <div class="post-content-preview">
       建议考虑的方向
-
 LSB
-foremost
+foremost 
 stegdetect
 010editor
 outguess
-binwalk
+binwalk 
 image combiner
 F5
-CRC
+CRC 
 
 面具下的 flag
-
 题解
-
 下载附件，binwalk 查看是否隐藏文件
-
 分离
-
 得到一个 压缩包和虚拟机文件，尝试用 7z 解压
-
-得到一个文件夹，打开 part one 和 part two，发现  brainfuck &......
+得到一个文件夹，打开 part one 和 part two，发现  brainfuck &amp......
     </div>
   </a>
   
@@ -554,72 +624,6 @@ CRC
   <!-- top end -->
   
 
-  <a href="/cn/web/">
-    <h2 class="post-title">
-      WEB
-    </h2>
-    <h3 class="post-subtitle">
-      some web subjects
-    </h3>
-    <div class="post-content-preview">
-      NOTPHP
-题解
-
-访问，一个 php，而且有一大堆判断
-
-第一个，data 协议绕过
-
-
-data:text/plain,“Welcome to CTF”
-
-
-
-md5 绕过，数组返回 null
-
-
-key1[]=1&amp;key2[]=2
-
-
-
-!is_numeric 绕过
-
-
-2077%00 将判断为字符串，int后还是2077
-
-
-
-# 绕过
-
-得到 flag
-
-
-flag{d3......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-09-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#BUUCTF" title="BUUCTF">BUUCTF</a>
-    
-    <a href="/tags/#NSSCTF" title="NSSCTF">NSSCTF</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
   <a href="/cn/0rays/">
     <h2 class="post-title">
       CBCTF
@@ -629,23 +633,15 @@ flag{d3......
     </h3>
     <div class="post-content-preview">
       
-开学时的 CBCTF 的简单题目 WriteUp
-同样是入门题目
+开学时的 CBCTF 的简单题目 WriteUp同样是入门题目
 
-misc
-流量分析
-题目描述
-和往常一样，管理员悠闲地进行着日常的网站管理，然而狡猾的大黑阔却神不知鬼不觉地监听了一切。。。
+misc流量分析题目描述和往常一样，管理员悠闲地进行着日常的网站管理，然而狡猾的大黑阔却神不知鬼不觉地监听了一切。。。
 flag格式：CBCTF{管理员的密码}
 题解
-
 下载附件，为其添加后缀名，使用 wireshark 打开
-
 根据题目描述，可能涉及管理员登陆行为，查找 post 协议
-
 查看具体的数据请求
-
-发现......
+发现 passwor......
     </div>
   </a>
   
@@ -655,9 +651,9 @@ flag格式：CBCTF{管理员的密码}
   </p>
   <div class="tags">
     
-    <a href="/tags/#0rays" title="0rays">0rays</a>
-    
     <a href="/tags/#easy" title="easy">easy</a>
+    
+    <a href="/tags/#0rays" title="0rays">0rays</a>
     
   </div>
   
@@ -681,28 +677,18 @@ flag格式：CBCTF{管理员的密码}
     </h3>
     <div class="post-content-preview">
       
-我好菜啊啊啊
+ 我好菜啊啊啊
 
-Web
-nisc_easyweb
-题解
-
+Webnisc_easyweb题解
 使用 dirsearch 扫描目录，发现 robots.txt
-
-
 访问 /api/record/ ，得到 api_test.php
-
-
 访问，查看源代码，找到 hint
-
 get 参数，得到 flag
 
-
-吃豆人吃豆魂
-题解
-
+吃豆人吃豆魂题解
 访问网站，查看源代码
-在 index.js 中发现 alert 函数与 经过 base64 加密的 fl......
+在 index.js 中发现 alert 函数与 经过 base64 加密的 flag
+base64 ......
     </div>
   </a>
   
@@ -736,28 +722,18 @@ get 参数，得到 flag
     </h3>
     <div class="post-content-preview">
       安装 python
-
 进入下方链接
-
-
-https://www.python.org/
-该 网站 运行很慢，耐心等待，挂梯子也行 你都会挂梯子，还看这个？？？
-
+https://www.python.org/该 网站 运行很慢，耐心等待，挂梯子也行 你都会挂梯子，还看这个？？？
 
 
 搜索 3.9.5（其他版本也可以
-
-
 点击 3.9.5 进入详情页面
-
-
 向下翻动页面，找到一个表格
-
 点击 installer(64-bit)
+大部分人都是这个，不排除有用 mac的同学，选择自己合适的版本应该没同学实体机装 Linux 吧
 
 
-大部分人都是这个，不排除有用 mac的同学，选择自己合适的版本
-应该没同学实体......
+......
     </div>
   </a>
   
@@ -793,25 +769,7 @@ https://www.python.org/
     </h3>
     <div class="post-content-preview">
       
-还记得我吗？
-初次见面时我是个小偷
-偷懒，偷笑，偷偷看你
-那之后我给自己请了个假
-假装陌生，假装正经，假装从你的全世界路过
-我承认，我的职业病又犯了
-偷偷靠近你，假装有勇气
-我们擦着黄昏而过
-我是饿狼，你是小羊
-暖阳轻吻你的发梢
-我偷偷咬了它一口
-自此
-我的胃里有黄昏在翻涌
-我的夜里有思念在滚烫
-我的人间，有你在闪亮
-思君无转易，何异北辰星
-思再多有什么用啊
-我不想看星星了，我想看你
-你眼......
+还记得我吗？初次见面时我是个小偷偷懒，偷笑，偷偷看你那之后我给自己请了个假假装陌生，假装正经，假装从你的全世界路过我承认，我的职业病又犯了偷偷靠近你，假装有勇气我们擦着黄昏而过我是饿狼，你是小羊暖阳轻吻你的发梢我偷偷咬了它一口自此我的胃里有黄昏在翻涌我的夜里有思念在滚烫我的人间，有你在闪亮思君无转易，何异北辰星思再多有什么用啊我不想看星星了，我想看你你眼中有春与秋胜过我见过爱过的一切山川与......
     </div>
   </a>
   
@@ -842,13 +800,8 @@ https://www.python.org/
       difficult (for me)
     </h3>
     <div class="post-content-preview">
-      Misc
-easy_keyboard
-题解（思路
-
-下载附件，写脚本
-
-12345678910111213import rekey_pattern = re.compile(&#x27;KeyDown &quot;(.*?)&quot;&#x27;)with open(&#x27;secret.Q&#x27;, &#x27;r&#x27;) as r:    content = r.read......
+      Misceasy_keyboard题解（思路
+下载附件，写脚本12345678910111213import rekey_pattern = re.compile(&#x27;KeyDown &quot;(.*?)&quot;&#x27;)with open(&#x27;secret.Q&#x27;, &#x27;r&#x27;) as r:    content = r.readlines......
     </div>
   </a>
   
@@ -882,27 +835,19 @@ easy_keyboard
     </h3>
     <div class="post-content-preview">
       
-刚开学时 Vidar 的题目，我能做出来的几乎都会给出 wp ，个别太简单的就不放了
-（虽然放上来的也都很简单，但是刚入门，不慌~~
-涉及到的网址都是随机容器，不能访问
+刚开学时 Vidar 的题目，我能做出来的几乎都会给出 wp ，个别太简单的就不放了（虽然放上来的也都很简单，但是刚入门，不慌~~涉及到的网址都是随机容器，不能访问
 
-Misc
-Ekrulila’s picture
-题解
-
+MiscEkrulila’s picture题解
 看题目描述，嘶，不知道是谁
-
 两个 Hint :
-
-
-看！那有一排鸟在电线上诶
-或许可以试试英文搜索？
+看！那有一排鸟在电线上诶或许可以试试英文搜索？
 
 
 听话，去网上搜
+第一个拦住我的地方出现了，不要在国内搜！！！
 
 
-第一个拦住我的地方出现了，不要在国内......
+打开 b......
     </div>
   </a>
   
@@ -912,56 +857,9 @@ Ekrulila’s picture
   </p>
   <div class="tags">
     
-    <a href="/tags/#easy" title="easy">easy</a>
-    
     <a href="/tags/#Vidar" title="Vidar">Vidar</a>
     
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/MyFirstBlog/">
-    <h2 class="post-title">
-      MyFirstBlog
-    </h2>
-    <h3 class="post-subtitle">
-      My first blog, just for fun and test...
-    </h3>
-    <div class="post-content-preview">
-      
-ahhhhhhhhhh!!! 这是我的第一个 Blog
-我觉得它很不错啊
-hhhhhhhhhhhh
-
-按照惯例
-打个招呼吧~
-Hello World, Hello My Blog, Hello My Life
-关于我的博客
-
-这个博客，主要用来记录在参加 CTF 时，遇到题目的 WriteUp
-部分学习过程中走过的弯路
-偶尔记录生活 (大概率懒得写
-风景，照片 (曾经好歹也算是航拍爱好者
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#First" title="First">First</a>
+    <a href="/tags/#easy" title="easy">easy</a>
     
   </div>
   
@@ -977,6 +875,10 @@ Hello World, Hello My Blog, Hello My Life
       <a href="/archives/2/">&larr; 上一页</a>
     </li>
     
+    
+    <li class="next">
+      <a href="/archives/4/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -1005,7 +907,7 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
+    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
     
     
     
@@ -1013,19 +915,19 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
+    <a href="/tags/#BUUCTF" title="BUUCTF" rel="3">BUUCTF</a>
     
     
     
-    <a href="/tags/#BUUCTF" title="BUUCTF" rel="4">BUUCTF</a>
+    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
     
     
     
-    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
+    <a href="/tags/#MISC" title="MISC" rel="14">MISC</a>
     
     
     
-    <a href="/tags/#NSSCTF" title="NSSCTF" rel="1">NSSCTF</a>
+    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
     
     
     
@@ -1033,11 +935,7 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#MISC" title="MISC" rel="13">MISC</a>
-    
-    
-    
-    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
+    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
     
     
     
@@ -1049,31 +947,11 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
-    
-    
-    
-    <a href="/tags/#WEB" title="WEB" rel="13">WEB</a>
-    
-    
-    
-    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
-    
-    
-    
-    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
-    
-    
-    
-    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
-    
-    
-    
-    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
-    
-    
-    
     <a href="/tags/#HNCTF" title="HNCTF" rel="1">HNCTF</a>
+    
+    
+    
+    <a href="/tags/#WEB" title="WEB" rel="15">WEB</a>
     
     
     
@@ -1085,7 +963,23 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    
+    
+    
+    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
+    
+    
+    
+    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
+    
+    
+    
+    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
+    
+    
+    
+    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
     
     
     
@@ -1093,11 +987,11 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
+    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    
+    
+    
     <a href="/tags/#Dokcer" title="Dokcer" rel="1">Dokcer</a>
-    
-    
-    
-    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1105,7 +999,7 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
+    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1113,7 +1007,11 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
+    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    
+    
+    
+    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
     
     
     
@@ -1121,7 +1019,7 @@ Hello World, Hello My Blog, Hello My Life
     
     
     
-    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
     
     
     
@@ -1130,6 +1028,14 @@ Hello World, Hello My Blog, Hello My Life
     
     
     <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
+    
+    
+    
+    <a href="/tags/#JAVA" title="JAVA" rel="1">JAVA</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="1">SpringBoot</a>
     
     
   </div>
@@ -1192,6 +1098,14 @@ Hello World, Hello My Blog, Hello My Life
 <div class="widget">
   <ul>
     
+    <a href="../../cn/springboot-learning/">
+      <li>SpringBoot</li>
+    </a>
+    
+    <a href="../../cn/pwnhub/">
+      <li>PwnHub</li>
+    </a>
+    
     <a href="../../cn/catf1ag/">
       <li>Catf1ag</li>
     </a>
@@ -1202,14 +1116,6 @@ Hello World, Hello My Blog, Hello My Life
     
     <a href="../../cn/cbzx-offical/">
       <li>12月协会招新 Official</li>
-    </a>
-    
-    <a href="../../cn/cbzx/">
-      <li>12月协会招新</li>
-    </a>
-    
-    <a href="../../cn/nctf/">
-      <li>NCTF</li>
     </a>
     
   </ul>
@@ -1274,7 +1180,7 @@ Hello World, Hello My Blog, Hello My Life
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">9</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">8</span></li></ul>
 </div>
 
 
@@ -1298,8 +1204,8 @@ Hello World, Hello My Blog, Hello My Life
       <li>Tools</li>
     </a>
     
-    <a href="/categories/#Course">
-      <li>Course</li>
+    <a href="/categories/#Learning">
+      <li>Learning</li>
     </a>
     
   </ul>

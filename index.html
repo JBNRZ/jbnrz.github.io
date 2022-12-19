@@ -242,20 +242,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+              标签
               
               
             </a>
@@ -275,9 +264,20 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -460,21 +460,16 @@
     </h3>
     <div class="post-content-preview">
       jjencode与aaencode
-
 https://www.qtool.net/decode
 
 Ook and brainfuck
-
 https://www.splitbrain.org/services/ook
 
 摩尔斯密码
-
-http://www.all-tool.cn/Tools/morse/
-http://codertab.com/JsUnFuck
+http://www.all-tool.cn/Tools/morse/http://codertab.com/JsUnFuck
 
 波利比奥斯密码
-
-http:/......
+http://ctf.......
     </div>
   </a>
   
@@ -501,6 +496,82 @@ http:/......
   <!-- top end -->
   
 
+  <a href="/cn/springboot-learning/">
+    <h2 class="post-title">
+      SpringBoot
+    </h2>
+    <h3 class="post-subtitle">
+      SpringBoot 学习记录
+    </h3>
+    <div class="post-content-preview">
+      构建基础项目
+编写代码io.jbnrz.demo.DemoApplication.java123456789package io.jbnrz.demo;import org.springframework.boot.SpringApplication;import org.springframework.boot.autoconfigure.SpringBootApplication;@Sp......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-12-19
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#JAVA" title="JAVA">JAVA</a>
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/pwnhub/">
+    <h2 class="post-title">
+      PwnHub
+    </h2>
+    <h3 class="post-subtitle">
+      2022 PwnHub
+    </h3>
+    <div class="post-content-preview">
+      WebCalc
+过滤字母 + ，利用全角英文绕过
+后台是由 eval 运行结果的，这不 pyjail
+shell 生成123456789101112# ｏｐｅｎ(ｂｙｔｅｓ((47,102,108,97,103)).ｄｅｃｏｄｅ()).ｒｅａｄ()## shell 生成，正常输入payloadshell = f&quot;__import__(&#x27;os&#x27;).popen(&#......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-12-19
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/catf1ag/">
     <h2 class="post-title">
       Catf1ag
@@ -509,18 +580,11 @@ http:/......
       2022 catf1ag
     </h3>
     <div class="post-content-preview">
-      Web
-ez_login
-
+      Webez_login
 扫目录得到 robots.txt 得到 imdex.php
-
 查看源代码
-
 得到源代码
-
-payload
-
-1234567891011&lt;?phpclass A&#123;    public $hello; &#125;class B&#123;    public $file = &quot;php://filter/write=string.strip_......
+payload1234567891011&lt;?phpclass A&#123;    public $hello; &#125;class B&#123;    public $file = &quot;php://filter/write=string.strip_tags|co......
     </div>
   </a>
   
@@ -563,13 +627,8 @@ payload
       The challenges from cryptohack.org
     </h3>
     <div class="post-content-preview">
-      General
-Encoding
-Acsii
-
-STEM
-
-123456&quot;&quot;&quot;ASCII is a 7-bit encoding standard which allows the representation of text using the integers 0-127.Using the below integer array, convert the ......
+      GeneralEncodingAcsii
+STEM123456&quot;&quot;&quot;ASCII is a 7-bit encoding standard which allows the representation of text using the integers 0-127.Using the below integer array, convert the numbe......
     </div>
   </a>
   
@@ -602,11 +661,8 @@ STEM
       官方 wp
     </h3>
     <div class="post-content-preview">
-      Web
-php_start
-打开页面，看到
+      Webphp_start打开页面，看到
 想到要添加cookie来证明自己是admin，抓包看看有没有提示参数
-
 
 参数就是user，接下来改包：user=admin
 
@@ -620,7 +676,7 @@ php_start
 
 然后我们就得到了一串php代码
 
-审计代码后发现......
+审计代码后发现最后要......
     </div>
   </a>
   
@@ -661,24 +717,14 @@ php_start
       几道 web 和 misc
     </h3>
     <div class="post-content-preview">
-      Web
-dig
-
-有关 dig 的命令执行
-
-12过滤：` $ / &amp; * | ;
-
-利用换行截断，注入点在于 type 参数
-
-1dig \ncd ..\ncd ..\ncd ..\ncat flag#
-
+      Webdig
+有关 dig 的命令执行12过滤：` $ / &amp; * | ;
+利用换行截断，注入点在于 type 参数1dig \ncd ..\ncd ..\ncd ..\ncat flag#
 写脚本会使人不幸
 
 first_java
-
 java 反序列化，但就是配环境花好长时间（比赛结束之后，比赛时不会java，就没看
-springboot 项目，代码解释cv于学长
-......
+springboot 项目，代码解释cv于学长123这里显然就是U......
     </div>
   </a>
   
@@ -714,14 +760,10 @@ springboot 项目，代码解释cv于学长
     </h3>
     <div class="post-content-preview">
       官方 wp，太菜了，基本不会，就没怎么做
-Web
-calc / calc_revenge
-
-预期
-
-1这个题是在p神写了那篇环境注入的文章后不久发现的一个利用。当时仔细想了一下其他语言中是否也存在这样的问题，有没有可能也造成rce。在看完python3的system具体实现后发现最后调用的位置，也是通过/bin/sh -c去执行的命令
+Webcalc / calc_revenge
+预期1这个题是在p神写了那篇环境注入的文章后不久发现的一个利用。当时仔细想了一下其他语言中是否也存在这样的问题，有没有可能也造成rce。在看完python3的system具体实现后发现最后调用的位置，也是通过/bin/sh -c去执行的命令
 ![calc](caclc1.png
-2. python......
+python 中将环境变量......
     </div>
   </a>
   
@@ -759,8 +801,8 @@ calc / calc_revenge
     </h3>
     <div class="post-content-preview">
       过程
-
 word: test
+
 
 
 
@@ -773,6 +815,8 @@ bin
 
 A-Za-z0-9+/
 0-63
+
+
 
 
 
@@ -808,7 +852,7 @@ s
 t
 116
 1110100
-0011101......
+00111......
     </div>
   </a>
   
@@ -843,26 +887,21 @@ t
       The Web, Misc, Crypto in UNCTF
     </h3>
     <div class="post-content-preview">
-      WEB
-我太喜欢bilibili大学啦
-
+      WEB我太喜欢bilibili大学啦
 进入页面直接搜 flag 就能得到
-
-
 UNCTF{a29ffa65-a6ce-4631-9da0-e8e537f3bf27}
 
+
+
 ezgame
-
 谷歌浏览器打开页面，进入源代码，搜索 999，改为 1，直接攻击一次就出 flag
-
 flag
-
-
 UNCTF{c5f9a27d-6f88-49fb-a510-fe7b163f8dd3}
 
-签到
 
-审查元素......
+
+签到
+审查元素，发现 2......
     </div>
   </a>
   
@@ -879,95 +918,6 @@ UNCTF{c5f9a27d-6f88-49fb-a510-fe7b163f8dd3}
     <a href="/tags/#CRYPTO" title="CRYPTO">CRYPTO</a>
     
     <a href="/tags/#UNCTF" title="UNCTF">UNCTF</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/syc/">
-    <h2 class="post-title">
-      SycCTF
-    </h2>
-    <h3 class="post-subtitle">
-      web and misc（懒得写了，直接截图
-    </h3>
-    <div class="post-content-preview">
-      Web
-
-Misc
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-12-02
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
-    <a href="/tags/#WEB" title="WEB">WEB</a>
-    
-    <a href="/tags/#SYC" title="SYC">SYC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/buu-pwn/">
-    <h2 class="post-title">
-      BUUCTF PWN
-    </h2>
-    <h3 class="post-subtitle">
-      easy pwn challenges
-    </h3>
-    <div class="post-content-preview">
-      rip
-
-查看主函数，s 长度为 15，gets 传入值，可以不限大小，存在栈溢出
-
-
-发现危险函数存在 system(‘bin/sh’)，将地址溢出至 fun() 地址，触发函数
-
-
-因存在 栈平衡问题（不明白是什么），须先传入返回地址，通过 ropper 获取 ret 地址
-
-
-payload
-
-1234567from pwn import *# a = process(&#x27;./......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-11-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#BUUCTF" title="BUUCTF">BUUCTF</a>
-    
-    <a href="/tags/#PWN" title="PWN">PWN</a>
     
   </div>
   
@@ -1011,7 +961,7 @@ payload
     
     
     
-    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
+    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
     
     
     
@@ -1019,19 +969,19 @@ payload
     
     
     
-    <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
+    <a href="/tags/#BUUCTF" title="BUUCTF" rel="3">BUUCTF</a>
     
     
     
-    <a href="/tags/#BUUCTF" title="BUUCTF" rel="4">BUUCTF</a>
+    <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
     
     
     
-    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
+    <a href="/tags/#MISC" title="MISC" rel="14">MISC</a>
     
     
     
-    <a href="/tags/#NSSCTF" title="NSSCTF" rel="1">NSSCTF</a>
+    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
     
     
     
@@ -1039,11 +989,7 @@ payload
     
     
     
-    <a href="/tags/#MISC" title="MISC" rel="13">MISC</a>
-    
-    
-    
-    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
+    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
     
     
     
@@ -1055,31 +1001,11 @@ payload
     
     
     
-    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
-    
-    
-    
-    <a href="/tags/#WEB" title="WEB" rel="13">WEB</a>
-    
-    
-    
-    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
-    
-    
-    
-    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
-    
-    
-    
-    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
-    
-    
-    
-    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
-    
-    
-    
     <a href="/tags/#HNCTF" title="HNCTF" rel="1">HNCTF</a>
+    
+    
+    
+    <a href="/tags/#WEB" title="WEB" rel="15">WEB</a>
     
     
     
@@ -1091,7 +1017,23 @@ payload
     
     
     
-    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    
+    
+    
+    <a href="/tags/#RCE" title="RCE" rel="2">RCE</a>
+    
+    
+    
+    <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
+    
+    
+    
+    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
+    
+    
+    
+    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
     
     
     
@@ -1099,11 +1041,11 @@ payload
     
     
     
+    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    
+    
+    
     <a href="/tags/#Dokcer" title="Dokcer" rel="1">Dokcer</a>
-    
-    
-    
-    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1111,7 +1053,7 @@ payload
     
     
     
-    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
+    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
     
     
     
@@ -1119,7 +1061,11 @@ payload
     
     
     
-    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
+    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    
+    
+    
+    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
     
     
     
@@ -1127,7 +1073,7 @@ payload
     
     
     
-    <a href="/tags/#SYC" title="SYC" rel="1">SYC</a>
+    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
     
     
     
@@ -1136,6 +1082,14 @@ payload
     
     
     <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
+    
+    
+    
+    <a href="/tags/#JAVA" title="JAVA" rel="1">JAVA</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="1">SpringBoot</a>
     
     
   </div>
@@ -1198,6 +1152,14 @@ payload
 <div class="widget">
   <ul>
     
+    <a href="cn/springboot-learning/">
+      <li>SpringBoot</li>
+    </a>
+    
+    <a href="cn/pwnhub/">
+      <li>PwnHub</li>
+    </a>
+    
     <a href="cn/catf1ag/">
       <li>Catf1ag</li>
     </a>
@@ -1208,14 +1170,6 @@ payload
     
     <a href="cn/cbzx-offical/">
       <li>12月协会招新 Official</li>
-    </a>
-    
-    <a href="cn/cbzx/">
-      <li>12月协会招新</li>
-    </a>
-    
-    <a href="cn/nctf/">
-      <li>NCTF</li>
     </a>
     
   </ul>
@@ -1280,7 +1234,7 @@ payload
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/12/">December 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">9</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/12/">December 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">8</span></li></ul>
 </div>
 
 
@@ -1304,8 +1258,8 @@ payload
       <li>Tools</li>
     </a>
     
-    <a href="/categories/#Course">
-      <li>Course</li>
+    <a href="/categories/#Learning">
+      <li>Learning</li>
     </a>
     
   </ul>

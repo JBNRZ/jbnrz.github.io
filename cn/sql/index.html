@@ -242,20 +242,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+              标签
               
               
             </a>
@@ -275,9 +264,20 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -403,7 +403,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">99</span> In Total
+              Words <span class="post-count">97</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,20 +465,16 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="BUUCTF-SUCTF-2019-EasySQL">BUUCTF [SUCTF 2019]EasySQL</h3>
-<ol>
+        <h3 id="BUUCTF-SUCTF-2019-EasySQL"><a href="#BUUCTF-SUCTF-2019-EasySQL" class="headerlink" title="BUUCTF [SUCTF 2019]EasySQL"></a>BUUCTF [SUCTF 2019]EasySQL</h3><ol>
 <li>测试发现无论输入什么数字，都会返回 1</li>
-<li>存在过滤 union, from, or … (不完全测试)，返回 nonono</li>
+<li>存在过滤 union, from, or … (不完全测试)，返回 nonono </li>
 <li>猜测后台 select 语句为 select {input} || flag from flag; (看别的师傅的 wp,不是很理解)’</li>
 <li>当输入任何 {} || flag 为 true，只返回 1</li>
 <li>只需要在执行 {} || flag 时带出 flag</li>
-<li>payload</li>
+<li>payload<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span>, <span class="number">1</span> <span class="operator">||</span> flag <span class="keyword">from</span> <span class="keyword">sql</span>;</span><br></pre></td></tr></table></figure></li>
+<li>flag<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">1</span>f<span class="number">5</span>a<span class="number">2</span>c<span class="number">76</span>-<span class="number">2543</span>-<span class="number">4252</span>-bbc<span class="number">8</span>-<span class="number">25721664</span>b<span class="number">6</span>a<span class="number">9</span>&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span>, <span class="number">1</span> <span class="operator">||</span> flag <span class="keyword">from</span> <span class="keyword">sql</span>;</span><br></pre></td></tr></table></figure>
-<ol start="7">
-<li>flag</li>
-</ol>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">1</span>f<span class="number">5</span>a<span class="number">2</span>c<span class="number">76</span>-<span class="number">2543</span>-<span class="number">4252</span>-bbc<span class="number">8</span>-<span class="number">25721664</span>b<span class="number">6</span>a<span class="number">9</span>&#125;</span><br></pre></td></tr></table></figure>
+
 
         <hr>
         <!-- Pager -->

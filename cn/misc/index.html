@@ -242,20 +242,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+              标签
               
               
             </a>
@@ -275,9 +264,20 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -461,313 +461,185 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>建议考虑的方向</h1>
-<ul>
+        <h1 id="建议考虑的方向"><a href="#建议考虑的方向" class="headerlink" title="建议考虑的方向"></a>建议考虑的方向</h1><ul>
 <li>LSB</li>
-<li>foremost</li>
+<li>foremost </li>
 <li>stegdetect</li>
 <li>010editor</li>
 <li>outguess</li>
-<li>binwalk</li>
+<li>binwalk </li>
 <li>image combiner</li>
 <li>F5</li>
-<li>CRC</li>
+<li>CRC </li>
 </ul>
-<h2 id="面具下的-flag">面具下的 flag</h2>
-<p><img src="mask.jpg" alt="mask"></p>
-<h3 id="题解">题解</h3>
-<ol>
-<li>下载附件，binwalk 查看是否隐藏文件<br>
-<img src="mask_1.png" alt="mask 1"></li>
-<li>分离<br>
-<img src="mask_2.png" alt="mask 2"></li>
-<li>得到一个 压缩包和虚拟机文件，尝试用 7z 解压<br>
-<img src="mask_3.png" alt="mask 3"></li>
-<li>得到一个文件夹，打开 part one 和 part two，发现  brainfuck &amp; ook，解密得 flag<br>
-<img src="mask_4.png" alt="mask 4"><br>
-<img src="mask_5.png" alt="mask 5"></li>
-</ol>
-<blockquote>
+<h2 id="面具下的-flag"><a href="#面具下的-flag" class="headerlink" title="面具下的 flag"></a>面具下的 flag</h2><p><img src="mask.jpg" alt="mask"></p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载附件，binwalk 查看是否隐藏文件<br><img src="mask_1.png" alt="mask 1"></li>
+<li>分离<br><img src="mask_2.png" alt="mask 2"></li>
+<li>得到一个 压缩包和虚拟机文件，尝试用 7z 解压<br><img src="mask_3.png" alt="mask 3"></li>
+<li>得到一个文件夹，打开 part one 和 part two，发现  brainfuck &amp; ook，解密得 flag<br><img src="mask_4.png" alt="mask 4"><br><img src="mask_5.png" alt="mask 5"><blockquote>
 <p>flag{N7F5_AD5_i5_funny!}</p>
 </blockquote>
-<h2 id="九连环">九连环</h2>
-<h3 id="题解-2">题解</h3>
-<ol>
-<li>下载附件得到图片<br>
-<img src="nine.jpg" alt="nine"></li>
-<li>binwalk 扫一下，有东西<br>
-<img src="nine_1.png" alt="nine 1"><br>
-<img src="nine_8.png" alt="nine 8"><br>
-<img src="nine_2.png" alt="nine 2"></li>
-<li>可能是伪加密，尝试解压得到的压缩文件<br>
-<img src="nine_3.png" alt="nine 3"><br>
-<img src="nine_4.png" alt="nine 4"></li>
-<li>成功，再用 binwalk 扫一下 good 图片<br>
-<img src="nine_5.png" alt="nine 5"></li>
-<li>没东西，但是换一种工具 steghide</li>
+</li>
 </ol>
-<blockquote>
-<p>steghide extract -sf good-已合并.jpg<br>
-密码为空<br>
-<img src="nine_6.png" alt="nine 6"></p>
+<h2 id="九连环"><a href="#九连环" class="headerlink" title="九连环"></a>九连环</h2><h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载附件得到图片<br><img src="nine.jpg" alt="nine"></li>
+<li>binwalk 扫一下，有东西<br><img src="nine_1.png" alt="nine 1"><br><img src="nine_8.png" alt="nine 8"><br><img src="nine_2.png" alt="nine 2"></li>
+<li>可能是伪加密，尝试解压得到的压缩文件<br><img src="nine_3.png" alt="nine 3"><br><img src="nine_4.png" alt="nine 4"></li>
+<li>成功，再用 binwalk 扫一下 good 图片<br><img src="nine_5.png" alt="nine 5"></li>
+<li>没东西，但是换一种工具 steghide<blockquote>
+<p>steghide extract -sf good-已合并.jpg<br>密码为空<br><img src="nine_6.png" alt="nine 6"></p>
 </blockquote>
-<ol start="8">
-<li>读取 fo.txt<br>
-<img src="nine_7.png" alt="nine 7"></li>
-<li>解压缩文件，得到 flag</li>
-</ol>
-<blockquote>
+</li>
+<li>读取 fo.txt<br><img src="nine_7.png" alt="nine 7"></li>
+<li>解压缩文件，得到 flag<blockquote>
 <p>flag{1RTo8w@&amp;4nK@z*XL}</p>
 </blockquote>
-<h2 id="flag">flag</h2>
-<h3 id="题解-3">题解</h3>
-<ol>
-<li>下载图片<br>
-<img src="f.png" alt="f"></li>
-<li>stegsolve 打开，尝试 LSB 隐写，发现 zip<br>
-<img src="f_1.png" alt="f 1"></li>
-<li>尝试压缩发现有损坏，binwalk 强制解压缩<br>
-<img src="f_2.png" alt="f 2"></li>
-<li>得到一个二进制文件，用 IDA 打开，得到 flag<br>
-<img src="f_3.png" alt="f 3"></li>
+</li>
 </ol>
-<blockquote>
+<h2 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h2><h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载图片<br><img src="f.png" alt="f"></li>
+<li>stegsolve 打开，尝试 LSB 隐写，发现 zip<br><img src="f_1.png" alt="f 1"></li>
+<li>尝试压缩发现有损坏，binwalk 强制解压缩<br><img src="f_2.png" alt="f 2"></li>
+<li>得到一个二进制文件，用 IDA 打开，得到 flag<br><img src="f_3.png" alt="f 3"><blockquote>
 <p>flag{dd0gf4c3tok3yb0ard4g41n}</p>
 </blockquote>
-<h2 id="刷新过的图片">刷新过的图片</h2>
-<h3 id="题解-4">题解</h3>
-<ol>
-<li>啊，题目很新，第一次见到，网上查过后发现是 F5 隐写下载工具</li>
+</li>
 </ol>
-<blockquote>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/matthewgao/F5-steganography">https://github.com/matthewgao/F5-steganography</a><br>
-java Extract Misc.jpg<br>
-<img src="f5_1.png" alt="f5 1"></p>
+<h2 id="刷新过的图片"><a href="#刷新过的图片" class="headerlink" title="刷新过的图片"></a>刷新过的图片</h2><h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>啊，题目很新，第一次见到，网上查过后发现是 F5 隐写下载工具<blockquote>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/matthewgao/F5-steganography">https://github.com/matthewgao/F5-steganography</a><br>java Extract Misc.jpg<br><img src="f5_1.png" alt="f5 1"></p>
 </blockquote>
-<ol start="2">
-<li>打开 output.txt 发现是个 zip，修改后缀，解压缩<br>
-<img src="f5_2.png" alt="f5 2"><br>
-<img src="f5_3.png" alt="f5 3"></li>
-<li>(binwalk yyds!) 得到 flag</li>
-</ol>
-<blockquote>
+</li>
+<li>打开 output.txt 发现是个 zip，修改后缀，解压缩<br><img src="f5_2.png" alt="f5 2"><br><img src="f5_3.png" alt="f5 3"></li>
+<li>(binwalk yyds!) 得到 flag<blockquote>
 <p>flag{96efd0a2037d06f34199e921079778ee}</p>
 </blockquote>
-<h2 id="被偷走的文件">被偷走的文件</h2>
-<h3 id="题解-5">题解</h3>
-<ol>
-<li>下载得到流量文件<br>
-<img src="cang_1.png" alt="cang 1"></li>
-<li>发现 ftp 协议，同时找到 flag.rar，binwalk 分离<br>
-<img src="cang_2.png" alt="cang 2"></li>
-<li>得到 flag.rar ，爆破密码<br>
-<img src="cang_3.png" alt="cang 3"></li>
-<li>得 flag</li>
+</li>
 </ol>
-<blockquote>
+<h2 id="被偷走的文件"><a href="#被偷走的文件" class="headerlink" title="被偷走的文件"></a>被偷走的文件</h2><h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载得到流量文件<br><img src="cang_1.png" alt="cang 1"></li>
+<li>发现 ftp 协议，同时找到 flag.rar，binwalk 分离<br><img src="cang_2.png" alt="cang 2"></li>
+<li>得到 flag.rar ，爆破密码<br><img src="cang_3.png" alt="cang 3"></li>
+<li>得 flag <blockquote>
 <p>flag{6fe99a5d03fb01f833ec3caa80358fa3}</p>
 </blockquote>
-<h2 id="菜刀666">菜刀666</h2>
-<h3 id="题解-6">题解</h3>
-<ol>
-<li>下载文件附件，打开，追踪数据流，发现存在 zip<br>
-<img src="666_1.png" alt="666 1"><br>
-<img src="666_2.png" alt="666 2"></li>
-<li>尝试寻找密码，最终在 tcp.stream ea 7 中找到<br>
-<img src="666_3.png" alt="666 3"></li>
-<li>根据 base64 加密过后的文字判断</li>
+</li>
 </ol>
-<blockquote>
-<p>RDpcd2FtcDY0XHd3d1x1cGxvYWRcNjY2Ni5qcGc%3D<br>
-D:\wamp64\www\upload\6666.jpg<br>
-<img src="666_4.png" alt="666 4"></p>
+<h2 id="菜刀666"><a href="#菜刀666" class="headerlink" title="菜刀666"></a>菜刀666</h2><h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载文件附件，打开，追踪数据流，发现存在 zip<br><img src="666_1.png" alt="666 1"><br><img src="666_2.png" alt="666 2"></li>
+<li>尝试寻找密码，最终在 tcp.stream ea 7 中找到<br><img src="666_3.png" alt="666 3"></li>
+<li>根据 base64 加密过后的文字判断<blockquote>
+<p>RDpcd2FtcDY0XHd3d1x1cGxvYWRcNjY2Ni5qcGc%3D<br>D:\wamp64\www\upload\6666.jpg<br><img src="666_4.png" alt="666 4"></p>
 </blockquote>
-<ol start="4">
-<li>猜测下一个参数 z2 为 6666.jpg，全部复制，导入至 010 导出图片<br>
-<img src="6666.jpg" alt="666"></li>
-<li>得到密码，解压压缩包得 flag</li>
-</ol>
-<blockquote>
-<p>Th1s_1s_p4sswd_!!!<br>
-flag{3OpWdJ-JP6FzK-koCMAK-VkfWBq-75Un2z}</p>
+</li>
+<li>猜测下一个参数 z2 为 6666.jpg，全部复制，导入至 010 导出图片<br><img src="6666.jpg" alt="666"></li>
+<li>得到密码，解压压缩包得 flag<blockquote>
+<p>Th1s<em>1s_p4sswd</em>!!!<br>flag{3OpWdJ-JP6FzK-koCMAK-VkfWBq-75Un2z}</p>
 </blockquote>
-<h2 id="一叶障目">一叶障目</h2>
-<h3 id="题解-7">题解</h3>
-<ol>
-<li>根据 RCR 爆破宽高</li>
+</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> zlib</span><br><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"><span class="comment">#读文件</span></span><br><span class="line">file = <span class="string">&#x27;1.png&#x27;</span>  <span class="comment">#注意，1.png图片要和脚本在同一个文件夹下哦~</span></span><br><span class="line">fr = <span class="built_in">open</span>(file,<span class="string">&#x27;rb&#x27;</span>).read()</span><br><span class="line">data = <span class="built_in">bytearray</span>(fr[<span class="number">12</span>:<span class="number">29</span>])</span><br><span class="line">crc32key = <span class="built_in">eval</span>(<span class="built_in">str</span>(fr[<span class="number">29</span>:<span class="number">33</span>]).replace(<span class="string">&#x27;\\x&#x27;</span>,<span class="string">&#x27;&#x27;</span>).replace(<span class="string">&quot;b&#x27;&quot;</span>,<span class="string">&#x27;0x&#x27;</span>).replace(<span class="string">&quot;&#x27;&quot;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="comment">#crc32key = 0xCBD6DF8A #补上0x，copy hex value</span></span><br><span class="line"><span class="comment">#data = bytearray(b&#x27;\x49\x48\x44\x52\x00\x00\x01\xF4\x00\x00\x01\xF1\x08\x06\x00\x00\x00&#x27;)  #hex下copy grep hex</span></span><br><span class="line">n = <span class="number">4095</span> <span class="comment">#理论上0xffffffff,但考虑到屏幕实际，0x0fff就差不多了</span></span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> <span class="built_in">range</span>(n):<span class="comment">#高和宽一起爆破</span></span><br><span class="line">    width = <span class="built_in">bytearray</span>(struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, w))<span class="comment">#q为8字节，i为4字节，h为2字节</span></span><br><span class="line">    <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        height = <span class="built_in">bytearray</span>(struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, h))</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">            data[x+<span class="number">4</span>] = width[x]</span><br><span class="line">            data[x+<span class="number">8</span>] = height[x]</span><br><span class="line">            <span class="comment">#print(data)</span></span><br><span class="line">        crc32result = zlib.crc32(data)</span><br><span class="line">        <span class="keyword">if</span> crc32result == crc32key:</span><br><span class="line">            <span class="built_in">print</span>(width,height)</span><br><span class="line">            <span class="comment">#写文件</span></span><br><span class="line">            newpic = <span class="built_in">bytearray</span>(fr)</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">                newpic[x+<span class="number">16</span>] = width[x]</span><br><span class="line">                newpic[x+<span class="number">20</span>] = height[x]</span><br><span class="line">            fw = <span class="built_in">open</span>(file+<span class="string">&#x27;.png&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>)<span class="comment">#保存副本</span></span><br><span class="line">            fw.write(newpic)</span><br><span class="line">            fw.close</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>得 flag</li>
-</ol>
-<blockquote>
+<h2 id="一叶障目"><a href="#一叶障目" class="headerlink" title="一叶障目"></a>一叶障目</h2><h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>根据 RCR 爆破宽高<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> zlib</span><br><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"><span class="comment">#读文件</span></span><br><span class="line">file = <span class="string">&#x27;1.png&#x27;</span>  <span class="comment">#注意，1.png图片要和脚本在同一个文件夹下哦~</span></span><br><span class="line">fr = <span class="built_in">open</span>(file,<span class="string">&#x27;rb&#x27;</span>).read()</span><br><span class="line">data = <span class="built_in">bytearray</span>(fr[<span class="number">12</span>:<span class="number">29</span>])</span><br><span class="line">crc32key = <span class="built_in">eval</span>(<span class="built_in">str</span>(fr[<span class="number">29</span>:<span class="number">33</span>]).replace(<span class="string">&#x27;\\x&#x27;</span>,<span class="string">&#x27;&#x27;</span>).replace(<span class="string">&quot;b&#x27;&quot;</span>,<span class="string">&#x27;0x&#x27;</span>).replace(<span class="string">&quot;&#x27;&quot;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="comment">#crc32key = 0xCBD6DF8A #补上0x，copy hex value</span></span><br><span class="line"><span class="comment">#data = bytearray(b&#x27;\x49\x48\x44\x52\x00\x00\x01\xF4\x00\x00\x01\xF1\x08\x06\x00\x00\x00&#x27;)  #hex下copy grep hex</span></span><br><span class="line">n = <span class="number">4095</span> <span class="comment">#理论上0xffffffff,但考虑到屏幕实际，0x0fff就差不多了</span></span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> <span class="built_in">range</span>(n):<span class="comment">#高和宽一起爆破</span></span><br><span class="line">    width = <span class="built_in">bytearray</span>(struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, w))<span class="comment">#q为8字节，i为4字节，h为2字节</span></span><br><span class="line">    <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        height = <span class="built_in">bytearray</span>(struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, h))</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">            data[x+<span class="number">4</span>] = width[x]</span><br><span class="line">            data[x+<span class="number">8</span>] = height[x]</span><br><span class="line">            <span class="comment">#print(data)</span></span><br><span class="line">        crc32result = zlib.crc32(data)</span><br><span class="line">        <span class="keyword">if</span> crc32result == crc32key:</span><br><span class="line">            <span class="built_in">print</span>(width,height)</span><br><span class="line">            <span class="comment">#写文件</span></span><br><span class="line">            newpic = <span class="built_in">bytearray</span>(fr)</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">                newpic[x+<span class="number">16</span>] = width[x]</span><br><span class="line">                newpic[x+<span class="number">20</span>] = height[x]</span><br><span class="line">            fw = <span class="built_in">open</span>(file+<span class="string">&#x27;.png&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>)<span class="comment">#保存副本</span></span><br><span class="line">            fw.write(newpic)</span><br><span class="line">            fw.close</span><br></pre></td></tr></table></figure></li>
+<li>得 flag<blockquote>
 <p>xaflag{66666}</p>
 </blockquote>
-<h2 id="梅花香自苦寒来">梅花香自苦寒来</h2>
-<p><strong>这题好啊</strong></p>
-<h3 id="题解-8">题解</h3>
-<ol>
-<li>下载附件，010 打开，在文件尾部发现大量 16进制<br>
-<img src="mh_1.png" alt="mh 1"></li>
-<li>转化为 ascii 码</li>
+</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;hex.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> h:     <span class="comment"># hex.txt为要转换的文本文件</span></span><br><span class="line">    val = h.read()</span><br><span class="line">    h.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;result.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> re: <span class="comment"># 转换完成后写入result.txt</span></span><br><span class="line">    tem = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(val), <span class="number">2</span>):</span><br><span class="line">        tem = <span class="string">&#x27;0x&#x27;</span> + val[i] + val[i+<span class="number">1</span>]</span><br><span class="line">        tem = <span class="built_in">int</span>(tem, base=<span class="number">16</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">chr</span>(tem), end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        re.write(<span class="built_in">chr</span>(tem))</span><br><span class="line">    re.close()</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>很明显是坐标，我也想到了，但不知道应该怎么画（使用 gnuplot 画图，先转化为可识别的格式</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;result.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> res:  <span class="comment"># 坐标格式文件比如(7,7)</span></span><br><span class="line">    re = res.read()</span><br><span class="line">    res.close()</span><br><span class="line">    </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;gnuplotTxt.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> gnup:   <span class="comment"># 将转换后的坐标写入gnuplotTxt.txt</span></span><br><span class="line">    re = re.split()</span><br><span class="line">    tem = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(re)):</span><br><span class="line">        tem = re[i]</span><br><span class="line">        tem = tem.lstrip(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">        tem = tem.rstrip(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(tem)):</span><br><span class="line">            <span class="keyword">if</span> tem[j] == <span class="string">&#x27;,&#x27;</span>:</span><br><span class="line">                tem = tem[:j] + <span class="string">&#x27; &#x27;</span> + tem[j+<span class="number">1</span>:]</span><br><span class="line">        gnup.write(tem + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    gnup.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>安装 gnuplot，在安装目录 bin 文件夹下执行（安装包将上传至 github</li>
-</ol>
-<blockquote>
+<h2 id="梅花香自苦寒来"><a href="#梅花香自苦寒来" class="headerlink" title="梅花香自苦寒来"></a>梅花香自苦寒来</h2><p><strong>这题好啊</strong></p>
+<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载附件，010 打开，在文件尾部发现大量 16进制<br><img src="mh_1.png" alt="mh 1"></li>
+<li>转化为 ascii 码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;hex.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> h:     <span class="comment"># hex.txt为要转换的文本文件</span></span><br><span class="line">    val = h.read()</span><br><span class="line">    h.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;result.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> re: <span class="comment"># 转换完成后写入result.txt</span></span><br><span class="line">    tem = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(val), <span class="number">2</span>):</span><br><span class="line">        tem = <span class="string">&#x27;0x&#x27;</span> + val[i] + val[i+<span class="number">1</span>]</span><br><span class="line">        tem = <span class="built_in">int</span>(tem, base=<span class="number">16</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">chr</span>(tem), end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        re.write(<span class="built_in">chr</span>(tem))</span><br><span class="line">    re.close()</span><br></pre></td></tr></table></figure></li>
+<li>很明显是坐标，我也想到了，但不知道应该怎么画（使用 gnuplot 画图，先转化为可识别的格式<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;result.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> res:  <span class="comment"># 坐标格式文件比如(7,7)</span></span><br><span class="line">    re = res.read()</span><br><span class="line">    res.close()</span><br><span class="line">    </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;gnuplotTxt.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> gnup:   <span class="comment"># 将转换后的坐标写入gnuplotTxt.txt</span></span><br><span class="line">    re = re.split()</span><br><span class="line">    tem = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(re)):</span><br><span class="line">        tem = re[i]</span><br><span class="line">        tem = tem.lstrip(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">        tem = tem.rstrip(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(tem)):</span><br><span class="line">            <span class="keyword">if</span> tem[j] == <span class="string">&#x27;,&#x27;</span>:</span><br><span class="line">                tem = tem[:j] + <span class="string">&#x27; &#x27;</span> + tem[j+<span class="number">1</span>:]</span><br><span class="line">        gnup.write(tem + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    gnup.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>安装 gnuplot，在安装目录 bin 文件夹下执行（安装包将上传至 github<blockquote>
 <p>plot ‘gnuplotTxt.txt’</p>
 </blockquote>
-<ol start="5">
-<li>扫描二维码，得到 flag</li>
-</ol>
-<blockquote>
+</li>
+<li>扫描二维码，得到 flag<blockquote>
 <p>flag{40fc0a979f759c8892f4dc045e28b820}</p>
 </blockquote>
-<h2 id="谁赢了比赛">谁赢了比赛</h2>
-<h3 id="题解-9">题解</h3>
-<ol>
-<li>下载，得到png，binwalk 文件分离，得到 rar，爆破，ps 打开，发现有问题的一帧，提取，stegsolve打开，不同通道，二维码扫描<br>
-<img src="game_1.png" alt="game 1"><br>
-<img src="game_2.png" alt="game 2"><br>
-<img src="game_3.png" alt="game 3"><br>
-<img src="game_4.png" alt="game 4"><br>
-<img src="game_5.png" alt="game 5"><br>
-<img src="game_6.png" alt="game 6"><br>
-<img src="game_7.png" alt="game 7"></li>
+</li>
 </ol>
-<blockquote>
+<h2 id="谁赢了比赛"><a href="#谁赢了比赛" class="headerlink" title="谁赢了比赛"></a>谁赢了比赛</h2><h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载，得到png，binwalk 文件分离，得到 rar，爆破，ps 打开，发现有问题的一帧，提取，stegsolve打开，不同通道，二维码扫描<br><img src="game_1.png" alt="game 1"><br><img src="game_2.png" alt="game 2"><br><img src="game_3.png" alt="game 3"><br><img src="game_4.png" alt="game 4"><br><img src="game_5.png" alt="game 5"><br><img src="game_6.png" alt="game 6"><br><img src="game_7.png" alt="game 7"><blockquote>
 <p>flag{shanxiajingwu_won_the_game}</p>
 </blockquote>
-<h2 id="gakki">gakki</h2>
-<h3 id="题解-10">题解</h3>
-<ol>
-<li>下载图片，binwalk查看，分离，rar 爆破密码，字频分析<br>
-<img src="gakki_1.png" alt="gakki 1"><br>
-<img src="gakki_2.png" alt="gakki 2"><br>
-<img src="gakki_3.png" alt="gakki 3"><br>
-<img src="gakki_4.png" alt="gakki 4"></li>
-<li>代码</li>
+</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">alphabet = <span class="string">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&amp;*()_+- =\\&#123;\\&#125;[]&quot;</span></span><br><span class="line">strings = <span class="built_in">open</span>(<span class="string">&#x27;flag.txt&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">result = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> alphabet:</span><br><span class="line">	counts = strings.count(i)</span><br><span class="line">	i = <span class="string">&#x27;&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">	result[i] = counts</span><br><span class="line"></span><br><span class="line">res = <span class="built_in">sorted</span>(result.items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> res:</span><br><span class="line">	<span class="built_in">print</span>(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">	flag = <span class="built_in">str</span>(i[<span class="number">0</span>])</span><br><span class="line">	<span class="built_in">print</span>(flag[<span class="number">0</span>],end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 代码来自：mochu7</span></span><br><span class="line"><span class="comment"># https://blog.csdn.net/mochu7777777/article/details/109377328</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>flag</li>
-</ol>
-<blockquote>
+<h2 id="gakki"><a href="#gakki" class="headerlink" title="gakki"></a>gakki</h2><h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载图片，binwalk查看，分离，rar 爆破密码，字频分析<br><img src="gakki_1.png" alt="gakki 1"><br><img src="gakki_2.png" alt="gakki 2"><br><img src="gakki_3.png" alt="gakki 3"><br><img src="gakki_4.png" alt="gakki 4"></li>
+<li>代码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">alphabet = <span class="string">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&amp;*()_+- =\\&#123;\\&#125;[]&quot;</span></span><br><span class="line">strings = <span class="built_in">open</span>(<span class="string">&#x27;flag.txt&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">result = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> alphabet:</span><br><span class="line">	counts = strings.count(i)</span><br><span class="line">	i = <span class="string">&#x27;&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">	result[i] = counts</span><br><span class="line"></span><br><span class="line">res = <span class="built_in">sorted</span>(result.items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> res:</span><br><span class="line">	<span class="built_in">print</span>(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">	flag = <span class="built_in">str</span>(i[<span class="number">0</span>])</span><br><span class="line">	<span class="built_in">print</span>(flag[<span class="number">0</span>],end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 代码来自：mochu7</span></span><br><span class="line"><span class="comment"># https://blog.csdn.net/mochu7777777/article/details/109377328</span></span><br></pre></td></tr></table></figure></li>
+<li>flag<blockquote>
 <p>flag{gaki_IsMyw1fe}</p>
 </blockquote>
-<h2 id="sqltest">sqltest</h2>
-<h3 id="题解-11">题解</h3>
-<blockquote>
-<p>摘自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yunqian2017/p/15124198.html">https://www.cnblogs.com/yunqian2017/p/15124198.html</a><br>
-<img src="sqltest.jpeg" alt="sqltest"></p>
-</blockquote>
-<h2 id="john-in-the-middle">john-in-the-middle</h2>
-<h3 id="题解-12">题解</h3>
-<ol>
-<li>下载文件，发现流量中传输了很多的文件，全部导出<br>
-<img src="http_1.png" alt="http 1"></li>
-<li>发现可疑文件<br>
-<img src="http_2.png" alt="http 2"></li>
-<li>stegsolve 打开（有先后顺序，我不理解）<br>
-<img src="http_3.png" alt="http 3"></li>
-<li>发现 flag<br>
-<img src="http_4.png" alt="http 4"></li>
+</li>
 </ol>
-<blockquote>
+<h2 id="sqltest"><a href="#sqltest" class="headerlink" title="sqltest"></a>sqltest</h2><h3 id="题解-10"><a href="#题解-10" class="headerlink" title="题解"></a>题解</h3><blockquote>
+<p>摘自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yunqian2017/p/15124198.html">https://www.cnblogs.com/yunqian2017/p/15124198.html</a><br><img src="sqltest.jpeg" alt="sqltest"></p>
+</blockquote>
+<h2 id="john-in-the-middle"><a href="#john-in-the-middle" class="headerlink" title="john-in-the-middle"></a>john-in-the-middle</h2><h3 id="题解-11"><a href="#题解-11" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载文件，发现流量中传输了很多的文件，全部导出<br><img src="http_1.png" alt="http 1"></li>
+<li>发现可疑文件<br><img src="http_2.png" alt="http 2"></li>
+<li>stegsolve 打开（有先后顺序，我不理解）<br><img src="http_3.png" alt="http 3"></li>
+<li>发现 flag<br><img src="http_4.png" alt="http 4"><blockquote>
 <p>flag{J0hn_th3_Sn1ffer}</p>
 </blockquote>
-<h2 id="喵喵喵">喵喵喵</h2>
-<h3 id="题解-13">题解</h3>
-<ol>
-<li>下载得到图片，没有发现隐藏文件，看看 LSB 隐写<br>
-<img src="mmm_1.png" alt="mmm 1"></li>
-<li>保存文件，010 打开，删除文件头多余的内容<br>
-<img src="mmm_2.png" alt="mmm 2"><br>
-<img src="mmm_3.png" alt="mmm 3"></li>
-<li>修改图片高度，得到完整二维码<br>
-<img src="mmm_4.png" alt="mmm 4"></li>
-<li>扫描得到网址，下载压缩包，解压，啥都没有<br>
-<img src="mmm_5.png" alt="mmm 5"><br>
-<img src="mmm_6.png" alt="mmm 6"></li>
-<li>nfts 查看流<br>
-<img src="mmm_7.png" alt="mmm 7"></li>
-<li>得到 pyc文件，进行反编译<br>
-<img src="mmm_8.png" alt="mmm 8"></li>
+</li>
 </ol>
-<blockquote>
+<h2 id="喵喵喵"><a href="#喵喵喵" class="headerlink" title="喵喵喵"></a>喵喵喵</h2><h3 id="题解-12"><a href="#题解-12" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>下载得到图片，没有发现隐藏文件，看看 LSB 隐写<br><img src="mmm_1.png" alt="mmm 1"></li>
+<li>保存文件，010 打开，删除文件头多余的内容<br><img src="mmm_2.png" alt="mmm 2"><br><img src="mmm_3.png" alt="mmm 3"></li>
+<li>修改图片高度，得到完整二维码<br><img src="mmm_4.png" alt="mmm 4"></li>
+<li>扫描得到网址，下载压缩包，解压，啥都没有<br><img src="mmm_5.png" alt="mmm 5"><br><img src="mmm_6.png" alt="mmm 6"></li>
+<li>nfts 查看流<br><img src="mmm_7.png" alt="mmm 7"></li>
+<li>得到 pyc文件，进行反编译<br><img src="mmm_8.png" alt="mmm 8"><blockquote>
 <p><a target="_blank" rel="noopener" href="https://tool.lu/pyc/">https://tool.lu/pyc/</a></p>
 </blockquote>
-<ol start="7">
-<li>得到代码</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># Version: Python 2.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encode</span>():</span></span><br><span class="line">    flag = <span class="string">&#x27;*************&#x27;</span></span><br><span class="line">    ciphertext = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(flag)):</span><br><span class="line">        s = <span class="built_in">chr</span>(i ^ <span class="built_in">ord</span>(flag[i]))</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            s = <span class="built_in">ord</span>(s) + <span class="number">10</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            s = <span class="built_in">ord</span>(s) - <span class="number">10</span></span><br><span class="line">        ciphertext.append(<span class="built_in">str</span>(s))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> ciphertext[::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">ciphertext = [</span><br><span class="line">    <span class="string">&#x27;96&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;65&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;93&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;123&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;91&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;97&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;93&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;70&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;102&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;94&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;132&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;46&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;112&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;64&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;97&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;88&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;80&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;82&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;137&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;90&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;109&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;99&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;112&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li>exp</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode</span>(<span class="params">arg1</span>):</span></span><br><span class="line">	ciphertext = arg1[::-<span class="number">1</span>]</span><br><span class="line">	flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ciphertext)):</span><br><span class="line">		<span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">			s = <span class="built_in">int</span>(ciphertext[i]) - <span class="number">10</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			s = <span class="built_in">int</span>(ciphertext[i]) + <span class="number">10</span> </span><br><span class="line">		s = s ^ i</span><br><span class="line">		flag += <span class="built_in">chr</span>(s)</span><br><span class="line">	<span class="built_in">print</span>(flag)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">	ciphertext = [</span><br><span class="line">        <span class="string">&#x27;96&#x27;</span>, <span class="string">&#x27;65&#x27;</span>, <span class="string">&#x27;93&#x27;</span>, <span class="string">&#x27;123&#x27;</span>, <span class="string">&#x27;91&#x27;</span>, <span class="string">&#x27;97&#x27;</span>, <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;93&#x27;</span>, <span class="string">&#x27;70&#x27;</span>, <span class="string">&#x27;102&#x27;</span>, <span class="string">&#x27;94&#x27;</span>, <span class="string">&#x27;132&#x27;</span>, <span class="string">&#x27;46&#x27;</span>, <span class="string">&#x27;112&#x27;</span>, <span class="string">&#x27;64&#x27;</span>, <span class="string">&#x27;97&#x27;</span>, <span class="string">&#x27;88&#x27;</span>, <span class="string">&#x27;80&#x27;</span>, <span class="string">&#x27;82&#x27;</span>, <span class="string">&#x27;137&#x27;</span>, <span class="string">&#x27;90&#x27;</span>, <span class="string">&#x27;109&#x27;</span>, <span class="string">&#x27;99&#x27;</span>, <span class="string">&#x27;112&#x27;</span></span><br><span class="line">    ]</span><br><span class="line">	decode(ciphertext)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>flag</li>
-</ol>
-<blockquote>
+</li>
+<li>得到代码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># Version: Python 2.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encode</span>():</span></span><br><span class="line">    flag = <span class="string">&#x27;*************&#x27;</span></span><br><span class="line">    ciphertext = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(flag)):</span><br><span class="line">        s = <span class="built_in">chr</span>(i ^ <span class="built_in">ord</span>(flag[i]))</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            s = <span class="built_in">ord</span>(s) + <span class="number">10</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            s = <span class="built_in">ord</span>(s) - <span class="number">10</span></span><br><span class="line">        ciphertext.append(<span class="built_in">str</span>(s))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> ciphertext[::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">ciphertext = [</span><br><span class="line">    <span class="string">&#x27;96&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;65&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;93&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;123&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;91&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;97&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;93&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;70&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;102&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;94&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;132&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;46&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;112&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;64&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;97&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;88&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;80&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;82&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;137&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;90&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;109&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;99&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;112&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>exp<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode</span>(<span class="params">arg1</span>):</span></span><br><span class="line">	ciphertext = arg1[::-<span class="number">1</span>]</span><br><span class="line">	flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ciphertext)):</span><br><span class="line">		<span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">			s = <span class="built_in">int</span>(ciphertext[i]) - <span class="number">10</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			s = <span class="built_in">int</span>(ciphertext[i]) + <span class="number">10</span> </span><br><span class="line">		s = s ^ i</span><br><span class="line">		flag += <span class="built_in">chr</span>(s)</span><br><span class="line">	<span class="built_in">print</span>(flag)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">	ciphertext = [</span><br><span class="line">        <span class="string">&#x27;96&#x27;</span>, <span class="string">&#x27;65&#x27;</span>, <span class="string">&#x27;93&#x27;</span>, <span class="string">&#x27;123&#x27;</span>, <span class="string">&#x27;91&#x27;</span>, <span class="string">&#x27;97&#x27;</span>, <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;93&#x27;</span>, <span class="string">&#x27;70&#x27;</span>, <span class="string">&#x27;102&#x27;</span>, <span class="string">&#x27;94&#x27;</span>, <span class="string">&#x27;132&#x27;</span>, <span class="string">&#x27;46&#x27;</span>, <span class="string">&#x27;112&#x27;</span>, <span class="string">&#x27;64&#x27;</span>, <span class="string">&#x27;97&#x27;</span>, <span class="string">&#x27;88&#x27;</span>, <span class="string">&#x27;80&#x27;</span>, <span class="string">&#x27;82&#x27;</span>, <span class="string">&#x27;137&#x27;</span>, <span class="string">&#x27;90&#x27;</span>, <span class="string">&#x27;109&#x27;</span>, <span class="string">&#x27;99&#x27;</span>, <span class="string">&#x27;112&#x27;</span></span><br><span class="line">    ]</span><br><span class="line">	decode(ciphertext)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>flag<blockquote>
 <p>flag{Y@e_Cl3veR_C1Ever!}</p>
 </blockquote>
-<h2 id="SXMgdGhpcyBiYXNlPw">SXMgdGhpcyBiYXNlPw==</h2>
-<h3 id="题解-14">题解</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">int2Bin</span>(<span class="params">digit</span>):</span></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">bin</span>(digit)[<span class="number">2</span>:]	<span class="comment">#将索引转成二进制，去掉&#x27;0b&#x27;;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binAsc</span>(<span class="params">string</span>):</span>		<span class="comment">#二进制转成ASCII码</span></span><br><span class="line">	temp = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">len</span>(string) / <span class="number">8</span>)):</span><br><span class="line">		temp += <span class="built_in">chr</span>(<span class="built_in">int</span>(string[i * <span class="number">8</span> : i* <span class="number">8</span> + <span class="number">8</span>] , <span class="number">2</span>))</span><br><span class="line">	<span class="keyword">return</span> temp</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readBase64FromFile</span>(<span class="params">filename</span>):</span></span><br><span class="line">	Base64Char = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span>     <span class="comment">#Base64字符集 已按照规范排列</span></span><br><span class="line">	result = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">with</span> <span class="built_in">open</span>(filename ,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">		<span class="keyword">for</span> data <span class="keyword">in</span> f.readlines():</span><br><span class="line">			<span class="keyword">if</span> data.find(<span class="string">&#x27;==&#x27;</span>) &gt; <span class="number">0</span>:</span><br><span class="line">				result += int2Bin(Base64Char.index(data[-<span class="number">4</span>]))[-<span class="number">4</span>:]		<span class="comment">#根据隐写原理，‘==’情况取等号前最后一个字符转换后取后4位</span></span><br><span class="line">			<span class="keyword">elif</span> data.find(<span class="string">&#x27;=&#x27;</span>) &gt; <span class="number">0</span>:</span><br><span class="line">				result += int2Bin(Base64Char.index(data[-<span class="number">3</span>]))[-<span class="number">2</span>:]		<span class="comment">#根据隐写原理，‘=’情况取等号前最后一个字符转换后取后2位</span></span><br><span class="line">	<span class="built_in">print</span>(binAsc(result))</span><br><span class="line"></span><br><span class="line">readBase64FromFile(<span class="string">&#x27;flag.txt&#x27;</span>)</span><br><span class="line">原文链接：https://blog.csdn.net/wangjin7356/article/details/<span class="number">122237992</span></span><br></pre></td></tr></table></figure>
-<h2 id="Mysterious">Mysterious</h2>
-<h3 id="题解-15">题解</h3>
-<ol>
-<li>ida ida打开</li>
+</li>
 </ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __stdcall <span class="title">sub_401090</span><span class="params">(HWND hWnd, <span class="keyword">int</span> a2, <span class="keyword">int</span> a3, <span class="keyword">int</span> a4)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> v4; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">char</span> Source[<span class="number">260</span>]; <span class="comment">// [esp+50h] [ebp-310h] BYREF</span></span><br><span class="line">  CHAR Text[<span class="number">5</span>]; <span class="comment">// [esp+154h] [ebp-20Ch] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v8[<span class="number">252</span>]; <span class="comment">// [esp+159h] [ebp-207h] BYREF</span></span><br><span class="line">  __int16 v9; <span class="comment">// [esp+255h] [ebp-10Bh]</span></span><br><span class="line">  <span class="keyword">char</span> v10; <span class="comment">// [esp+257h] [ebp-109h]</span></span><br><span class="line">  <span class="keyword">int</span> Value; <span class="comment">// [esp+258h] [ebp-108h]</span></span><br><span class="line">  CHAR String[<span class="number">260</span>]; <span class="comment">// [esp+25Ch] [ebp-104h] BYREF</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">memset</span>(String, <span class="number">0</span>, <span class="keyword">sizeof</span>(String));</span><br><span class="line">  Value = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> ( a2 == <span class="number">16</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    DestroyWindow(hWnd);</span><br><span class="line">    PostQuitMessage(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> ( a2 == <span class="number">273</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( a3 == <span class="number">1000</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      GetDlgItemTextA(hWnd, <span class="number">1002</span>, String, <span class="number">260</span>);</span><br><span class="line">      <span class="built_in">strlen</span>(String);</span><br><span class="line">      <span class="keyword">if</span> ( <span class="built_in">strlen</span>(String) &gt; <span class="number">6</span> )</span><br><span class="line">        ExitProcess(<span class="number">0</span>);</span><br><span class="line">      v4 = atoi(String);</span><br><span class="line">      Value = v4 + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span> ( v4 == <span class="number">122</span> &amp;&amp; String[<span class="number">3</span>] == <span class="number">120</span> &amp;&amp; String[<span class="number">5</span>] == <span class="number">122</span> &amp;&amp; String[<span class="number">4</span>] == <span class="number">121</span> )</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="built_in">strcpy</span>(Text, <span class="string">&quot;flag&quot;</span>);</span><br><span class="line">        <span class="built_in">memset</span>(v8, <span class="number">0</span>, <span class="keyword">sizeof</span>(v8));</span><br><span class="line">        v9 = <span class="number">0</span>;</span><br><span class="line">        v10 = <span class="number">0</span>;</span><br><span class="line">        _itoa(Value, Source, <span class="number">10</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;&#123;&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, Source);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;_&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;Buff3r_0v3rf|0w&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;&#125;&quot;</span>);</span><br><span class="line">        MessageBoxA(<span class="number">0</span>, Text, <span class="string">&quot;well done&quot;</span>, <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      SetTimer(hWnd, <span class="number">1u</span>, <span class="number">0x3E8</span>u, TimerFunc);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ( a3 == <span class="number">1001</span> )</span><br><span class="line">      KillTimer(hWnd, <span class="number">1u</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="SXMgdGhpcyBiYXNlPw"><a href="#SXMgdGhpcyBiYXNlPw" class="headerlink" title="SXMgdGhpcyBiYXNlPw=="></a>SXMgdGhpcyBiYXNlPw==</h2><h3 id="题解-13"><a href="#题解-13" class="headerlink" title="题解"></a>题解</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">int2Bin</span>(<span class="params">digit</span>):</span></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">bin</span>(digit)[<span class="number">2</span>:]	<span class="comment">#将索引转成二进制，去掉&#x27;0b&#x27;;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binAsc</span>(<span class="params">string</span>):</span>		<span class="comment">#二进制转成ASCII码</span></span><br><span class="line">	temp = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">len</span>(string) / <span class="number">8</span>)):</span><br><span class="line">		temp += <span class="built_in">chr</span>(<span class="built_in">int</span>(string[i * <span class="number">8</span> : i* <span class="number">8</span> + <span class="number">8</span>] , <span class="number">2</span>))</span><br><span class="line">	<span class="keyword">return</span> temp</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readBase64FromFile</span>(<span class="params">filename</span>):</span></span><br><span class="line">	Base64Char = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span>     <span class="comment">#Base64字符集 已按照规范排列</span></span><br><span class="line">	result = <span class="string">&#x27;&#x27;</span></span><br><span class="line">	<span class="keyword">with</span> <span class="built_in">open</span>(filename ,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">		<span class="keyword">for</span> data <span class="keyword">in</span> f.readlines():</span><br><span class="line">			<span class="keyword">if</span> data.find(<span class="string">&#x27;==&#x27;</span>) &gt; <span class="number">0</span>:</span><br><span class="line">				result += int2Bin(Base64Char.index(data[-<span class="number">4</span>]))[-<span class="number">4</span>:]		<span class="comment">#根据隐写原理，‘==’情况取等号前最后一个字符转换后取后4位</span></span><br><span class="line">			<span class="keyword">elif</span> data.find(<span class="string">&#x27;=&#x27;</span>) &gt; <span class="number">0</span>:</span><br><span class="line">				result += int2Bin(Base64Char.index(data[-<span class="number">3</span>]))[-<span class="number">2</span>:]		<span class="comment">#根据隐写原理，‘=’情况取等号前最后一个字符转换后取后2位</span></span><br><span class="line">	<span class="built_in">print</span>(binAsc(result))</span><br><span class="line"></span><br><span class="line">readBase64FromFile(<span class="string">&#x27;flag.txt&#x27;</span>)</span><br><span class="line">原文链接：https://blog.csdn.net/wangjin7356/article/details/<span class="number">122237992</span></span><br></pre></td></tr></table></figure>
+<h2 id="Mysterious"><a href="#Mysterious" class="headerlink" title="Mysterious"></a>Mysterious</h2><h3 id="题解-14"><a href="#题解-14" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>ida ida打开<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __stdcall <span class="title">sub_401090</span><span class="params">(HWND hWnd, <span class="keyword">int</span> a2, <span class="keyword">int</span> a3, <span class="keyword">int</span> a4)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> v4; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">char</span> Source[<span class="number">260</span>]; <span class="comment">// [esp+50h] [ebp-310h] BYREF</span></span><br><span class="line">  CHAR Text[<span class="number">5</span>]; <span class="comment">// [esp+154h] [ebp-20Ch] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v8[<span class="number">252</span>]; <span class="comment">// [esp+159h] [ebp-207h] BYREF</span></span><br><span class="line">  __int16 v9; <span class="comment">// [esp+255h] [ebp-10Bh]</span></span><br><span class="line">  <span class="keyword">char</span> v10; <span class="comment">// [esp+257h] [ebp-109h]</span></span><br><span class="line">  <span class="keyword">int</span> Value; <span class="comment">// [esp+258h] [ebp-108h]</span></span><br><span class="line">  CHAR String[<span class="number">260</span>]; <span class="comment">// [esp+25Ch] [ebp-104h] BYREF</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">memset</span>(String, <span class="number">0</span>, <span class="keyword">sizeof</span>(String));</span><br><span class="line">  Value = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> ( a2 == <span class="number">16</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    DestroyWindow(hWnd);</span><br><span class="line">    PostQuitMessage(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> ( a2 == <span class="number">273</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( a3 == <span class="number">1000</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      GetDlgItemTextA(hWnd, <span class="number">1002</span>, String, <span class="number">260</span>);</span><br><span class="line">      <span class="built_in">strlen</span>(String);</span><br><span class="line">      <span class="keyword">if</span> ( <span class="built_in">strlen</span>(String) &gt; <span class="number">6</span> )</span><br><span class="line">        ExitProcess(<span class="number">0</span>);</span><br><span class="line">      v4 = atoi(String);</span><br><span class="line">      Value = v4 + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span> ( v4 == <span class="number">122</span> &amp;&amp; String[<span class="number">3</span>] == <span class="number">120</span> &amp;&amp; String[<span class="number">5</span>] == <span class="number">122</span> &amp;&amp; String[<span class="number">4</span>] == <span class="number">121</span> )</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="built_in">strcpy</span>(Text, <span class="string">&quot;flag&quot;</span>);</span><br><span class="line">        <span class="built_in">memset</span>(v8, <span class="number">0</span>, <span class="keyword">sizeof</span>(v8));</span><br><span class="line">        v9 = <span class="number">0</span>;</span><br><span class="line">        v10 = <span class="number">0</span>;</span><br><span class="line">        _itoa(Value, Source, <span class="number">10</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;&#123;&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, Source);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;_&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;Buff3r_0v3rf|0w&quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(Text, <span class="string">&quot;&#125;&quot;</span>);</span><br><span class="line">        MessageBoxA(<span class="number">0</span>, Text, <span class="string">&quot;well done&quot;</span>, <span class="number">0</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      SetTimer(hWnd, <span class="number">1u</span>, <span class="number">0x3E8</span>u, TimerFunc);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ( a3 == <span class="number">1001</span> )</span><br><span class="line">      KillTimer(hWnd, <span class="number">1u</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>v4 == 122 &amp;&amp; String[3] == 120 &amp;&amp; String[5] == 122 &amp;&amp; String[4] == 121<br>
-v4 = 122xyz</p>
+<p>v4 == 122 &amp;&amp; String[3] == 120 &amp;&amp; String[5] == 122 &amp;&amp; String[4] == 121<br>v4 = 122xyz</p>
 </blockquote>
-<ol start="2">
-<li>flag</li>
-</ol>
-<blockquote>
+</li>
+<li>flag<blockquote>
 <p>flag{123_Buff3r_0v3rf|0w}</p>
 </blockquote>
-<h2 id="小易的u盘">小易的u盘</h2>
-<h3 id="题解-16">题解</h3>
-<ol>
-<li>没有题解，只是想说，遇到 iso 的题，不要急着解压，先看16进制，再开隐藏文件</li>
-<li>flag</li>
+</li>
 </ol>
-<blockquote>
+<h2 id="小易的u盘"><a href="#小易的u盘" class="headerlink" title="小易的u盘"></a>小易的u盘</h2><h3 id="题解-15"><a href="#题解-15" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>没有题解，只是想说，遇到 iso 的题，不要急着解压，先看16进制，再开隐藏文件</li>
+<li>flag<blockquote>
 <p>flag{29a0vkrlek3eu10ue89yug9y4r0wdu10}</p>
 </blockquote>
-<h2 id="哥们在这儿给你说唱-0xGame">哥们在这儿给你说唱(0xGame)</h2>
-<h3 id="题解-17">题解</h3>
-<ol>
-<li>描述知存在 deepsound，提取文件，密码在 slienteye 中</li>
-<li>flag</li>
+</li>
 </ol>
-<blockquote>
+<h2 id="哥们在这儿给你说唱-0xGame"><a href="#哥们在这儿给你说唱-0xGame" class="headerlink" title="哥们在这儿给你说唱(0xGame)"></a>哥们在这儿给你说唱(0xGame)</h2><h3 id="题解-16"><a href="#题解-16" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>描述知存在 deepsound，提取文件，密码在 slienteye 中</li>
+<li>flag<blockquote>
 <p>0xGame{5d4d7df0-6de7-4897-adee-e4b3828978f8}</p>
 </blockquote>
-<h2 id="不太普通的图片">不太普通的图片</h2>
-<h3 id="题解-18">题解</h3>
-<ol>
-<li>stegsolve 中发现某个通道存在密码</li>
+</li>
 </ol>
-<blockquote>
+<h2 id="不太普通的图片"><a href="#不太普通的图片" class="headerlink" title="不太普通的图片"></a>不太普通的图片</h2><h3 id="题解-17"><a href="#题解-17" class="headerlink" title="题解"></a>题解</h3><ol>
+<li>stegsolve 中发现某个通道存在密码<blockquote>
 <p>0xGameyyds</p>
 </blockquote>
-<ol start="2">
-<li>在 rgb0 存在 lsb 特征，但是解不出来，带密码的 LSB 隐写，用 cloacked-pixel 解</li>
-</ol>
-<blockquote>
+</li>
+<li>在 rgb0 存在 lsb 特征，但是解不出来，带密码的 LSB 隐写，用 cloacked-pixel 解<blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/livz/cloacked-pixel">https://github.com/livz/cloacked-pixel</a></p>
-</blockquote>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">python</span> lsb.<span class="keyword">py</span> </span><br><span class="line">LSB steganogprahy. Hide <span class="keyword">files</span> within least significant bits of images.</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">  lsb.<span class="keyword">py</span> <span class="keyword">hide</span> <span class="symbol">&lt;img_file&gt;</span> <span class="symbol">&lt;payload_file&gt;</span> <span class="symbol">&lt;password&gt;</span></span><br><span class="line">  lsb.<span class="keyword">py</span> extract <span class="symbol">&lt;stego_file&gt;</span> <span class="symbol">&lt;out_file&gt;</span> <span class="symbol">&lt;password&gt;</span></span><br><span class="line">  lsb.<span class="keyword">py</span> analyse <span class="symbol">&lt;stego_file&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
 
 
         <hr>
@@ -780,7 +652,7 @@ v4 = 122xyz</p>
           
           
           <li class="next">
-            <a href="/cn/web/" data-toggle="tooltip" data-placement="top" title="WEB">Next Post &rarr;</a>
+            <a href="/cn/0rays/" data-toggle="tooltip" data-placement="top" title="CBCTF">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -867,7 +739,7 @@ v4 = 122xyz</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">建议考虑的方向</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%A2%E5%85%B7%E4%B8%8B%E7%9A%84-flag"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">面具下的 flag</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B9%9D%E8%BF%9E%E7%8E%AF"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">九连环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#flag"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">flag</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%B7%E6%96%B0%E8%BF%87%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">刷新过的图片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A2%AB%E5%81%B7%E8%B5%B0%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">被偷走的文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%8F%9C%E5%88%80666"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">菜刀666</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E5%8F%B6%E9%9A%9C%E7%9B%AE"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">一叶障目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A2%85%E8%8A%B1%E9%A6%99%E8%87%AA%E8%8B%A6%E5%AF%92%E6%9D%A5"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">梅花香自苦寒来</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="toc-nav-number">1.8.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B0%81%E8%B5%A2%E4%BA%86%E6%AF%94%E8%B5%9B"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">谁赢了比赛</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="toc-nav-number">1.9.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gakki"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">gakki</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#sqltest"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">sqltest</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#john-in-the-middle"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">john-in-the-middle</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="toc-nav-number">1.12.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%96%B5%E5%96%B5%E5%96%B5"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">喵喵喵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="toc-nav-number">1.13.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SXMgdGhpcyBiYXNlPw"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">SXMgdGhpcyBiYXNlPw&#x3D;&#x3D;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="toc-nav-number">1.14.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysterious"><span class="toc-nav-number">1.15.</span> <span class="toc-nav-text">Mysterious</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="toc-nav-number">1.15.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B0%8F%E6%98%93%E7%9A%84u%E7%9B%98"><span class="toc-nav-number">1.16.</span> <span class="toc-nav-text">小易的u盘</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="toc-nav-number">1.16.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%A5%E4%BB%AC%E5%9C%A8%E8%BF%99%E5%84%BF%E7%BB%99%E4%BD%A0%E8%AF%B4%E5%94%B1-0xGame"><span class="toc-nav-number">1.17.</span> <span class="toc-nav-text">哥们在这儿给你说唱(0xGame)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-17"><span class="toc-nav-number">1.17.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8D%E5%A4%AA%E6%99%AE%E9%80%9A%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-nav-number">1.18.</span> <span class="toc-nav-text">不太普通的图片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-18"><span class="toc-nav-number">1.18.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BB%BA%E8%AE%AE%E8%80%83%E8%99%91%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">建议考虑的方向</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%A2%E5%85%B7%E4%B8%8B%E7%9A%84-flag"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">面具下的 flag</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B9%9D%E8%BF%9E%E7%8E%AF"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">九连环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#flag"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">flag</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%B7%E6%96%B0%E8%BF%87%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">刷新过的图片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A2%AB%E5%81%B7%E8%B5%B0%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">被偷走的文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%8F%9C%E5%88%80666"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">菜刀666</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E5%8F%B6%E9%9A%9C%E7%9B%AE"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">一叶障目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A2%85%E8%8A%B1%E9%A6%99%E8%87%AA%E8%8B%A6%E5%AF%92%E6%9D%A5"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">梅花香自苦寒来</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="toc-nav-number">1.8.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B0%81%E8%B5%A2%E4%BA%86%E6%AF%94%E8%B5%9B"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">谁赢了比赛</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="toc-nav-number">1.9.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gakki"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">gakki</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="toc-nav-number">1.10.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#sqltest"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">sqltest</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="toc-nav-number">1.11.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#john-in-the-middle"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">john-in-the-middle</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="toc-nav-number">1.12.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%96%B5%E5%96%B5%E5%96%B5"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">喵喵喵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="toc-nav-number">1.13.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SXMgdGhpcyBiYXNlPw"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">SXMgdGhpcyBiYXNlPw&#x3D;&#x3D;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="toc-nav-number">1.14.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysterious"><span class="toc-nav-number">1.15.</span> <span class="toc-nav-text">Mysterious</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="toc-nav-number">1.15.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B0%8F%E6%98%93%E7%9A%84u%E7%9B%98"><span class="toc-nav-number">1.16.</span> <span class="toc-nav-text">小易的u盘</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="toc-nav-number">1.16.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%A5%E4%BB%AC%E5%9C%A8%E8%BF%99%E5%84%BF%E7%BB%99%E4%BD%A0%E8%AF%B4%E5%94%B1-0xGame"><span class="toc-nav-number">1.17.</span> <span class="toc-nav-text">哥们在这儿给你说唱(0xGame)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="toc-nav-number">1.17.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8D%E5%A4%AA%E6%99%AE%E9%80%9A%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-nav-number">1.18.</span> <span class="toc-nav-text">不太普通的图片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A2%98%E8%A7%A3-17"><span class="toc-nav-number">1.18.1.</span> <span class="toc-nav-text">题解</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
