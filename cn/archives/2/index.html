@@ -242,28 +242,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -275,9 +253,31 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
               
               
             </a>
@@ -456,10 +456,19 @@
     </h3>
     <div class="post-content-preview">
       rip
+
 查看主函数，s 长度为 15，gets 传入值，可以不限大小，存在栈溢出
+
+
 发现危险函数存在 system(‘bin/sh’)，将地址溢出至 fun() 地址，触发函数
+
+
 因存在 栈平衡问题（不明白是什么），须先传入返回地址，通过 ropper 获取 ret 地址
-payload1234567from pwn import *# a = process(&#x27;./pwn1&#x27......
+
+
+payload
+
+1234567from pwn import *# a = process(&#x27;./......
     </div>
   </a>
   
@@ -495,7 +504,10 @@ payload1234567from pwn import *# a = process(&#x27;./pwn1&#x27......
     </h3>
     <div class="post-content-preview">
       RCE 1
-challenge1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);$code = $_POST[&#x27;code&#x27;];$code = str_replace(&quot;(&quot;,&quot;括号&quot;,$code);$code = str_replace(&q......
+
+challenge
+
+1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);$code = $_POST[&#x27;code&#x27;];$code = str_replace(&quot;(&quot;,&quot;括号&quot;,$code);$code = str_replace......
     </div>
   </a>
   
@@ -524,48 +536,6 @@ challenge1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);
   <!-- top end -->
   
 
-  <a href="/cn/sql/">
-    <h2 class="post-title">
-      SQL
-    </h2>
-    <h3 class="post-subtitle">
-      SQL 刷题记录
-    </h3>
-    <div class="post-content-preview">
-      BUUCTF [SUCTF 2019]EasySQL
-测试发现无论输入什么数字，都会返回 1
-存在过滤 union, from, or … (不完全测试)，返回 nonono 
-猜测后台 select 语句为 select {input} || flag from flag; (看别的师傅的 wp,不是很理解)’
-当输入任何 {} || flag 为 true，只返回 1
-只需要在执行 {}......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-11-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#BUUCTF" title="BUUCTF">BUUCTF</a>
-    
-    <a href="/tags/#WEB" title="WEB">WEB</a>
-    
-    <a href="/tags/#SQL" title="SQL">SQL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
   <a href="/cn/docker/">
     <h2 class="post-title">
       Docker
@@ -574,13 +544,17 @@ challenge1234567891011121314&lt;?phperror_reporting(0);highlight_file(__FILE__);
       Install Docker
     </h3>
     <div class="post-content-preview">
-      安装官网
+      安装
+官网
+
 https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository
 
 清华源
+
 https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/
 
-Install123456789101112131415sudo apt-get install apt-transport-h......
+Install
+123456789101112131415sudo apt-get install apt-transpo......
     </div>
   </a>
   
@@ -614,11 +588,16 @@ Install123456789101112131415sudo apt-get install apt-transport-h......
     </h3>
     <div class="post-content-preview">
       环境 Ubuntu 20.04 vmware
-安装安装 mysql server12sudo apt-get updatesudo apt-get install mysql-server
+安装
+安装 mysql server
+12sudo apt-get updatesudo apt-get install mysql-server
 
-第一次登录是无需输入密码1mysql -u root -p
 
-设置 root 密码1ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIE......
+第一次登录是无需输入密码
+1mysql -u root -p
+
+设置 root 密码
+1ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDEN......
     </div>
   </a>
   
@@ -651,7 +630,9 @@ Install123456789101112131415sudo apt-get install apt-transport-h......
       我好菜，拖后腿了
     </h3>
     <div class="post-content-preview">
-      S3qUenCEspayload123456789101112131415161718192021222324252627282930313233343536373839404142from pwn import *def run(n: int, m: int, a1: list):    sign = []    minn = []    summary = 0    sum1 = 0  ......
+      S3qUenCEs
+payload
+123456789101112131415161718192021222324252627282930313233343536373839404142from pwn import *def run(n: int, m: int, a1: list):    sign = []    minn = []    summary = 0    sum1 = 0......
     </div>
   </a>
   
@@ -688,8 +669,13 @@ Install123456789101112131415sudo apt-get install apt-transport-h......
       My vegetables has exploded
     </h3>
     <div class="post-content-preview">
-      MiscISCTF 层层迷宫题解
-run.py123456789101112131415161718192021222324252627282930313233from pwn import *from solve import solveimport syssys.setrecursionlimit(20000)  # 修改最大递归深度a = remote(&#x27;120.79.18.......
+      Misc
+ISCTF 层层迷宫
+题解
+
+run.py
+
+123456789101112131415161718192021222324252627282930313233from pwn import *from solve import solveimport syssys.setrecursionlimit(20000)  # 修改最大递归深度a = remote(&#x27;120.7......
     </div>
   </a>
   
@@ -727,14 +713,23 @@ run.py123456789101112131415161718192021222324252627282930313233from pwn import *
     </h3>
     <div class="post-content-preview">
       啊，淦，web就会俩题，
-Webbackdoor (动态链接库逆向题解
+Web
+backdoor (动态链接库逆向
+题解
+
 访问 robots.txt，得知 www.zip，下载
-index.phpbackdoor.phpphpinfo.phprobots.txtso.so
+
+
+index.php
+backdoor.php
+phpinfo.php
+robots.txt
+so.so
 
 
 打开 backdoor.php 发现是乱码
-IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyenc
-https://......
+
+IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen......
     </div>
   </a>
   
@@ -771,7 +766,9 @@ https://......
       一些脚本
     </h3>
     <div class="post-content-preview">
-      RSA 1例题123456789101112from Crypto.Util.number import bytes_to_long, getPrimefrom gmpy2 import *from secret import flagm = bytes_to_long(flag)p = getPrime(128)q = getPrime(128)n = p * qe = 65537c = ......
+      RSA 1
+例题
+123456789101112from Crypto.Util.number import bytes_to_long, getPrimefrom gmpy2 import *from secret import flagm = bytes_to_long(flag)p = getPrime(128)q = getPrime(128)n = p * qe = 65537c ......
     </div>
   </a>
   
@@ -806,10 +803,18 @@ https://......
       Kali Linux Volatility
     </h3>
     <div class="post-content-preview">
-      Installpip212wget https://bootstrap.pypa.io/pip/2.7/get-pip.pysudo python2 get-pip.py 
+      Install
+pip2
+12wget https://bootstrap.pypa.io/pip/2.7/get-pip.pysudo python2 get-pip.py 
 volatility
-repository1https://github.com/volatilityfoundation/volatility
-下载 源代码1wget https://github.com/volati......
+
+repository
+
+1https://github.com/volatilityfoundation/volatility
+
+下载 源代码
+
+1wget https://github.co......
     </div>
   </a>
   
@@ -822,6 +827,56 @@ repository1https://github.com/volatilityfoundation/volatility
     <a href="/tags/#MISC" title="MISC">MISC</a>
     
     <a href="/tags/#Volatility" title="Volatility">Volatility</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/hnctf/">
+    <h2 class="post-title">
+      HNCTF
+    </h2>
+    <h3 class="post-subtitle">
+      Misc and Web
+    </h3>
+    <div class="post-content-preview">
+      MISC
+UP&amp;DOWN_Aussie
+题目描述
+由于Aussie的一些申必bug 编码数据的长度为73,得出的数据第二位需要大写 第23位大写 第30位大写 第31位保密 第45位大写 第47位大写
+题解
+
+很有意思的题，但是也不难，搜到东西就很好办
+challenge.aussie
+
+123456789101112131415161718192021222324252627282......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-10-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#HNCTF" title="HNCTF">HNCTF</a>
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#JAIL" title="JAIL">JAIL</a>
+    
+    <a href="/tags/#自增" title="自增">自增</a>
     
   </div>
   
@@ -877,11 +932,15 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#BUUCTF" title="BUUCTF" rel="3">BUUCTF</a>
-    
-    
-    
     <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
+    
+    
+    
+    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
+    
+    
+    
+    <a href="/tags/#CBC-DASCTF" title="CBC-DASCTF" rel="1">CBC-DASCTF</a>
     
     
     
@@ -893,27 +952,11 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#CBC-DASCTF" title="CBC-DASCTF" rel="1">CBC-DASCTF</a>
-    
-    
-    
-    <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
-    
-    
-    
-    <a href="/tags/#教程" title="教程" rel="1">教程</a>
-    
-    
-    
-    <a href="/tags/#PYTHON" title="PYTHON" rel="1">PYTHON</a>
-    
-    
-    
     <a href="/tags/#HNCTF" title="HNCTF" rel="1">HNCTF</a>
     
     
     
-    <a href="/tags/#WEB" title="WEB" rel="15">WEB</a>
+    <a href="/tags/#WEB" title="WEB" rel="14">WEB</a>
     
     
     
@@ -925,7 +968,7 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    <a href="/tags/#BUUCTF" title="BUUCTF" rel="2">BUUCTF</a>
     
     
     
@@ -933,7 +976,19 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
+    <a href="/tags/#教程" title="教程" rel="1">教程</a>
+    
+    
+    
+    <a href="/tags/#PYTHON" title="PYTHON" rel="1">PYTHON</a>
+    
+    
+    
     <a href="/tags/#Volatility" title="Volatility" rel="1">Volatility</a>
+    
+    
+    
+    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
     
     
     
@@ -949,7 +1004,7 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
+    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
     
     
     
@@ -961,11 +1016,7 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#SQL" title="SQL" rel="1">SQL</a>
-    
-    
-    
-    <a href="/tags/#BASE" title="BASE" rel="1">BASE</a>
+    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
     
     
     
@@ -973,23 +1024,15 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     
-    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
-    
-    
-    
-    <a href="/tags/#NCTF" title="NCTF" rel="1">NCTF</a>
-    
-    
-    
     <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
     
     
     
-    <a href="/tags/#REVERSE" title="REVERSE" rel="2">REVERSE</a>
+    <a href="/tags/#BASE" title="BASE" rel="1">BASE</a>
     
     
     
-    <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
+    <a href="/tags/#NCTF" title="NCTF" rel="1">NCTF</a>
     
     
     
@@ -998,6 +1041,14 @@ repository1https://github.com/volatilityfoundation/volatility
     
     
     <a href="/tags/#SpringBoot" title="SpringBoot" rel="1">SpringBoot</a>
+    
+    
+    
+    <a href="/tags/#REVERSE" title="REVERSE" rel="2">REVERSE</a>
+    
+    
+    
+    <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
     
     
   </div>
@@ -1142,7 +1193,7 @@ repository1https://github.com/volatilityfoundation/volatility
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/12/">December 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/11/">November 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/09/">September 2022</a><span class="archive-list-count">8</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/12/">December 2022</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/11/">November 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/09/">September 2022</a><span class="archive-list-count">7</span></li></ul>
 </div>
 
 

