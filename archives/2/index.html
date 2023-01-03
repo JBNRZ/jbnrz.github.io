@@ -242,28 +242,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -275,9 +253,31 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -447,6 +447,51 @@
   <!-- top end -->
   
 
+  <a href="/cn/nctf/">
+    <h2 class="post-title">
+      NCTF
+    </h2>
+    <h3 class="post-subtitle">
+      Misc and Web in NCTF
+    </h3>
+    <div class="post-content-preview">
+      官方 wp，太菜了，基本不会，就没怎么做
+Web
+calc / calc_revenge
+
+预期
+
+1这个题是在p神写了那篇环境注入的文章后不久发现的一个利用。当时仔细想了一下其他语言中是否也存在这样的问题，有没有可能也造成rce。在看完python3的system具体实现后发现最后调用的位置，也是通过/bin/sh -c去执行的命令
+![calc](caclc1.png
+2. python......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by JBNRZ on
+    2022-12-05
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
+    
+    <a href="/tags/#NCTF" title="NCTF">NCTF</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/base64/">
     <h2 class="post-title">
       Base64
@@ -569,9 +614,9 @@ UNCTF{c5f9a27d-6f88-49fb-a510-fe7b163f8dd3}
   </p>
   <div class="tags">
     
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
     <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
     
     <a href="/tags/#CRYPTO" title="CRYPTO">CRYPTO</a>
     
@@ -612,9 +657,9 @@ Misc
   </p>
   <div class="tags">
     
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
     <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
     
     <a href="/tags/#SYC" title="SYC">SYC</a>
     
@@ -826,9 +871,9 @@ payload
   </p>
   <div class="tags">
     
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
     <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
     
     <a href="/tags/#CRYPTO" title="CRYPTO">CRYPTO</a>
     
@@ -869,65 +914,11 @@ run.py
   </p>
   <div class="tags">
     
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
     <a href="/tags/#WEB" title="WEB">WEB</a>
+    
+    <a href="/tags/#MISC" title="MISC">MISC</a>
     
     <a href="/tags/#ISCTF" title="ISCTF">ISCTF</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/uuctf/">
-    <h2 class="post-title">
-      UUCTF
-    </h2>
-    <h3 class="post-subtitle">
-      My vegetables has exploded
-    </h3>
-    <div class="post-content-preview">
-      啊，淦，web就会俩题，
-Web
-backdoor (动态链接库逆向
-题解
-
-访问 robots.txt，得知 www.zip，下载
-
-
-index.php
-backdoor.php
-phpinfo.php
-robots.txt
-so.so
-
-
-打开 backdoor.php 发现是乱码
-
-IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by JBNRZ on
-    2022-11-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MISC" title="MISC">MISC</a>
-    
-    <a href="/tags/#WEB" title="WEB">WEB</a>
-    
-    <a href="/tags/#UUCTF" title="UUCTF">UUCTF</a>
     
   </div>
   
@@ -975,10 +966,6 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
-    <a href="/tags/#BUUCTF" title="BUUCTF" rel="2">BUUCTF</a>
-    
-    
-    
     <a href="/tags/#0rays" title="0rays" rel="1">0rays</a>
     
     
@@ -987,23 +974,15 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
+    <a href="/tags/#BUUCTF" title="BUUCTF" rel="2">BUUCTF</a>
+    
+    
+    
     <a href="/tags/#Vidar" title="Vidar" rel="1">Vidar</a>
     
     
     
-    <a href="/tags/#CBC-DASCTF" title="CBC-DASCTF" rel="1">CBC-DASCTF</a>
-    
-    
-    
     <a href="/tags/#省赛" title="省赛" rel="1">省赛</a>
-    
-    
-    
-    <a href="/tags/#MISC" title="MISC" rel="14">MISC</a>
-    
-    
-    
-    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
     
     
     
@@ -1015,7 +994,11 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
-    <a href="/tags/#WEB" title="WEB" rel="15">WEB</a>
+    <a href="/tags/#CBC-DASCTF" title="CBC-DASCTF" rel="1">CBC-DASCTF</a>
+    
+    
+    
+    <a href="/tags/#WEB" title="WEB" rel="16">WEB</a>
     
     
     
@@ -1023,15 +1006,11 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
-    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    <a href="/tags/#MISC" title="MISC" rel="15">MISC</a>
     
     
     
-    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
-    
-    
-    
-    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
+    <a href="/tags/#古典密码" title="古典密码" rel="1">古典密码</a>
     
     
     
@@ -1051,11 +1030,19 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
+    <a href="/tags/#UUCTF" title="UUCTF" rel="1">UUCTF</a>
+    
+    
+    
+    <a href="/tags/#CRYPTO" title="CRYPTO" rel="6">CRYPTO</a>
+    
+    
+    
+    <a href="/tags/#RSA" title="RSA" rel="1">RSA</a>
+    
+    
+    
     <a href="/tags/#ISCTF" title="ISCTF" rel="1">ISCTF</a>
-    
-    
-    
-    <a href="/tags/#Dokcer" title="Dokcer" rel="1">Dokcer</a>
     
     
     
@@ -1063,7 +1050,19 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
+    <a href="/tags/#Dokcer" title="Dokcer" rel="1">Dokcer</a>
+    
+    
+    
     <a href="/tags/#PWN" title="PWN" rel="3">PWN</a>
+    
+    
+    
+    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
+    
+    
+    
+    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
     
     
     
@@ -1075,15 +1074,15 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     
-    <a href="/tags/#CTFSHOW" title="CTFSHOW" rel="1">CTFSHOW</a>
-    
-    
-    
     <a href="/tags/#NCTF" title="NCTF" rel="1">NCTF</a>
     
     
     
-    <a href="/tags/#UNCTF" title="UNCTF" rel="1">UNCTF</a>
+    <a href="/tags/#REVERSE" title="REVERSE" rel="3">REVERSE</a>
+    
+    
+    
+    <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
     
     
     
@@ -1100,14 +1099,6 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     
     <a href="/tags/#LifeGame" title="LifeGame" rel="1">LifeGame</a>
-    
-    
-    
-    <a href="/tags/#REVERSE" title="REVERSE" rel="2">REVERSE</a>
-    
-    
-    
-    <a href="/tags/#FORENSICS" title="FORENSICS" rel="1">FORENSICS</a>
     
     
   </div>
@@ -1170,6 +1161,10 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
 <div class="widget">
   <ul>
     
+    <a href="../../cn/moectf/">
+      <li>MoeCTF</li>
+    </a>
+    
     <a href="../../cn/lifegame/">
       <li>LifeGame</li>
     </a>
@@ -1184,10 +1179,6 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
     
     <a href="../../cn/pwnhub/">
       <li>PwnHub</li>
-    </a>
-    
-    <a href="../../cn/catf1ag/">
-      <li>Catf1ag</li>
     </a>
     
   </ul>
@@ -1252,7 +1243,7 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">7</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/10/">October 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">7</span></li></ul>
 </div>
 
 
@@ -1272,12 +1263,12 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
       <li>WriteUp</li>
     </a>
     
-    <a href="/categories/#Tools">
-      <li>Tools</li>
-    </a>
-    
     <a href="/categories/#Learning">
       <li>Learning</li>
+    </a>
+    
+    <a href="/categories/#Tools">
+      <li>Tools</li>
     </a>
     
     <a href="/categories/#Nothing">
@@ -1334,7 +1325,7 @@ IDA 打开 so.so，发现函数 tonyenc_encode，github 搜索项目 tonyen.....
         <p class="copyright text-muted">
           Copyright &copy;
           JBNRZ
-          2022
+          2023
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
