@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        :root {
+            --primary-color: #e0e0e0;
+            --accent-1: #6366f1;
+            --accent-2: #a855f7;
+            --background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            padding: 2rem 1rem;
+            background: var(--background);
+            color: var(--primary-color);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            margin: 2rem 0;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            border-radius: 2px;
+        }
+
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            
+            /* 初始比例 */
+            aspect-ratio: 16/9;
+        }
+
+        .card:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 65%; /* 根据比例动态调整 */
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .thumbnail iframe {
+            width: calc(100% * var(--ratio-multiplier));
+            height: calc(100% * var(--ratio-multiplier));
+            transform: scale(calc(1 / var(--ratio-multiplier)));
+            transform-origin: 0 0;
+            border: none;
+            filter: grayscale(0.3) contrast(1.1);
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            height: 35%;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .card-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+            border-radius: 50%;
+        }
+
+        .card-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Something</h1>
+        <div class="card-list" id="cardContainer"></div>
+    </div>
+
+    <script>
+        // 计算屏幕比例
+        const screenRatio = window.innerWidth / window.innerHeight;
+        document.documentElement.style.setProperty('--screen-ratio', screenRatio);
+        
+        // 设置缩略图缩放倍数（根据实际需求调整）
+        const ratioMultiplier = screenRatio > 1 ? 2 : 1.5;
+        document.documentElement.style.setProperty('--ratio-multiplier', ratioMultiplier);
+
+        // 导航项配置
+        const pages = [
+            { 
+                name: 'CBCTF',
+                url: 'https://jbnrz.github.io/cbctf' 
+            },
+            {
+                name: 'map',
+                url: 'https://jbnrz.github.io/map'
+            },
+            {
+                name: 'slowroads',
+                url: 'https://jbnrz.github.io/slowroads'
+            },
+        ];
+
+        function createCards() {
+            const container = document.getElementById('cardContainer');
+            
+            pages.forEach(page => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="thumbnail">
+                        <iframe src="${page.url}"></iframe>
+                        <a href="${page.url}" class="card-link"></a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">${page.name}</h3>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // 窗口大小改变时更新比例
+        window.addEventListener('resize', () => {
+            const newRatio = window.innerWidth / window.innerHeight;
+            document.documentElement.style.setProperty('--screen-ratio', newRatio);
+        });
+
+        window.addEventListener('DOMContentLoaded', createCards);
+    </script>
+</body>
+</html>
