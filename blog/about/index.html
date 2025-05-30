@@ -1076,7 +1076,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
     });
 
     function initSearchJson() {
-      initLoad(['/search.flv'], {
+      initLoad(['./search.flv'], {
         loadOptions: {
           success: function (obj) {
             localStorage.setItem('searchJson', obj['search.json'])
