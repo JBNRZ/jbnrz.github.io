@@ -342,26 +342,26 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/1.jpg');
+      --intro-header-background-image-url-home: url('./img/header_img/1.jpg');
       --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('./img/header_img/archive_bg2.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/1.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./img/header_img/1.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./img/header_img/archive_bg2.jpg');
     }
 
     header.intro-header {
        /*config*/
         background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/1.jpg'); */
+        /* background-image: url('./img/header_img/1.jpg'); */
       
     }
 
     
       #signature {/*signature*/
-        background-image: url('/img/signature/jbnrz.png');
+        background-image: url('./img/signature/jbnrz.png');
       }
     
   </style>
@@ -1361,7 +1361,7 @@ CRC
 
   
     <!-- Busuanzi JavaScript -->
-    <script async="async" src=".//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script async="async" src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 
   
@@ -1491,7 +1491,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
       $localSearchInput.focus();
     }
     // get search zip version
-    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+    $.get('./searchVersion.json?t=' + (+new Date()), function (res) {
       if (localStorage.getItem('searchVersion') !== res) {
         localStorage.setItem('searchVersion', res);
         initSearchJson();
