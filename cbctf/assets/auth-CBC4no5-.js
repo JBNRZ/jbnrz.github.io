@@ -1,1 +1,0 @@
-import{b as s}from"./index-ONk2F1V0.js";const a=r=>s({url:"/login",method:"POST",data:{name:r.name,password:r.password}}),o=r=>s({url:"/register",method:"POST",data:{name:r.name,email:r.email,password:r.password}}),n=r=>s({url:"/admin/login",method:"POST",data:{name:r.name,password:r.password}});export{n as a,a as l,o as r};

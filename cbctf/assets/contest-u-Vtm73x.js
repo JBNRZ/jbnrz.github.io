@@ -1,1 +1,0 @@
-import{b as s}from"./index-ONk2F1V0.js";const r=()=>s({url:"/contests",method:"GET"}),c=t=>s({url:`/contests/${t}`,method:"GET"}),a=(t,e=3,n=0)=>s({url:`/contests/${t}/rank`,method:"GET",params:{limit:e,offset:n}}),u=async(t,e={})=>s.get(`/contests/${t}/notices`,{params:e});export{c as a,u as b,a as c,r as g};
